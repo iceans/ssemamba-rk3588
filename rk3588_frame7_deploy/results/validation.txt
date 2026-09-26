@@ -1,0 +1,24 @@
+==================== frame7 (TsgMamba/DAUB) ONNX 导出与 RKNN 验证记录 ====================
+
+输入: [1,10,640,640]   (3 = 当前帧RGB, 7 = 历史灰度帧)
+输出: box0/1/2 [1,64,h,w] 原始DFL logits; cls0/1/2 [1,1,h,w] 原始cls logits (后处理sigmoid)
+
+[1] 并行扫描 (Hillis-Steele) vs 原 selective_scan_torch (fp32 loop)
+    maxdiff ~ 3e-6 (rel ~1e-7)  -> 数值等价
+
+[2] 向量化 DCNv2 (grid_sample) vs torchvision DeformConv2d
+    k=3 pad=1 maxdiff ~ 5e-7 ; k=1 maxdiff ~ 1.4e-6 ; stride=2 maxdiff ~ 4e-7
+
+[3] ONNX Runtime (fp32) vs PyTorch (fp32, CUDA)
+    box0 rel ~ 6.5e-3 ; cls0 rel ~ 7.7e-3 ; box1 rel ~ 5.2e-3 ; cls1 rel ~ 9.3e-4
+    box2 rel ~ 8.7e-4 ; cls2 rel ~ 2.0e-4          (差异来自并行扫描 fp32 舍入)
+
+[4] RKNN fp16 转换
+    build 成功 (rknn-toolkit2 2.3.2, ~113s), 模型 191 MB
+    唯一无 NPU lowering 的算子: 4 x GridSample (DCN) -> CPU/CustomOperator
+    RKNN 模拟器可运行 (x86, ~26-38 s/帧, 非板端NPU速度)
+
+[5] RKNN fp16 vs PyTorch fp32 (同一输入, 模拟器)
+    box0 rel ~ 3.6e-1 ; cls0 rel ~ 1.8e-1 ; box1 rel ~ 1.5e-1
+    cls1 rel ~ 3.0e-2 ; box2 rel ~ 1.0e-1 ; cls2 rel ~ 1.6e-2
+    -> fp16 在长序列扫描上精度损失较大, 需在板端用真实数据评估 mAP

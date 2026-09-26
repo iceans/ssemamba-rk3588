@@ -1,0 +1,47 @@
+{
+  "checked_at": "2026-09-15T03:09:12.802267+00:00",
+  "passed": true,
+  "records": [
+    {
+      "task": "B_FULL_0",
+      "checkpoint": "/home/dell/lxs/tsgmamba/ultralytics-main/revision_work/series_b/runs/B_FULL_0/weights/last.pt",
+      "epoch_completed": 1,
+      "file_bytes": 65025261,
+      "model_tensors": 553,
+      "ema_tensors": 553,
+      "optimizer_states": 328,
+      "pending_gradient_tensors": 0,
+      "ema_updates": 615,
+      "rng_fields": [
+        "python",
+        "numpy",
+        "torch",
+        "cuda"
+      ],
+      "all_state_tensors_finite": true,
+      "config_source_match": true,
+      "training_test_evaluations": 0
+    },
+    {
+      "task": "B_3DCONV_0",
+      "checkpoint": "/home/dell/lxs/tsgmamba/ultralytics-main/revision_work/series_b/runs/B_3DCONV_0/weights/last.pt",
+      "epoch_completed": 2,
+      "file_bytes": 81072369,
+      "model_tensors": 517,
+      "ema_tensors": 517,
+      "optimizer_states": 295,
+      "pending_gradient_tensors": 295,
+      "ema_updates": 871,
+      "rng_fields": [
+        "python",
+        "numpy",
+        "torch",
+        "cuda"
+      ],
+      "all_state_tensors_finite": true,
+      "config_source_match": true,
+      "training_test_evaluations": 0
+    }
+  ],
+  "note": "Read-only CPU inspection of produced resume checkpoints; no training interruption or test evaluation"
+}

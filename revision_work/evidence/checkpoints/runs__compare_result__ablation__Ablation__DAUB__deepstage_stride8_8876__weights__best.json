@@ -1,0 +1,5403 @@
+{
+  "checkpoint": "/home/dell/lxs/tsgmamba/ultralytics-main/runs/compare_result/ablation/Ablation/DAUB/deepstage_stride8_8876/weights/best.pt",
+  "sha256": "1958f066ea4c61c319b27ac6dcf84e031ae22108c7b0754403b08aa6c27e76d9",
+  "epoch": -1,
+  "date": "2026-06-04T19:51:06.048813",
+  "version": "8.3.234",
+  "git": {
+    "root": "None",
+    "branch": null,
+    "commit": null,
+    "origin": null
+  },
+  "train_args": {
+    "task": "detect",
+    "mode": "train",
+    "model": "./ultralytics/cfg/models/v8/yolov8n_mamba.yaml",
+    "data": "/home/dell/lxs/tsgmamba/ultralytics-main/ultralytics/cfg/datasets/DAUB.yaml",
+    "epochs": 20,
+    "time": null,
+    "patience": 40,
+    "batch": 8,
+    "imgsz": 640,
+    "save": true,
+    "save_period": -1,
+    "cache": false,
+    "device": "1",
+    "workers": 8,
+    "project": null,
+    "name": "train86",
+    "exist_ok": false,
+    "pretrained": "/home/dell/lxs/tsgmamba/ultralytics-main/runs/compare_result/DAUB/my_2timMix_945/weights/best.pt",
+    "optimizer": "auto",
+    "verbose": true,
+    "seed": 0,
+    "deterministic": true,
+    "single_cls": false,
+    "rect": false,
+    "cos_lr": false,
+    "close_mosaic": 10,
+    "resume": false,
+    "amp": false,
+    "fraction": 1.0,
+    "profile": false,
+    "freeze": null,
+    "multi_scale": false,
+    "compile": false,
+    "overlap_mask": true,
+    "mask_ratio": 4,
+    "dropout": 0.0,
+    "val": true,
+    "split": "val",
+    "save_json": false,
+    "conf": null,
+    "iou": 0.7,
+    "max_det": 300,
+    "half": false,
+    "dnn": false,
+    "plots": true,
+    "source": null,
+    "vid_stride": 1,
+    "stream_buffer": false,
+    "visualize": false,
+    "augment": true,
+    "agnostic_nms": false,
+    "classes": null,
+    "retina_masks": false,
+    "embed": null,
+    "show": false,
+    "save_frames": false,
+    "save_txt": false,
+    "save_conf": false,
+    "save_crop": false,
+    "show_labels": true,
+    "show_conf": true,
+    "show_boxes": true,
+    "line_width": null,
+    "format": "torchscript",
+    "keras": false,
+    "optimize": false,
+    "int8": false,
+    "dynamic": false,
+    "simplify": true,
+    "opset": null,
+    "workspace": null,
+    "nms": false,
+    "lr0": 0.0001,
+    "lrf": 0.01,
+    "momentum": 0.937,
+    "weight_decay": 0.0005,
+    "warmup_epochs": 3.0,
+    "warmup_momentum": 0.8,
+    "warmup_bias_lr": 0.0,
+    "box": 7.5,
+    "cls": 0.5,
+    "dfl": 1.5,
+    "pose": 12.0,
+    "kobj": 1.0,
+    "nbs": 64,
+    "hsv_h": 0.015,
+    "hsv_s": 0.7,
+    "hsv_v": 0.4,
+    "degrees": 0.0,
+    "translate": 0.1,
+    "scale": 0.5,
+    "shear": 0.0,
+    "perspective": 0.0,
+    "flipud": 0.0,
+    "fliplr": 0.5,
+    "bgr": 0.0,
+    "mosaic": 1.0,
+    "mixup": 0.0,
+    "cutmix": 0.0,
+    "copy_paste": 0.0,
+    "copy_paste_mode": "flip",
+    "auto_augment": "randaugment",
+    "erasing": 0.4,
+    "cfg": null,
+    "tracker": "botsort.yaml",
+    "gray": false,
+    "cube": true,
+    "mod": false,
+    "frame_num": 7
+  },
+  "train_metrics": {
+    "metrics/precision(B)": 0.888,
+    "metrics/recall(B)": 0.78542,
+    "metrics/mAP50(B)": 0.89079,
+    "metrics/mAP50-95(B)": 0.53576,
+    "val/box_loss": 1.35085,
+    "val/cls_loss": 1.11416,
+    "val/dfl_loss": 0.88663,
+    "fitness": 0.53576
+  },
+  "optimizer_present": false,
+  "serialized_yaml": {
+    "nc": 1,
+    "scales": {
+      "n": [
+        0.33,
+        0.25,
+        1024
+      ],
+      "s": [
+        0.33,
+        0.5,
+        1024
+      ],
+      "m": [
+        0.67,
+        0.75,
+        768
+      ],
+      "l": [
+        1.0,
+        1.0,
+        512
+      ],
+      "x": [
+        1.0,
+        1.25,
+        512
+      ]
+    },
+    "backbone": [
+      [
+        -1,
+        1,
+        "DWConv1",
+        [
+          8,
+          3,
+          1
+        ]
+      ],
+      [
+        0,
+        1,
+        "Split",
+        [
+          5,
+          3,
+          0
+        ]
+      ],
+      [
+        0,
+        1,
+        "Split",
+        [
+          5,
+          3,
+          1
+        ]
+      ],
+      [
+        1,
+        1,
+        "TimeMambaStem",
+        [
+          64,
+          false
+        ]
+      ],
+      [
+        2,
+        1,
+        "Conv",
+        [
+          64,
+          3,
+          2
+        ]
+      ],
+      [
+        -1,
+        1,
+        "Conv",
+        [
+          128,
+          3,
+          2
+        ]
+      ],
+      [
+        -1,
+        3,
+        "C2f",
+        [
+          128,
+          true
+        ]
+      ],
+      [
+        -1,
+        1,
+        "Conv",
+        [
+          256,
+          3,
+          2
+        ]
+      ],
+      [
+        -1,
+        6,
+        "C2f",
+        [
+          256,
+          true
+        ]
+      ],
+      [
+        -1,
+        1,
+        "Conv",
+        [
+          512,
+          3,
+          2
+        ]
+      ],
+      [
+        -1,
+        6,
+        "C2f",
+        [
+          512,
+          true
+        ]
+      ],
+      [
+        [
+          -1,
+          3
+        ],
+        1,
+        "TMixSSM",
+        [
+          512
+        ]
+      ],
+      [
+        -1,
+        1,
+        "Conv",
+        [
+          1024,
+          3,
+          2
+        ]
+      ],
+      [
+        -1,
+        3,
+        "C2f",
+        [
+          1024,
+          true
+        ]
+      ],
+      [
+        -1,
+        1,
+        "SPPF",
+        [
+          1024,
+          5
+        ]
+      ]
+    ],
+    "head": [
+      [
+        -1,
+        1,
+        "nn.Upsample",
+        [
+          "None",
+          2,
+          "nearest"
+        ]
+      ],
+      [
+        [
+          -1,
+          11
+        ],
+        1,
+        "Concat",
+        [
+          1
+        ]
+      ],
+      [
+        -1,
+        3,
+        "C2f",
+        [
+          512
+        ]
+      ],
+      [
+        -1,
+        1,
+        "nn.Upsample",
+        [
+          "None",
+          2,
+          "nearest"
+        ]
+      ],
+      [
+        [
+          -1,
+          8
+        ],
+        1,
+        "Concat",
+        [
+          1
+        ]
+      ],
+      [
+        -1,
+        1,
+        "CCCBlock",
+        [
+          256
+        ]
+      ],
+      [
+        -1,
+        6,
+        "C2f",
+        [
+          256
+        ]
+      ],
+      [
+        -1,
+        1,
+        "Conv",
+        [
+          256,
+          3,
+          2
+        ]
+      ],
+      [
+        [
+          -1,
+          17
+        ],
+        1,
+        "Concat",
+        [
+          1
+        ]
+      ],
+      [
+        -1,
+        3,
+        "C2f",
+        [
+          512
+        ]
+      ],
+      [
+        -1,
+        1,
+        "Conv",
+        [
+          512,
+          3,
+          2
+        ]
+      ],
+      [
+        [
+          -1,
+          14
+        ],
+        1,
+        "Concat",
+        [
+          1
+        ]
+      ],
+      [
+        -1,
+        3,
+        "C2f",
+        [
+          1024
+        ]
+      ],
+      [
+        [
+          21,
+          24,
+          27
+        ],
+        1,
+        "Detect",
+        [
+          "nc"
+        ]
+      ]
+    ],
+    "scale": "n",
+    "yaml_file": "ultralytics/cfg/models/v8/yolov8n_mamba.yaml",
+    "channels": 10
+  },
+  "params": 4267350,
+  "state_tensors": 526,
+  "nonfinite_keys": [],
+  "graph": [
+    {
+      "i": 0,
+      "from": -1,
+      "class": "ultralytics.nn.modules.conv.DWConv1",
+      "params": 376
+    },
+    {
+      "i": 1,
+      "from": 0,
+      "class": "ultralytics.nn.modules.timeguid.Split",
+      "params": 0
+    },
+    {
+      "i": 2,
+      "from": 0,
+      "class": "ultralytics.nn.modules.timeguid.Split",
+      "params": 0
+    },
+    {
+      "i": 3,
+      "from": 1,
+      "class": "ultralytics.nn.modules.timeguid.TimeMambaStem",
+      "params": 3127
+    },
+    {
+      "i": 4,
+      "from": 2,
+      "class": "ultralytics.nn.modules.conv.Conv",
+      "params": 464
+    },
+    {
+      "i": 5,
+      "from": -1,
+      "class": "ultralytics.nn.modules.conv.Conv",
+      "params": 4672
+    },
+    {
+      "i": 6,
+      "from": -1,
+      "class": "ultralytics.nn.modules.block.C2f",
+      "params": 7360
+    },
+    {
+      "i": 7,
+      "from": -1,
+      "class": "ultralytics.nn.modules.conv.Conv",
+      "params": 18560
+    },
+    {
+      "i": 8,
+      "from": -1,
+      "class": "ultralytics.nn.modules.block.C2f",
+      "params": 49664
+    },
+    {
+      "i": 9,
+      "from": -1,
+      "class": "ultralytics.nn.modules.conv.Conv",
+      "params": 73984
+    },
+    {
+      "i": 10,
+      "from": -1,
+      "class": "ultralytics.nn.modules.block.C2f",
+      "params": 197632
+    },
+    {
+      "i": 11,
+      "from": [
+        -1,
+        3
+      ],
+      "class": "ultralytics.nn.modules.timeguid.TMixSSM",
+      "params": 348993
+    },
+    {
+      "i": 12,
+      "from": -1,
+      "class": "ultralytics.nn.modules.conv.Conv",
+      "params": 295424
+    },
+    {
+      "i": 13,
+      "from": -1,
+      "class": "ultralytics.nn.modules.block.C2f",
+      "params": 460288
+    },
+    {
+      "i": 14,
+      "from": -1,
+      "class": "ultralytics.nn.modules.block.SPPF",
+      "params": 164608
+    },
+    {
+      "i": 15,
+      "from": -1,
+      "class": "torch.nn.modules.upsampling.Upsample",
+      "params": 0
+    },
+    {
+      "i": 16,
+      "from": [
+        -1,
+        11
+      ],
+      "class": "ultralytics.nn.modules.conv.Concat",
+      "params": 0
+    },
+    {
+      "i": 17,
+      "from": -1,
+      "class": "ultralytics.nn.modules.block.C2f",
+      "params": 148224
+    },
+    {
+      "i": 18,
+      "from": -1,
+      "class": "torch.nn.modules.upsampling.Upsample",
+      "params": 0
+    },
+    {
+      "i": 19,
+      "from": [
+        -1,
+        8
+      ],
+      "class": "ultralytics.nn.modules.conv.Concat",
+      "params": 0
+    },
+    {
+      "i": 20,
+      "from": -1,
+      "class": "ultralytics.nn.modules.tgsmamba.CCCBlock",
+      "params": 72448
+    },
+    {
+      "i": 21,
+      "from": -1,
+      "class": "ultralytics.nn.modules.block.C2f",
+      "params": 49664
+    },
+    {
+      "i": 22,
+      "from": -1,
+      "class": "ultralytics.nn.modules.conv.Conv",
+      "params": 36992
+    },
+    {
+      "i": 23,
+      "from": [
+        -1,
+        17
+      ],
+      "class": "ultralytics.nn.modules.conv.Concat",
+      "params": 0
+    },
+    {
+      "i": 24,
+      "from": -1,
+      "class": "ultralytics.nn.modules.block.C2f",
+      "params": 123648
+    },
+    {
+      "i": 25,
+      "from": -1,
+      "class": "ultralytics.nn.modules.conv.Conv",
+      "params": 147712
+    },
+    {
+      "i": 26,
+      "from": [
+        -1,
+        14
+      ],
+      "class": "ultralytics.nn.modules.conv.Concat",
+      "params": 0
+    },
+    {
+      "i": 27,
+      "from": -1,
+      "class": "ultralytics.nn.modules.block.C2f",
+      "params": 493056
+    },
+    {
+      "i": 28,
+      "from": [
+        21,
+        24,
+        27
+      ],
+      "class": "ultralytics.nn.modules.head.Detect",
+      "params": 1570454
+    }
+  ],
+  "modules": [
+    {
+      "path": "",
+      "class": "ultralytics.nn.tasks.DetectionModel",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model",
+      "class": "torch.nn.modules.container.Sequential",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.0",
+      "class": "ultralytics.nn.modules.conv.DWConv1",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.0.conv",
+      "class": "torch.nn.modules.conv.Conv2d",
+      "kernel": [
+        3,
+        3
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "groups": 2
+    },
+    {
+      "path": "model.0.bn",
+      "class": "torch.nn.modules.batchnorm.BatchNorm2d",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.0.act",
+      "class": "torch.nn.modules.activation.SiLU",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.1",
+      "class": "ultralytics.nn.modules.timeguid.Split",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.2",
+      "class": "ultralytics.nn.modules.timeguid.Split",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.3",
+      "class": "ultralytics.nn.modules.timeguid.TimeMambaStem",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.3.spatial_dw1",
+      "class": "torch.nn.modules.conv.Conv2d",
+      "kernel": [
+        3,
+        3
+      ],
+      "stride": [
+        2,
+        2
+      ],
+      "groups": 5
+    },
+    {
+      "path": "model.3.spatial_dw2",
+      "class": "torch.nn.modules.conv.Conv2d",
+      "kernel": [
+        3,
+        3
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "groups": 5
+    },
+    {
+      "path": "model.3.spatial_dw3",
+      "class": "torch.nn.modules.conv.Conv2d",
+      "kernel": [
+        3,
+        3
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "groups": 5
+    },
+    {
+      "path": "model.3.spatial_dw4",
+      "class": "torch.nn.modules.conv.Conv2d",
+      "kernel": [
+        3,
+        3
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "groups": 5
+    },
+    {
+      "path": "model.3.mamba",
+      "class": "ultralytics.nn.modules.timeguid.DisentangledSTMixSSM",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.3.mamba.norm",
+      "class": "ultralytics.nn.modules.tgsmamba.LayerNorm",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.3.mamba.op",
+      "class": "ultralytics.nn.modules.timeguid.SS2DTimeMix",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.3.mamba.op.out_norm",
+      "class": "ultralytics.nn.modules.tgsmamba.LayerNorm",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.3.mamba.op.in_proj",
+      "class": "ultralytics.nn.modules.tgsmamba.Linear",
+      "kernel": null,
+      "stride": null,
+      "groups": 1
+    },
+    {
+      "path": "model.3.mamba.op.act",
+      "class": "torch.nn.modules.activation.SiLU",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.3.mamba.op.dt_projs",
+      "class": "ultralytics.nn.modules.tgsmamba.Linear",
+      "kernel": null,
+      "stride": null,
+      "groups": 1
+    },
+    {
+      "path": "model.3.mamba.op.out_act",
+      "class": "torch.nn.modules.linear.Identity",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.3.mamba.op.out_proj",
+      "class": "ultralytics.nn.modules.tgsmamba.Linear",
+      "kernel": null,
+      "stride": null,
+      "groups": 1
+    },
+    {
+      "path": "model.3.mamba.op.dropout",
+      "class": "torch.nn.modules.linear.Identity",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.3.mamba.drop_path",
+      "class": "timm.layers.drop.DropPath",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.3.mamba.norm2",
+      "class": "ultralytics.nn.modules.tgsmamba.LayerNorm",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.3.mamba.mlp",
+      "class": "ultralytics.nn.modules.tgsmamba.Mlp",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.3.mamba.mlp.fc1",
+      "class": "ultralytics.nn.modules.tgsmamba.Linear",
+      "kernel": null,
+      "stride": null,
+      "groups": 1
+    },
+    {
+      "path": "model.3.mamba.mlp.act",
+      "class": "torch.nn.modules.activation.GELU",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.3.mamba.mlp.fc2",
+      "class": "ultralytics.nn.modules.tgsmamba.Linear",
+      "kernel": null,
+      "stride": null,
+      "groups": 1
+    },
+    {
+      "path": "model.3.mamba.mlp.drop",
+      "class": "torch.nn.modules.dropout.Dropout",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.3.bn",
+      "class": "torch.nn.modules.batchnorm.BatchNorm2d",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.3.act",
+      "class": "torch.nn.modules.activation.SiLU",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.3.out_proj",
+      "class": "ultralytics.nn.modules.conv.Conv",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.3.out_proj.conv",
+      "class": "torch.nn.modules.conv.Conv2d",
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "groups": 1
+    },
+    {
+      "path": "model.3.out_proj.bn",
+      "class": "torch.nn.modules.batchnorm.BatchNorm2d",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.3.alignment",
+      "class": "ultralytics.nn.modules.timeguid.DCNAlignment",
+      "kernel": 3,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.3.alignment.conv_offset",
+      "class": "torch.nn.modules.conv.Conv2d",
+      "kernel": [
+        3,
+        3
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "groups": 1
+    },
+    {
+      "path": "model.3.alignment.dcn",
+      "class": "torchvision.ops.deform_conv.DeformConv2d",
+      "kernel": [
+        3,
+        3
+      ],
+      "stride": null,
+      "groups": 1
+    },
+    {
+      "path": "model.3.t4_proj",
+      "class": "torch.nn.modules.conv.Conv2d",
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "groups": 1
+    },
+    {
+      "path": "model.4",
+      "class": "ultralytics.nn.modules.conv.Conv",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.4.conv",
+      "class": "torch.nn.modules.conv.Conv2d",
+      "kernel": [
+        3,
+        3
+      ],
+      "stride": [
+        2,
+        2
+      ],
+      "groups": 1
+    },
+    {
+      "path": "model.4.bn",
+      "class": "torch.nn.modules.batchnorm.BatchNorm2d",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.5",
+      "class": "ultralytics.nn.modules.conv.Conv",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.5.conv",
+      "class": "torch.nn.modules.conv.Conv2d",
+      "kernel": [
+        3,
+        3
+      ],
+      "stride": [
+        2,
+        2
+      ],
+      "groups": 1
+    },
+    {
+      "path": "model.5.bn",
+      "class": "torch.nn.modules.batchnorm.BatchNorm2d",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.6",
+      "class": "ultralytics.nn.modules.block.C2f",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.6.cv1",
+      "class": "ultralytics.nn.modules.conv.Conv",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.6.cv1.conv",
+      "class": "torch.nn.modules.conv.Conv2d",
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "groups": 1
+    },
+    {
+      "path": "model.6.cv1.bn",
+      "class": "torch.nn.modules.batchnorm.BatchNorm2d",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.6.cv2",
+      "class": "ultralytics.nn.modules.conv.Conv",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.6.cv2.conv",
+      "class": "torch.nn.modules.conv.Conv2d",
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "groups": 1
+    },
+    {
+      "path": "model.6.cv2.bn",
+      "class": "torch.nn.modules.batchnorm.BatchNorm2d",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.6.m",
+      "class": "torch.nn.modules.container.ModuleList",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.6.m.0",
+      "class": "ultralytics.nn.modules.block.Bottleneck",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.6.m.0.cv1",
+      "class": "ultralytics.nn.modules.conv.Conv",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.6.m.0.cv1.conv",
+      "class": "torch.nn.modules.conv.Conv2d",
+      "kernel": [
+        3,
+        3
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "groups": 1
+    },
+    {
+      "path": "model.6.m.0.cv1.bn",
+      "class": "torch.nn.modules.batchnorm.BatchNorm2d",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.6.m.0.cv2",
+      "class": "ultralytics.nn.modules.conv.Conv",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.6.m.0.cv2.conv",
+      "class": "torch.nn.modules.conv.Conv2d",
+      "kernel": [
+        3,
+        3
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "groups": 1
+    },
+    {
+      "path": "model.6.m.0.cv2.bn",
+      "class": "torch.nn.modules.batchnorm.BatchNorm2d",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.7",
+      "class": "ultralytics.nn.modules.conv.Conv",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.7.conv",
+      "class": "torch.nn.modules.conv.Conv2d",
+      "kernel": [
+        3,
+        3
+      ],
+      "stride": [
+        2,
+        2
+      ],
+      "groups": 1
+    },
+    {
+      "path": "model.7.bn",
+      "class": "torch.nn.modules.batchnorm.BatchNorm2d",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.8",
+      "class": "ultralytics.nn.modules.block.C2f",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.8.cv1",
+      "class": "ultralytics.nn.modules.conv.Conv",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.8.cv1.conv",
+      "class": "torch.nn.modules.conv.Conv2d",
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "groups": 1
+    },
+    {
+      "path": "model.8.cv1.bn",
+      "class": "torch.nn.modules.batchnorm.BatchNorm2d",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.8.cv2",
+      "class": "ultralytics.nn.modules.conv.Conv",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.8.cv2.conv",
+      "class": "torch.nn.modules.conv.Conv2d",
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "groups": 1
+    },
+    {
+      "path": "model.8.cv2.bn",
+      "class": "torch.nn.modules.batchnorm.BatchNorm2d",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.8.m",
+      "class": "torch.nn.modules.container.ModuleList",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.8.m.0",
+      "class": "ultralytics.nn.modules.block.Bottleneck",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.8.m.0.cv1",
+      "class": "ultralytics.nn.modules.conv.Conv",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.8.m.0.cv1.conv",
+      "class": "torch.nn.modules.conv.Conv2d",
+      "kernel": [
+        3,
+        3
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "groups": 1
+    },
+    {
+      "path": "model.8.m.0.cv1.bn",
+      "class": "torch.nn.modules.batchnorm.BatchNorm2d",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.8.m.0.cv2",
+      "class": "ultralytics.nn.modules.conv.Conv",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.8.m.0.cv2.conv",
+      "class": "torch.nn.modules.conv.Conv2d",
+      "kernel": [
+        3,
+        3
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "groups": 1
+    },
+    {
+      "path": "model.8.m.0.cv2.bn",
+      "class": "torch.nn.modules.batchnorm.BatchNorm2d",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.8.m.1",
+      "class": "ultralytics.nn.modules.block.Bottleneck",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.8.m.1.cv1",
+      "class": "ultralytics.nn.modules.conv.Conv",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.8.m.1.cv1.conv",
+      "class": "torch.nn.modules.conv.Conv2d",
+      "kernel": [
+        3,
+        3
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "groups": 1
+    },
+    {
+      "path": "model.8.m.1.cv1.bn",
+      "class": "torch.nn.modules.batchnorm.BatchNorm2d",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.8.m.1.cv2",
+      "class": "ultralytics.nn.modules.conv.Conv",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.8.m.1.cv2.conv",
+      "class": "torch.nn.modules.conv.Conv2d",
+      "kernel": [
+        3,
+        3
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "groups": 1
+    },
+    {
+      "path": "model.8.m.1.cv2.bn",
+      "class": "torch.nn.modules.batchnorm.BatchNorm2d",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.9",
+      "class": "ultralytics.nn.modules.conv.Conv",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.9.conv",
+      "class": "torch.nn.modules.conv.Conv2d",
+      "kernel": [
+        3,
+        3
+      ],
+      "stride": [
+        2,
+        2
+      ],
+      "groups": 1
+    },
+    {
+      "path": "model.9.bn",
+      "class": "torch.nn.modules.batchnorm.BatchNorm2d",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.10",
+      "class": "ultralytics.nn.modules.block.C2f",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.10.cv1",
+      "class": "ultralytics.nn.modules.conv.Conv",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.10.cv1.conv",
+      "class": "torch.nn.modules.conv.Conv2d",
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "groups": 1
+    },
+    {
+      "path": "model.10.cv1.bn",
+      "class": "torch.nn.modules.batchnorm.BatchNorm2d",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.10.cv2",
+      "class": "ultralytics.nn.modules.conv.Conv",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.10.cv2.conv",
+      "class": "torch.nn.modules.conv.Conv2d",
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "groups": 1
+    },
+    {
+      "path": "model.10.cv2.bn",
+      "class": "torch.nn.modules.batchnorm.BatchNorm2d",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.10.m",
+      "class": "torch.nn.modules.container.ModuleList",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.10.m.0",
+      "class": "ultralytics.nn.modules.block.Bottleneck",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.10.m.0.cv1",
+      "class": "ultralytics.nn.modules.conv.Conv",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.10.m.0.cv1.conv",
+      "class": "torch.nn.modules.conv.Conv2d",
+      "kernel": [
+        3,
+        3
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "groups": 1
+    },
+    {
+      "path": "model.10.m.0.cv1.bn",
+      "class": "torch.nn.modules.batchnorm.BatchNorm2d",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.10.m.0.cv2",
+      "class": "ultralytics.nn.modules.conv.Conv",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.10.m.0.cv2.conv",
+      "class": "torch.nn.modules.conv.Conv2d",
+      "kernel": [
+        3,
+        3
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "groups": 1
+    },
+    {
+      "path": "model.10.m.0.cv2.bn",
+      "class": "torch.nn.modules.batchnorm.BatchNorm2d",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.10.m.1",
+      "class": "ultralytics.nn.modules.block.Bottleneck",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.10.m.1.cv1",
+      "class": "ultralytics.nn.modules.conv.Conv",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.10.m.1.cv1.conv",
+      "class": "torch.nn.modules.conv.Conv2d",
+      "kernel": [
+        3,
+        3
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "groups": 1
+    },
+    {
+      "path": "model.10.m.1.cv1.bn",
+      "class": "torch.nn.modules.batchnorm.BatchNorm2d",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.10.m.1.cv2",
+      "class": "ultralytics.nn.modules.conv.Conv",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.10.m.1.cv2.conv",
+      "class": "torch.nn.modules.conv.Conv2d",
+      "kernel": [
+        3,
+        3
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "groups": 1
+    },
+    {
+      "path": "model.10.m.1.cv2.bn",
+      "class": "torch.nn.modules.batchnorm.BatchNorm2d",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.11",
+      "class": "ultralytics.nn.modules.timeguid.TMixSSM",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.11.norm",
+      "class": "ultralytics.nn.modules.tgsmamba.LayerNorm",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.11.op",
+      "class": "ultralytics.nn.modules.timeguid.SS2DguideMix",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.11.op.out_norm",
+      "class": "ultralytics.nn.modules.tgsmamba.LayerNorm",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.11.op.in_proj",
+      "class": "ultralytics.nn.modules.tgsmamba.Linear",
+      "kernel": null,
+      "stride": null,
+      "groups": 1
+    },
+    {
+      "path": "model.11.op.act",
+      "class": "torch.nn.modules.activation.SiLU",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.11.op.dt_projs",
+      "class": "ultralytics.nn.modules.tgsmamba.Linear",
+      "kernel": null,
+      "stride": null,
+      "groups": 1
+    },
+    {
+      "path": "model.11.op.out_act",
+      "class": "torch.nn.modules.linear.Identity",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.11.op.out_proj",
+      "class": "ultralytics.nn.modules.tgsmamba.Linear",
+      "kernel": null,
+      "stride": null,
+      "groups": 1
+    },
+    {
+      "path": "model.11.op.dropout",
+      "class": "torch.nn.modules.linear.Identity",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.11.drop_path",
+      "class": "timm.layers.drop.DropPath",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.11.norm2",
+      "class": "ultralytics.nn.modules.tgsmamba.LayerNorm",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.11.mlp",
+      "class": "ultralytics.nn.modules.tgsmamba.Mlp",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.11.mlp.fc1",
+      "class": "ultralytics.nn.modules.tgsmamba.Linear",
+      "kernel": null,
+      "stride": null,
+      "groups": 1
+    },
+    {
+      "path": "model.11.mlp.act",
+      "class": "torch.nn.modules.activation.GELU",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.11.mlp.fc2",
+      "class": "ultralytics.nn.modules.tgsmamba.Linear",
+      "kernel": null,
+      "stride": null,
+      "groups": 1
+    },
+    {
+      "path": "model.11.mlp.drop",
+      "class": "torch.nn.modules.dropout.Dropout",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.11.saam",
+      "class": "ultralytics.nn.modules.timeguid.TaskAlignedPredictor",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.11.saam.interact_conv",
+      "class": "ultralytics.nn.modules.conv.Conv",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.11.saam.interact_conv.conv",
+      "class": "torch.nn.modules.conv.Conv2d",
+      "kernel": [
+        3,
+        3
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "groups": 1
+    },
+    {
+      "path": "model.11.saam.interact_conv.bn",
+      "class": "torch.nn.modules.batchnorm.BatchNorm2d",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.11.saam.alignment_map",
+      "class": "torch.nn.modules.container.Sequential",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.11.saam.alignment_map.0",
+      "class": "torch.nn.modules.conv.Conv2d",
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "groups": 1
+    },
+    {
+      "path": "model.11.saam.alignment_map.1",
+      "class": "torch.nn.modules.batchnorm.BatchNorm2d",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.11.saam.alignment_map.2",
+      "class": "torch.nn.modules.activation.SiLU",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.11.saam.alignment_map.3",
+      "class": "torch.nn.modules.conv.Conv2d",
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "groups": 1
+    },
+    {
+      "path": "model.11.saam.alignment_map.4",
+      "class": "torch.nn.modules.activation.Sigmoid",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.11.haar",
+      "class": "ultralytics.nn.modules.timeguid.HaarWaveletDownsampling",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.11.haar.channel_reducer",
+      "class": "torch.nn.modules.conv.Conv2d",
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "groups": 1
+    },
+    {
+      "path": "model.11.haar.bn",
+      "class": "torch.nn.modules.batchnorm.BatchNorm2d",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.12",
+      "class": "ultralytics.nn.modules.conv.Conv",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.12.conv",
+      "class": "torch.nn.modules.conv.Conv2d",
+      "kernel": [
+        3,
+        3
+      ],
+      "stride": [
+        2,
+        2
+      ],
+      "groups": 1
+    },
+    {
+      "path": "model.12.bn",
+      "class": "torch.nn.modules.batchnorm.BatchNorm2d",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.13",
+      "class": "ultralytics.nn.modules.block.C2f",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.13.cv1",
+      "class": "ultralytics.nn.modules.conv.Conv",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.13.cv1.conv",
+      "class": "torch.nn.modules.conv.Conv2d",
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "groups": 1
+    },
+    {
+      "path": "model.13.cv1.bn",
+      "class": "torch.nn.modules.batchnorm.BatchNorm2d",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.13.cv2",
+      "class": "ultralytics.nn.modules.conv.Conv",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.13.cv2.conv",
+      "class": "torch.nn.modules.conv.Conv2d",
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "groups": 1
+    },
+    {
+      "path": "model.13.cv2.bn",
+      "class": "torch.nn.modules.batchnorm.BatchNorm2d",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.13.m",
+      "class": "torch.nn.modules.container.ModuleList",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.13.m.0",
+      "class": "ultralytics.nn.modules.block.Bottleneck",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.13.m.0.cv1",
+      "class": "ultralytics.nn.modules.conv.Conv",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.13.m.0.cv1.conv",
+      "class": "torch.nn.modules.conv.Conv2d",
+      "kernel": [
+        3,
+        3
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "groups": 1
+    },
+    {
+      "path": "model.13.m.0.cv1.bn",
+      "class": "torch.nn.modules.batchnorm.BatchNorm2d",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.13.m.0.cv2",
+      "class": "ultralytics.nn.modules.conv.Conv",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.13.m.0.cv2.conv",
+      "class": "torch.nn.modules.conv.Conv2d",
+      "kernel": [
+        3,
+        3
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "groups": 1
+    },
+    {
+      "path": "model.13.m.0.cv2.bn",
+      "class": "torch.nn.modules.batchnorm.BatchNorm2d",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.14",
+      "class": "ultralytics.nn.modules.block.SPPF",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.14.cv1",
+      "class": "ultralytics.nn.modules.conv.Conv",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.14.cv1.conv",
+      "class": "torch.nn.modules.conv.Conv2d",
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "groups": 1
+    },
+    {
+      "path": "model.14.cv1.bn",
+      "class": "torch.nn.modules.batchnorm.BatchNorm2d",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.14.cv2",
+      "class": "ultralytics.nn.modules.conv.Conv",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.14.cv2.conv",
+      "class": "torch.nn.modules.conv.Conv2d",
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "groups": 1
+    },
+    {
+      "path": "model.14.cv2.bn",
+      "class": "torch.nn.modules.batchnorm.BatchNorm2d",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.14.m",
+      "class": "torch.nn.modules.pooling.MaxPool2d",
+      "kernel": 5,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.15",
+      "class": "torch.nn.modules.upsampling.Upsample",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.16",
+      "class": "ultralytics.nn.modules.conv.Concat",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.17",
+      "class": "ultralytics.nn.modules.block.C2f",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.17.cv1",
+      "class": "ultralytics.nn.modules.conv.Conv",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.17.cv1.conv",
+      "class": "torch.nn.modules.conv.Conv2d",
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "groups": 1
+    },
+    {
+      "path": "model.17.cv1.bn",
+      "class": "torch.nn.modules.batchnorm.BatchNorm2d",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.17.cv2",
+      "class": "ultralytics.nn.modules.conv.Conv",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.17.cv2.conv",
+      "class": "torch.nn.modules.conv.Conv2d",
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "groups": 1
+    },
+    {
+      "path": "model.17.cv2.bn",
+      "class": "torch.nn.modules.batchnorm.BatchNorm2d",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.17.m",
+      "class": "torch.nn.modules.container.ModuleList",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.17.m.0",
+      "class": "ultralytics.nn.modules.block.Bottleneck",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.17.m.0.cv1",
+      "class": "ultralytics.nn.modules.conv.Conv",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.17.m.0.cv1.conv",
+      "class": "torch.nn.modules.conv.Conv2d",
+      "kernel": [
+        3,
+        3
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "groups": 1
+    },
+    {
+      "path": "model.17.m.0.cv1.bn",
+      "class": "torch.nn.modules.batchnorm.BatchNorm2d",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.17.m.0.cv2",
+      "class": "ultralytics.nn.modules.conv.Conv",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.17.m.0.cv2.conv",
+      "class": "torch.nn.modules.conv.Conv2d",
+      "kernel": [
+        3,
+        3
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "groups": 1
+    },
+    {
+      "path": "model.17.m.0.cv2.bn",
+      "class": "torch.nn.modules.batchnorm.BatchNorm2d",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.18",
+      "class": "torch.nn.modules.upsampling.Upsample",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.19",
+      "class": "ultralytics.nn.modules.conv.Concat",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.20",
+      "class": "ultralytics.nn.modules.tgsmamba.CCCBlock",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.20.norm",
+      "class": "ultralytics.nn.modules.tgsmamba.LayerNorm",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.20.op",
+      "class": "ultralytics.nn.modules.tgsmamba.SS2D1conv",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.20.op.out_norm",
+      "class": "ultralytics.nn.modules.tgsmamba.LayerNorm",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.20.op.in_proj",
+      "class": "ultralytics.nn.modules.tgsmamba.Linear",
+      "kernel": null,
+      "stride": null,
+      "groups": 1
+    },
+    {
+      "path": "model.20.op.act",
+      "class": "torch.nn.modules.activation.SiLU",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.20.op.conv2d",
+      "class": "torch.nn.modules.conv.Conv2d",
+      "kernel": [
+        3,
+        3
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "groups": 128
+    },
+    {
+      "path": "model.20.op.dt_projs",
+      "class": "ultralytics.nn.modules.tgsmamba.Linear",
+      "kernel": null,
+      "stride": null,
+      "groups": 1
+    },
+    {
+      "path": "model.20.op.out_act",
+      "class": "torch.nn.modules.linear.Identity",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.20.op.out_proj",
+      "class": "ultralytics.nn.modules.tgsmamba.Linear",
+      "kernel": null,
+      "stride": null,
+      "groups": 1
+    },
+    {
+      "path": "model.20.op.dropout",
+      "class": "torch.nn.modules.dropout.Dropout",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.20.op.my_conv",
+      "class": "torch.nn.modules.container.Sequential",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.20.op.my_conv.0",
+      "class": "ultralytics.nn.modules.conv.Conv",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.20.op.my_conv.0.conv",
+      "class": "torch.nn.modules.conv.Conv2d",
+      "kernel": [
+        3,
+        3
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "groups": 128
+    },
+    {
+      "path": "model.20.op.my_conv.0.bn",
+      "class": "torch.nn.modules.batchnorm.BatchNorm2d",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.20.drop_path",
+      "class": "timm.layers.drop.DropPath",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.20.norm2",
+      "class": "ultralytics.nn.modules.tgsmamba.LayerNorm",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.20.mlp",
+      "class": "ultralytics.nn.modules.tgsmamba.Mlp",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.20.mlp.fc1",
+      "class": "ultralytics.nn.modules.tgsmamba.Linear",
+      "kernel": null,
+      "stride": null,
+      "groups": 1
+    },
+    {
+      "path": "model.20.mlp.act",
+      "class": "torch.nn.modules.activation.GELU",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.20.mlp.fc2",
+      "class": "ultralytics.nn.modules.tgsmamba.Linear",
+      "kernel": null,
+      "stride": null,
+      "groups": 1
+    },
+    {
+      "path": "model.20.mlp.drop",
+      "class": "torch.nn.modules.dropout.Dropout",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.20.first_reshape",
+      "class": "torch.nn.modules.conv.Conv2d",
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "groups": 1
+    },
+    {
+      "path": "model.21",
+      "class": "ultralytics.nn.modules.block.C2f",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.21.cv1",
+      "class": "ultralytics.nn.modules.conv.Conv",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.21.cv1.conv",
+      "class": "torch.nn.modules.conv.Conv2d",
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "groups": 1
+    },
+    {
+      "path": "model.21.cv1.bn",
+      "class": "torch.nn.modules.batchnorm.BatchNorm2d",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.21.cv2",
+      "class": "ultralytics.nn.modules.conv.Conv",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.21.cv2.conv",
+      "class": "torch.nn.modules.conv.Conv2d",
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "groups": 1
+    },
+    {
+      "path": "model.21.cv2.bn",
+      "class": "torch.nn.modules.batchnorm.BatchNorm2d",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.21.m",
+      "class": "torch.nn.modules.container.ModuleList",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.21.m.0",
+      "class": "ultralytics.nn.modules.block.Bottleneck",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.21.m.0.cv1",
+      "class": "ultralytics.nn.modules.conv.Conv",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.21.m.0.cv1.conv",
+      "class": "torch.nn.modules.conv.Conv2d",
+      "kernel": [
+        3,
+        3
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "groups": 1
+    },
+    {
+      "path": "model.21.m.0.cv1.bn",
+      "class": "torch.nn.modules.batchnorm.BatchNorm2d",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.21.m.0.cv2",
+      "class": "ultralytics.nn.modules.conv.Conv",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.21.m.0.cv2.conv",
+      "class": "torch.nn.modules.conv.Conv2d",
+      "kernel": [
+        3,
+        3
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "groups": 1
+    },
+    {
+      "path": "model.21.m.0.cv2.bn",
+      "class": "torch.nn.modules.batchnorm.BatchNorm2d",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.21.m.1",
+      "class": "ultralytics.nn.modules.block.Bottleneck",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.21.m.1.cv1",
+      "class": "ultralytics.nn.modules.conv.Conv",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.21.m.1.cv1.conv",
+      "class": "torch.nn.modules.conv.Conv2d",
+      "kernel": [
+        3,
+        3
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "groups": 1
+    },
+    {
+      "path": "model.21.m.1.cv1.bn",
+      "class": "torch.nn.modules.batchnorm.BatchNorm2d",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.21.m.1.cv2",
+      "class": "ultralytics.nn.modules.conv.Conv",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.21.m.1.cv2.conv",
+      "class": "torch.nn.modules.conv.Conv2d",
+      "kernel": [
+        3,
+        3
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "groups": 1
+    },
+    {
+      "path": "model.21.m.1.cv2.bn",
+      "class": "torch.nn.modules.batchnorm.BatchNorm2d",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.22",
+      "class": "ultralytics.nn.modules.conv.Conv",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.22.conv",
+      "class": "torch.nn.modules.conv.Conv2d",
+      "kernel": [
+        3,
+        3
+      ],
+      "stride": [
+        2,
+        2
+      ],
+      "groups": 1
+    },
+    {
+      "path": "model.22.bn",
+      "class": "torch.nn.modules.batchnorm.BatchNorm2d",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.23",
+      "class": "ultralytics.nn.modules.conv.Concat",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.24",
+      "class": "ultralytics.nn.modules.block.C2f",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.24.cv1",
+      "class": "ultralytics.nn.modules.conv.Conv",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.24.cv1.conv",
+      "class": "torch.nn.modules.conv.Conv2d",
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "groups": 1
+    },
+    {
+      "path": "model.24.cv1.bn",
+      "class": "torch.nn.modules.batchnorm.BatchNorm2d",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.24.cv2",
+      "class": "ultralytics.nn.modules.conv.Conv",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.24.cv2.conv",
+      "class": "torch.nn.modules.conv.Conv2d",
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "groups": 1
+    },
+    {
+      "path": "model.24.cv2.bn",
+      "class": "torch.nn.modules.batchnorm.BatchNorm2d",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.24.m",
+      "class": "torch.nn.modules.container.ModuleList",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.24.m.0",
+      "class": "ultralytics.nn.modules.block.Bottleneck",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.24.m.0.cv1",
+      "class": "ultralytics.nn.modules.conv.Conv",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.24.m.0.cv1.conv",
+      "class": "torch.nn.modules.conv.Conv2d",
+      "kernel": [
+        3,
+        3
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "groups": 1
+    },
+    {
+      "path": "model.24.m.0.cv1.bn",
+      "class": "torch.nn.modules.batchnorm.BatchNorm2d",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.24.m.0.cv2",
+      "class": "ultralytics.nn.modules.conv.Conv",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.24.m.0.cv2.conv",
+      "class": "torch.nn.modules.conv.Conv2d",
+      "kernel": [
+        3,
+        3
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "groups": 1
+    },
+    {
+      "path": "model.24.m.0.cv2.bn",
+      "class": "torch.nn.modules.batchnorm.BatchNorm2d",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.25",
+      "class": "ultralytics.nn.modules.conv.Conv",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.25.conv",
+      "class": "torch.nn.modules.conv.Conv2d",
+      "kernel": [
+        3,
+        3
+      ],
+      "stride": [
+        2,
+        2
+      ],
+      "groups": 1
+    },
+    {
+      "path": "model.25.bn",
+      "class": "torch.nn.modules.batchnorm.BatchNorm2d",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.26",
+      "class": "ultralytics.nn.modules.conv.Concat",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.27",
+      "class": "ultralytics.nn.modules.block.C2f",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.27.cv1",
+      "class": "ultralytics.nn.modules.conv.Conv",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.27.cv1.conv",
+      "class": "torch.nn.modules.conv.Conv2d",
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "groups": 1
+    },
+    {
+      "path": "model.27.cv1.bn",
+      "class": "torch.nn.modules.batchnorm.BatchNorm2d",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.27.cv2",
+      "class": "ultralytics.nn.modules.conv.Conv",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.27.cv2.conv",
+      "class": "torch.nn.modules.conv.Conv2d",
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "groups": 1
+    },
+    {
+      "path": "model.27.cv2.bn",
+      "class": "torch.nn.modules.batchnorm.BatchNorm2d",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.27.m",
+      "class": "torch.nn.modules.container.ModuleList",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.27.m.0",
+      "class": "ultralytics.nn.modules.block.Bottleneck",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.27.m.0.cv1",
+      "class": "ultralytics.nn.modules.conv.Conv",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.27.m.0.cv1.conv",
+      "class": "torch.nn.modules.conv.Conv2d",
+      "kernel": [
+        3,
+        3
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "groups": 1
+    },
+    {
+      "path": "model.27.m.0.cv1.bn",
+      "class": "torch.nn.modules.batchnorm.BatchNorm2d",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.27.m.0.cv2",
+      "class": "ultralytics.nn.modules.conv.Conv",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.27.m.0.cv2.conv",
+      "class": "torch.nn.modules.conv.Conv2d",
+      "kernel": [
+        3,
+        3
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "groups": 1
+    },
+    {
+      "path": "model.27.m.0.cv2.bn",
+      "class": "torch.nn.modules.batchnorm.BatchNorm2d",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.28",
+      "class": "ultralytics.nn.modules.head.Detect",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.28.cv2",
+      "class": "torch.nn.modules.container.ModuleList",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.28.cv2.0",
+      "class": "torch.nn.modules.container.Sequential",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.28.cv2.0.0",
+      "class": "ultralytics.nn.modules.conv.Conv",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.28.cv2.0.0.conv",
+      "class": "torch.nn.modules.conv.Conv2d",
+      "kernel": [
+        3,
+        3
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "groups": 1
+    },
+    {
+      "path": "model.28.cv2.0.0.bn",
+      "class": "torch.nn.modules.batchnorm.BatchNorm2d",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.28.cv2.0.1",
+      "class": "ultralytics.nn.modules.conv.Conv",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.28.cv2.0.1.conv",
+      "class": "torch.nn.modules.conv.Conv2d",
+      "kernel": [
+        3,
+        3
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "groups": 1
+    },
+    {
+      "path": "model.28.cv2.0.1.bn",
+      "class": "torch.nn.modules.batchnorm.BatchNorm2d",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.28.cv2.0.2",
+      "class": "torch.nn.modules.conv.Conv2d",
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "groups": 1
+    },
+    {
+      "path": "model.28.cv2.1",
+      "class": "torch.nn.modules.container.Sequential",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.28.cv2.1.0",
+      "class": "ultralytics.nn.modules.conv.Conv",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.28.cv2.1.0.conv",
+      "class": "torch.nn.modules.conv.Conv2d",
+      "kernel": [
+        3,
+        3
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "groups": 1
+    },
+    {
+      "path": "model.28.cv2.1.0.bn",
+      "class": "torch.nn.modules.batchnorm.BatchNorm2d",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.28.cv2.1.1",
+      "class": "ultralytics.nn.modules.conv.Conv",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.28.cv2.1.1.conv",
+      "class": "torch.nn.modules.conv.Conv2d",
+      "kernel": [
+        3,
+        3
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "groups": 1
+    },
+    {
+      "path": "model.28.cv2.1.1.bn",
+      "class": "torch.nn.modules.batchnorm.BatchNorm2d",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.28.cv2.1.2",
+      "class": "torch.nn.modules.conv.Conv2d",
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "groups": 1
+    },
+    {
+      "path": "model.28.cv2.2",
+      "class": "torch.nn.modules.container.Sequential",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.28.cv2.2.0",
+      "class": "ultralytics.nn.modules.conv.Conv",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.28.cv2.2.0.conv",
+      "class": "torch.nn.modules.conv.Conv2d",
+      "kernel": [
+        3,
+        3
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "groups": 1
+    },
+    {
+      "path": "model.28.cv2.2.0.bn",
+      "class": "torch.nn.modules.batchnorm.BatchNorm2d",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.28.cv2.2.1",
+      "class": "ultralytics.nn.modules.conv.Conv",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.28.cv2.2.1.conv",
+      "class": "torch.nn.modules.conv.Conv2d",
+      "kernel": [
+        3,
+        3
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "groups": 1
+    },
+    {
+      "path": "model.28.cv2.2.1.bn",
+      "class": "torch.nn.modules.batchnorm.BatchNorm2d",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.28.cv2.2.2",
+      "class": "torch.nn.modules.conv.Conv2d",
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "groups": 1
+    },
+    {
+      "path": "model.28.cv3",
+      "class": "torch.nn.modules.container.ModuleList",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.28.cv3.0",
+      "class": "torch.nn.modules.container.Sequential",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.28.cv3.0.0",
+      "class": "ultralytics.nn.modules.conv.Conv",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.28.cv3.0.0.conv",
+      "class": "torch.nn.modules.conv.Conv2d",
+      "kernel": [
+        3,
+        3
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "groups": 1
+    },
+    {
+      "path": "model.28.cv3.0.0.bn",
+      "class": "torch.nn.modules.batchnorm.BatchNorm2d",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.28.cv3.0.1",
+      "class": "ultralytics.nn.modules.conv.Conv",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.28.cv3.0.1.conv",
+      "class": "torch.nn.modules.conv.Conv2d",
+      "kernel": [
+        3,
+        3
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "groups": 1
+    },
+    {
+      "path": "model.28.cv3.0.1.bn",
+      "class": "torch.nn.modules.batchnorm.BatchNorm2d",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.28.cv3.0.2",
+      "class": "torch.nn.modules.conv.Conv2d",
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "groups": 1
+    },
+    {
+      "path": "model.28.cv3.1",
+      "class": "torch.nn.modules.container.Sequential",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.28.cv3.1.0",
+      "class": "ultralytics.nn.modules.conv.Conv",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.28.cv3.1.0.conv",
+      "class": "torch.nn.modules.conv.Conv2d",
+      "kernel": [
+        3,
+        3
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "groups": 1
+    },
+    {
+      "path": "model.28.cv3.1.0.bn",
+      "class": "torch.nn.modules.batchnorm.BatchNorm2d",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.28.cv3.1.1",
+      "class": "ultralytics.nn.modules.conv.Conv",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.28.cv3.1.1.conv",
+      "class": "torch.nn.modules.conv.Conv2d",
+      "kernel": [
+        3,
+        3
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "groups": 1
+    },
+    {
+      "path": "model.28.cv3.1.1.bn",
+      "class": "torch.nn.modules.batchnorm.BatchNorm2d",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.28.cv3.1.2",
+      "class": "torch.nn.modules.conv.Conv2d",
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "groups": 1
+    },
+    {
+      "path": "model.28.cv3.2",
+      "class": "torch.nn.modules.container.Sequential",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.28.cv3.2.0",
+      "class": "ultralytics.nn.modules.conv.Conv",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.28.cv3.2.0.conv",
+      "class": "torch.nn.modules.conv.Conv2d",
+      "kernel": [
+        3,
+        3
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "groups": 1
+    },
+    {
+      "path": "model.28.cv3.2.0.bn",
+      "class": "torch.nn.modules.batchnorm.BatchNorm2d",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.28.cv3.2.1",
+      "class": "ultralytics.nn.modules.conv.Conv",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.28.cv3.2.1.conv",
+      "class": "torch.nn.modules.conv.Conv2d",
+      "kernel": [
+        3,
+        3
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "groups": 1
+    },
+    {
+      "path": "model.28.cv3.2.1.bn",
+      "class": "torch.nn.modules.batchnorm.BatchNorm2d",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.28.cv3.2.2",
+      "class": "torch.nn.modules.conv.Conv2d",
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "groups": 1
+    },
+    {
+      "path": "model.28.dfl",
+      "class": "ultralytics.nn.modules.block.DFL",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.28.dfl.conv",
+      "class": "torch.nn.modules.conv.Conv2d",
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "groups": 1
+    },
+    {
+      "path": "model.28.aligned",
+      "class": "torch.nn.modules.container.ModuleList",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.28.aligned.0",
+      "class": "ultralytics.nn.modules.head.TaskAlignedPredictor",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.28.aligned.0.interact_conv",
+      "class": "ultralytics.nn.modules.conv.Conv",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.28.aligned.0.interact_conv.conv",
+      "class": "torch.nn.modules.conv.Conv2d",
+      "kernel": [
+        3,
+        3
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "groups": 1
+    },
+    {
+      "path": "model.28.aligned.0.interact_conv.bn",
+      "class": "torch.nn.modules.batchnorm.BatchNorm2d",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.28.aligned.0.alignment_map",
+      "class": "torch.nn.modules.container.Sequential",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.28.aligned.0.alignment_map.0",
+      "class": "torch.nn.modules.conv.Conv2d",
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "groups": 1
+    },
+    {
+      "path": "model.28.aligned.0.alignment_map.1",
+      "class": "torch.nn.modules.batchnorm.BatchNorm2d",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.28.aligned.0.alignment_map.2",
+      "class": "torch.nn.modules.activation.SiLU",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.28.aligned.0.alignment_map.3",
+      "class": "torch.nn.modules.conv.Conv2d",
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "groups": 1
+    },
+    {
+      "path": "model.28.aligned.0.alignment_map.4",
+      "class": "torch.nn.modules.activation.Sigmoid",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.28.aligned.1",
+      "class": "ultralytics.nn.modules.head.TaskAlignedPredictor",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.28.aligned.1.interact_conv",
+      "class": "ultralytics.nn.modules.conv.Conv",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.28.aligned.1.interact_conv.conv",
+      "class": "torch.nn.modules.conv.Conv2d",
+      "kernel": [
+        3,
+        3
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "groups": 1
+    },
+    {
+      "path": "model.28.aligned.1.interact_conv.bn",
+      "class": "torch.nn.modules.batchnorm.BatchNorm2d",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.28.aligned.1.alignment_map",
+      "class": "torch.nn.modules.container.Sequential",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.28.aligned.1.alignment_map.0",
+      "class": "torch.nn.modules.conv.Conv2d",
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "groups": 1
+    },
+    {
+      "path": "model.28.aligned.1.alignment_map.1",
+      "class": "torch.nn.modules.batchnorm.BatchNorm2d",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.28.aligned.1.alignment_map.2",
+      "class": "torch.nn.modules.activation.SiLU",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.28.aligned.1.alignment_map.3",
+      "class": "torch.nn.modules.conv.Conv2d",
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "groups": 1
+    },
+    {
+      "path": "model.28.aligned.1.alignment_map.4",
+      "class": "torch.nn.modules.activation.Sigmoid",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.28.aligned.2",
+      "class": "ultralytics.nn.modules.head.TaskAlignedPredictor",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.28.aligned.2.interact_conv",
+      "class": "ultralytics.nn.modules.conv.Conv",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.28.aligned.2.interact_conv.conv",
+      "class": "torch.nn.modules.conv.Conv2d",
+      "kernel": [
+        3,
+        3
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "groups": 1
+    },
+    {
+      "path": "model.28.aligned.2.interact_conv.bn",
+      "class": "torch.nn.modules.batchnorm.BatchNorm2d",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.28.aligned.2.alignment_map",
+      "class": "torch.nn.modules.container.Sequential",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.28.aligned.2.alignment_map.0",
+      "class": "torch.nn.modules.conv.Conv2d",
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "groups": 1
+    },
+    {
+      "path": "model.28.aligned.2.alignment_map.1",
+      "class": "torch.nn.modules.batchnorm.BatchNorm2d",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.28.aligned.2.alignment_map.2",
+      "class": "torch.nn.modules.activation.SiLU",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    },
+    {
+      "path": "model.28.aligned.2.alignment_map.3",
+      "class": "torch.nn.modules.conv.Conv2d",
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "groups": 1
+    },
+    {
+      "path": "model.28.aligned.2.alignment_map.4",
+      "class": "torch.nn.modules.activation.Sigmoid",
+      "kernel": null,
+      "stride": null,
+      "groups": null
+    }
+  ],
+  "state_shapes": {
+    "model.0.conv.weight": [
+      8,
+      5,
+      3,
+      3
+    ],
+    "model.0.bn.weight": [
+      8
+    ],
+    "model.0.bn.bias": [
+      8
+    ],
+    "model.0.bn.running_mean": [
+      8
+    ],
+    "model.0.bn.running_var": [
+      8
+    ],
+    "model.0.bn.num_batches_tracked": [],
+    "model.3.spatial_dw1.weight": [
+      5,
+      1,
+      3,
+      3
+    ],
+    "model.3.spatial_dw1.bias": [
+      5
+    ],
+    "model.3.spatial_dw2.weight": [
+      5,
+      1,
+      3,
+      3
+    ],
+    "model.3.spatial_dw2.bias": [
+      5
+    ],
+    "model.3.spatial_dw3.weight": [
+      5,
+      1,
+      3,
+      3
+    ],
+    "model.3.spatial_dw3.bias": [
+      5
+    ],
+    "model.3.spatial_dw4.weight": [
+      5,
+      1,
+      3,
+      3
+    ],
+    "model.3.spatial_dw4.bias": [
+      5
+    ],
+    "model.3.mamba.norm.weight": [
+      4
+    ],
+    "model.3.mamba.norm.bias": [
+      4
+    ],
+    "model.3.mamba.op.A_logs": [
+      8,
+      16
+    ],
+    "model.3.mamba.op.Ds": [
+      8
+    ],
+    "model.3.mamba.op.dt_projs_bias": [
+      1,
+      8
+    ],
+    "model.3.mamba.op.x_proj_weight": [
+      1,
+      33,
+      8
+    ],
+    "model.3.mamba.op.out_norm.weight": [
+      8
+    ],
+    "model.3.mamba.op.out_norm.bias": [
+      8
+    ],
+    "model.3.mamba.op.in_proj.weight": [
+      8,
+      4
+    ],
+    "model.3.mamba.op.dt_projs.weight": [
+      8,
+      1
+    ],
+    "model.3.mamba.op.out_proj.weight": [
+      4,
+      8
+    ],
+    "model.3.mamba.norm2.weight": [
+      4
+    ],
+    "model.3.mamba.norm2.bias": [
+      4
+    ],
+    "model.3.mamba.mlp.fc1.weight": [
+      16,
+      4
+    ],
+    "model.3.mamba.mlp.fc1.bias": [
+      16
+    ],
+    "model.3.mamba.mlp.fc2.weight": [
+      4,
+      16
+    ],
+    "model.3.mamba.mlp.fc2.bias": [
+      4
+    ],
+    "model.3.bn.weight": [
+      16
+    ],
+    "model.3.bn.bias": [
+      16
+    ],
+    "model.3.bn.running_mean": [
+      16
+    ],
+    "model.3.bn.running_var": [
+      16
+    ],
+    "model.3.bn.num_batches_tracked": [],
+    "model.3.out_proj.conv.weight": [
+      16,
+      4,
+      1,
+      1
+    ],
+    "model.3.out_proj.bn.weight": [
+      16
+    ],
+    "model.3.out_proj.bn.bias": [
+      16
+    ],
+    "model.3.out_proj.bn.running_mean": [
+      16
+    ],
+    "model.3.out_proj.bn.running_var": [
+      16
+    ],
+    "model.3.out_proj.bn.num_batches_tracked": [],
+    "model.3.alignment.conv_offset.weight": [
+      27,
+      8,
+      3,
+      3
+    ],
+    "model.3.alignment.conv_offset.bias": [
+      27
+    ],
+    "model.3.alignment.dcn.weight": [
+      4,
+      4,
+      3,
+      3
+    ],
+    "model.3.alignment.dcn.bias": [
+      4
+    ],
+    "model.3.t4_proj.weight": [
+      4,
+      4,
+      1,
+      1
+    ],
+    "model.3.t4_proj.bias": [
+      4
+    ],
+    "model.4.conv.weight": [
+      16,
+      3,
+      3,
+      3
+    ],
+    "model.4.bn.weight": [
+      16
+    ],
+    "model.4.bn.bias": [
+      16
+    ],
+    "model.4.bn.running_mean": [
+      16
+    ],
+    "model.4.bn.running_var": [
+      16
+    ],
+    "model.4.bn.num_batches_tracked": [],
+    "model.5.conv.weight": [
+      32,
+      16,
+      3,
+      3
+    ],
+    "model.5.bn.weight": [
+      32
+    ],
+    "model.5.bn.bias": [
+      32
+    ],
+    "model.5.bn.running_mean": [
+      32
+    ],
+    "model.5.bn.running_var": [
+      32
+    ],
+    "model.5.bn.num_batches_tracked": [],
+    "model.6.cv1.conv.weight": [
+      32,
+      32,
+      1,
+      1
+    ],
+    "model.6.cv1.bn.weight": [
+      32
+    ],
+    "model.6.cv1.bn.bias": [
+      32
+    ],
+    "model.6.cv1.bn.running_mean": [
+      32
+    ],
+    "model.6.cv1.bn.running_var": [
+      32
+    ],
+    "model.6.cv1.bn.num_batches_tracked": [],
+    "model.6.cv2.conv.weight": [
+      32,
+      48,
+      1,
+      1
+    ],
+    "model.6.cv2.bn.weight": [
+      32
+    ],
+    "model.6.cv2.bn.bias": [
+      32
+    ],
+    "model.6.cv2.bn.running_mean": [
+      32
+    ],
+    "model.6.cv2.bn.running_var": [
+      32
+    ],
+    "model.6.cv2.bn.num_batches_tracked": [],
+    "model.6.m.0.cv1.conv.weight": [
+      16,
+      16,
+      3,
+      3
+    ],
+    "model.6.m.0.cv1.bn.weight": [
+      16
+    ],
+    "model.6.m.0.cv1.bn.bias": [
+      16
+    ],
+    "model.6.m.0.cv1.bn.running_mean": [
+      16
+    ],
+    "model.6.m.0.cv1.bn.running_var": [
+      16
+    ],
+    "model.6.m.0.cv1.bn.num_batches_tracked": [],
+    "model.6.m.0.cv2.conv.weight": [
+      16,
+      16,
+      3,
+      3
+    ],
+    "model.6.m.0.cv2.bn.weight": [
+      16
+    ],
+    "model.6.m.0.cv2.bn.bias": [
+      16
+    ],
+    "model.6.m.0.cv2.bn.running_mean": [
+      16
+    ],
+    "model.6.m.0.cv2.bn.running_var": [
+      16
+    ],
+    "model.6.m.0.cv2.bn.num_batches_tracked": [],
+    "model.7.conv.weight": [
+      64,
+      32,
+      3,
+      3
+    ],
+    "model.7.bn.weight": [
+      64
+    ],
+    "model.7.bn.bias": [
+      64
+    ],
+    "model.7.bn.running_mean": [
+      64
+    ],
+    "model.7.bn.running_var": [
+      64
+    ],
+    "model.7.bn.num_batches_tracked": [],
+    "model.8.cv1.conv.weight": [
+      64,
+      64,
+      1,
+      1
+    ],
+    "model.8.cv1.bn.weight": [
+      64
+    ],
+    "model.8.cv1.bn.bias": [
+      64
+    ],
+    "model.8.cv1.bn.running_mean": [
+      64
+    ],
+    "model.8.cv1.bn.running_var": [
+      64
+    ],
+    "model.8.cv1.bn.num_batches_tracked": [],
+    "model.8.cv2.conv.weight": [
+      64,
+      128,
+      1,
+      1
+    ],
+    "model.8.cv2.bn.weight": [
+      64
+    ],
+    "model.8.cv2.bn.bias": [
+      64
+    ],
+    "model.8.cv2.bn.running_mean": [
+      64
+    ],
+    "model.8.cv2.bn.running_var": [
+      64
+    ],
+    "model.8.cv2.bn.num_batches_tracked": [],
+    "model.8.m.0.cv1.conv.weight": [
+      32,
+      32,
+      3,
+      3
+    ],
+    "model.8.m.0.cv1.bn.weight": [
+      32
+    ],
+    "model.8.m.0.cv1.bn.bias": [
+      32
+    ],
+    "model.8.m.0.cv1.bn.running_mean": [
+      32
+    ],
+    "model.8.m.0.cv1.bn.running_var": [
+      32
+    ],
+    "model.8.m.0.cv1.bn.num_batches_tracked": [],
+    "model.8.m.0.cv2.conv.weight": [
+      32,
+      32,
+      3,
+      3
+    ],
+    "model.8.m.0.cv2.bn.weight": [
+      32
+    ],
+    "model.8.m.0.cv2.bn.bias": [
+      32
+    ],
+    "model.8.m.0.cv2.bn.running_mean": [
+      32
+    ],
+    "model.8.m.0.cv2.bn.running_var": [
+      32
+    ],
+    "model.8.m.0.cv2.bn.num_batches_tracked": [],
+    "model.8.m.1.cv1.conv.weight": [
+      32,
+      32,
+      3,
+      3
+    ],
+    "model.8.m.1.cv1.bn.weight": [
+      32
+    ],
+    "model.8.m.1.cv1.bn.bias": [
+      32
+    ],
+    "model.8.m.1.cv1.bn.running_mean": [
+      32
+    ],
+    "model.8.m.1.cv1.bn.running_var": [
+      32
+    ],
+    "model.8.m.1.cv1.bn.num_batches_tracked": [],
+    "model.8.m.1.cv2.conv.weight": [
+      32,
+      32,
+      3,
+      3
+    ],
+    "model.8.m.1.cv2.bn.weight": [
+      32
+    ],
+    "model.8.m.1.cv2.bn.bias": [
+      32
+    ],
+    "model.8.m.1.cv2.bn.running_mean": [
+      32
+    ],
+    "model.8.m.1.cv2.bn.running_var": [
+      32
+    ],
+    "model.8.m.1.cv2.bn.num_batches_tracked": [],
+    "model.9.conv.weight": [
+      128,
+      64,
+      3,
+      3
+    ],
+    "model.9.bn.weight": [
+      128
+    ],
+    "model.9.bn.bias": [
+      128
+    ],
+    "model.9.bn.running_mean": [
+      128
+    ],
+    "model.9.bn.running_var": [
+      128
+    ],
+    "model.9.bn.num_batches_tracked": [],
+    "model.10.cv1.conv.weight": [
+      128,
+      128,
+      1,
+      1
+    ],
+    "model.10.cv1.bn.weight": [
+      128
+    ],
+    "model.10.cv1.bn.bias": [
+      128
+    ],
+    "model.10.cv1.bn.running_mean": [
+      128
+    ],
+    "model.10.cv1.bn.running_var": [
+      128
+    ],
+    "model.10.cv1.bn.num_batches_tracked": [],
+    "model.10.cv2.conv.weight": [
+      128,
+      256,
+      1,
+      1
+    ],
+    "model.10.cv2.bn.weight": [
+      128
+    ],
+    "model.10.cv2.bn.bias": [
+      128
+    ],
+    "model.10.cv2.bn.running_mean": [
+      128
+    ],
+    "model.10.cv2.bn.running_var": [
+      128
+    ],
+    "model.10.cv2.bn.num_batches_tracked": [],
+    "model.10.m.0.cv1.conv.weight": [
+      64,
+      64,
+      3,
+      3
+    ],
+    "model.10.m.0.cv1.bn.weight": [
+      64
+    ],
+    "model.10.m.0.cv1.bn.bias": [
+      64
+    ],
+    "model.10.m.0.cv1.bn.running_mean": [
+      64
+    ],
+    "model.10.m.0.cv1.bn.running_var": [
+      64
+    ],
+    "model.10.m.0.cv1.bn.num_batches_tracked": [],
+    "model.10.m.0.cv2.conv.weight": [
+      64,
+      64,
+      3,
+      3
+    ],
+    "model.10.m.0.cv2.bn.weight": [
+      64
+    ],
+    "model.10.m.0.cv2.bn.bias": [
+      64
+    ],
+    "model.10.m.0.cv2.bn.running_mean": [
+      64
+    ],
+    "model.10.m.0.cv2.bn.running_var": [
+      64
+    ],
+    "model.10.m.0.cv2.bn.num_batches_tracked": [],
+    "model.10.m.1.cv1.conv.weight": [
+      64,
+      64,
+      3,
+      3
+    ],
+    "model.10.m.1.cv1.bn.weight": [
+      64
+    ],
+    "model.10.m.1.cv1.bn.bias": [
+      64
+    ],
+    "model.10.m.1.cv1.bn.running_mean": [
+      64
+    ],
+    "model.10.m.1.cv1.bn.running_var": [
+      64
+    ],
+    "model.10.m.1.cv1.bn.num_batches_tracked": [],
+    "model.10.m.1.cv2.conv.weight": [
+      64,
+      64,
+      3,
+      3
+    ],
+    "model.10.m.1.cv2.bn.weight": [
+      64
+    ],
+    "model.10.m.1.cv2.bn.bias": [
+      64
+    ],
+    "model.10.m.1.cv2.bn.running_mean": [
+      64
+    ],
+    "model.10.m.1.cv2.bn.running_var": [
+      64
+    ],
+    "model.10.m.1.cv2.bn.num_batches_tracked": [],
+    "model.11.norm.weight": [
+      128
+    ],
+    "model.11.norm.bias": [
+      128
+    ],
+    "model.11.op.A_logs": [
+      256,
+      16
+    ],
+    "model.11.op.Ds": [
+      256
+    ],
+    "model.11.op.dt_projs_bias": [
+      1,
+      256
+    ],
+    "model.11.op.x_proj_weight": [
+      1,
+      40,
+      256
+    ],
+    "model.11.op.out_norm.weight": [
+      256
+    ],
+    "model.11.op.out_norm.bias": [
+      256
+    ],
+    "model.11.op.in_proj.weight": [
+      256,
+      128
+    ],
+    "model.11.op.dt_projs.weight": [
+      256,
+      8
+    ],
+    "model.11.op.out_proj.weight": [
+      128,
+      256
+    ],
+    "model.11.norm2.weight": [
+      128
+    ],
+    "model.11.norm2.bias": [
+      128
+    ],
+    "model.11.mlp.fc1.weight": [
+      512,
+      128
+    ],
+    "model.11.mlp.fc1.bias": [
+      512
+    ],
+    "model.11.mlp.fc2.weight": [
+      128,
+      512
+    ],
+    "model.11.mlp.fc2.bias": [
+      128
+    ],
+    "model.11.saam.interact_conv.conv.weight": [
+      16,
+      16,
+      3,
+      3
+    ],
+    "model.11.saam.interact_conv.bn.weight": [
+      16
+    ],
+    "model.11.saam.interact_conv.bn.bias": [
+      16
+    ],
+    "model.11.saam.interact_conv.bn.running_mean": [
+      16
+    ],
+    "model.11.saam.interact_conv.bn.running_var": [
+      16
+    ],
+    "model.11.saam.interact_conv.bn.num_batches_tracked": [],
+    "model.11.saam.alignment_map.0.weight": [
+      8,
+      16,
+      1,
+      1
+    ],
+    "model.11.saam.alignment_map.0.bias": [
+      8
+    ],
+    "model.11.saam.alignment_map.1.weight": [
+      8
+    ],
+    "model.11.saam.alignment_map.1.bias": [
+      8
+    ],
+    "model.11.saam.alignment_map.1.running_mean": [
+      8
+    ],
+    "model.11.saam.alignment_map.1.running_var": [
+      8
+    ],
+    "model.11.saam.alignment_map.1.num_batches_tracked": [],
+    "model.11.saam.alignment_map.3.weight": [
+      1,
+      8,
+      1,
+      1
+    ],
+    "model.11.saam.alignment_map.3.bias": [
+      1
+    ],
+    "model.11.haar.haar_weights": [
+      64,
+      16,
+      2,
+      2
+    ],
+    "model.11.haar.channel_reducer.weight": [
+      128,
+      1024,
+      1,
+      1
+    ],
+    "model.11.haar.bn.weight": [
+      128
+    ],
+    "model.11.haar.bn.bias": [
+      128
+    ],
+    "model.11.haar.bn.running_mean": [
+      128
+    ],
+    "model.11.haar.bn.running_var": [
+      128
+    ],
+    "model.11.haar.bn.num_batches_tracked": [],
+    "model.12.conv.weight": [
+      256,
+      128,
+      3,
+      3
+    ],
+    "model.12.bn.weight": [
+      256
+    ],
+    "model.12.bn.bias": [
+      256
+    ],
+    "model.12.bn.running_mean": [
+      256
+    ],
+    "model.12.bn.running_var": [
+      256
+    ],
+    "model.12.bn.num_batches_tracked": [],
+    "model.13.cv1.conv.weight": [
+      256,
+      256,
+      1,
+      1
+    ],
+    "model.13.cv1.bn.weight": [
+      256
+    ],
+    "model.13.cv1.bn.bias": [
+      256
+    ],
+    "model.13.cv1.bn.running_mean": [
+      256
+    ],
+    "model.13.cv1.bn.running_var": [
+      256
+    ],
+    "model.13.cv1.bn.num_batches_tracked": [],
+    "model.13.cv2.conv.weight": [
+      256,
+      384,
+      1,
+      1
+    ],
+    "model.13.cv2.bn.weight": [
+      256
+    ],
+    "model.13.cv2.bn.bias": [
+      256
+    ],
+    "model.13.cv2.bn.running_mean": [
+      256
+    ],
+    "model.13.cv2.bn.running_var": [
+      256
+    ],
+    "model.13.cv2.bn.num_batches_tracked": [],
+    "model.13.m.0.cv1.conv.weight": [
+      128,
+      128,
+      3,
+      3
+    ],
+    "model.13.m.0.cv1.bn.weight": [
+      128
+    ],
+    "model.13.m.0.cv1.bn.bias": [
+      128
+    ],
+    "model.13.m.0.cv1.bn.running_mean": [
+      128
+    ],
+    "model.13.m.0.cv1.bn.running_var": [
+      128
+    ],
+    "model.13.m.0.cv1.bn.num_batches_tracked": [],
+    "model.13.m.0.cv2.conv.weight": [
+      128,
+      128,
+      3,
+      3
+    ],
+    "model.13.m.0.cv2.bn.weight": [
+      128
+    ],
+    "model.13.m.0.cv2.bn.bias": [
+      128
+    ],
+    "model.13.m.0.cv2.bn.running_mean": [
+      128
+    ],
+    "model.13.m.0.cv2.bn.running_var": [
+      128
+    ],
+    "model.13.m.0.cv2.bn.num_batches_tracked": [],
+    "model.14.cv1.conv.weight": [
+      128,
+      256,
+      1,
+      1
+    ],
+    "model.14.cv1.bn.weight": [
+      128
+    ],
+    "model.14.cv1.bn.bias": [
+      128
+    ],
+    "model.14.cv1.bn.running_mean": [
+      128
+    ],
+    "model.14.cv1.bn.running_var": [
+      128
+    ],
+    "model.14.cv1.bn.num_batches_tracked": [],
+    "model.14.cv2.conv.weight": [
+      256,
+      512,
+      1,
+      1
+    ],
+    "model.14.cv2.bn.weight": [
+      256
+    ],
+    "model.14.cv2.bn.bias": [
+      256
+    ],
+    "model.14.cv2.bn.running_mean": [
+      256
+    ],
+    "model.14.cv2.bn.running_var": [
+      256
+    ],
+    "model.14.cv2.bn.num_batches_tracked": [],
+    "model.17.cv1.conv.weight": [
+      128,
+      384,
+      1,
+      1
+    ],
+    "model.17.cv1.bn.weight": [
+      128
+    ],
+    "model.17.cv1.bn.bias": [
+      128
+    ],
+    "model.17.cv1.bn.running_mean": [
+      128
+    ],
+    "model.17.cv1.bn.running_var": [
+      128
+    ],
+    "model.17.cv1.bn.num_batches_tracked": [],
+    "model.17.cv2.conv.weight": [
+      128,
+      192,
+      1,
+      1
+    ],
+    "model.17.cv2.bn.weight": [
+      128
+    ],
+    "model.17.cv2.bn.bias": [
+      128
+    ],
+    "model.17.cv2.bn.running_mean": [
+      128
+    ],
+    "model.17.cv2.bn.running_var": [
+      128
+    ],
+    "model.17.cv2.bn.num_batches_tracked": [],
+    "model.17.m.0.cv1.conv.weight": [
+      64,
+      64,
+      3,
+      3
+    ],
+    "model.17.m.0.cv1.bn.weight": [
+      64
+    ],
+    "model.17.m.0.cv1.bn.bias": [
+      64
+    ],
+    "model.17.m.0.cv1.bn.running_mean": [
+      64
+    ],
+    "model.17.m.0.cv1.bn.running_var": [
+      64
+    ],
+    "model.17.m.0.cv1.bn.num_batches_tracked": [],
+    "model.17.m.0.cv2.conv.weight": [
+      64,
+      64,
+      3,
+      3
+    ],
+    "model.17.m.0.cv2.bn.weight": [
+      64
+    ],
+    "model.17.m.0.cv2.bn.bias": [
+      64
+    ],
+    "model.17.m.0.cv2.bn.running_mean": [
+      64
+    ],
+    "model.17.m.0.cv2.bn.running_var": [
+      64
+    ],
+    "model.17.m.0.cv2.bn.num_batches_tracked": [],
+    "model.20.norm.weight": [
+      64
+    ],
+    "model.20.norm.bias": [
+      64
+    ],
+    "model.20.op.A_logs": [
+      128,
+      16
+    ],
+    "model.20.op.Ds": [
+      128
+    ],
+    "model.20.op.dt_projs_bias": [
+      1,
+      128
+    ],
+    "model.20.op.x_proj_weight": [
+      1,
+      36,
+      128
+    ],
+    "model.20.op.out_norm.weight": [
+      128
+    ],
+    "model.20.op.out_norm.bias": [
+      128
+    ],
+    "model.20.op.in_proj.weight": [
+      128,
+      64
+    ],
+    "model.20.op.conv2d.weight": [
+      128,
+      1,
+      3,
+      3
+    ],
+    "model.20.op.conv2d.bias": [
+      128
+    ],
+    "model.20.op.dt_projs.weight": [
+      128,
+      4
+    ],
+    "model.20.op.out_proj.weight": [
+      64,
+      128
+    ],
+    "model.20.op.my_conv.0.conv.weight": [
+      128,
+      1,
+      3,
+      3
+    ],
+    "model.20.op.my_conv.0.bn.weight": [
+      128
+    ],
+    "model.20.op.my_conv.0.bn.bias": [
+      128
+    ],
+    "model.20.op.my_conv.0.bn.running_mean": [
+      128
+    ],
+    "model.20.op.my_conv.0.bn.running_var": [
+      128
+    ],
+    "model.20.op.my_conv.0.bn.num_batches_tracked": [],
+    "model.20.norm2.weight": [
+      64
+    ],
+    "model.20.norm2.bias": [
+      64
+    ],
+    "model.20.mlp.fc1.weight": [
+      256,
+      64
+    ],
+    "model.20.mlp.fc1.bias": [
+      256
+    ],
+    "model.20.mlp.fc2.weight": [
+      64,
+      256
+    ],
+    "model.20.mlp.fc2.bias": [
+      64
+    ],
+    "model.20.first_reshape.weight": [
+      64,
+      192,
+      1,
+      1
+    ],
+    "model.20.first_reshape.bias": [
+      64
+    ],
+    "model.21.cv1.conv.weight": [
+      64,
+      64,
+      1,
+      1
+    ],
+    "model.21.cv1.bn.weight": [
+      64
+    ],
+    "model.21.cv1.bn.bias": [
+      64
+    ],
+    "model.21.cv1.bn.running_mean": [
+      64
+    ],
+    "model.21.cv1.bn.running_var": [
+      64
+    ],
+    "model.21.cv1.bn.num_batches_tracked": [],
+    "model.21.cv2.conv.weight": [
+      64,
+      128,
+      1,
+      1
+    ],
+    "model.21.cv2.bn.weight": [
+      64
+    ],
+    "model.21.cv2.bn.bias": [
+      64
+    ],
+    "model.21.cv2.bn.running_mean": [
+      64
+    ],
+    "model.21.cv2.bn.running_var": [
+      64
+    ],
+    "model.21.cv2.bn.num_batches_tracked": [],
+    "model.21.m.0.cv1.conv.weight": [
+      32,
+      32,
+      3,
+      3
+    ],
+    "model.21.m.0.cv1.bn.weight": [
+      32
+    ],
+    "model.21.m.0.cv1.bn.bias": [
+      32
+    ],
+    "model.21.m.0.cv1.bn.running_mean": [
+      32
+    ],
+    "model.21.m.0.cv1.bn.running_var": [
+      32
+    ],
+    "model.21.m.0.cv1.bn.num_batches_tracked": [],
+    "model.21.m.0.cv2.conv.weight": [
+      32,
+      32,
+      3,
+      3
+    ],
+    "model.21.m.0.cv2.bn.weight": [
+      32
+    ],
+    "model.21.m.0.cv2.bn.bias": [
+      32
+    ],
+    "model.21.m.0.cv2.bn.running_mean": [
+      32
+    ],
+    "model.21.m.0.cv2.bn.running_var": [
+      32
+    ],
+    "model.21.m.0.cv2.bn.num_batches_tracked": [],
+    "model.21.m.1.cv1.conv.weight": [
+      32,
+      32,
+      3,
+      3
+    ],
+    "model.21.m.1.cv1.bn.weight": [
+      32
+    ],
+    "model.21.m.1.cv1.bn.bias": [
+      32
+    ],
+    "model.21.m.1.cv1.bn.running_mean": [
+      32
+    ],
+    "model.21.m.1.cv1.bn.running_var": [
+      32
+    ],
+    "model.21.m.1.cv1.bn.num_batches_tracked": [],
+    "model.21.m.1.cv2.conv.weight": [
+      32,
+      32,
+      3,
+      3
+    ],
+    "model.21.m.1.cv2.bn.weight": [
+      32
+    ],
+    "model.21.m.1.cv2.bn.bias": [
+      32
+    ],
+    "model.21.m.1.cv2.bn.running_mean": [
+      32
+    ],
+    "model.21.m.1.cv2.bn.running_var": [
+      32
+    ],
+    "model.21.m.1.cv2.bn.num_batches_tracked": [],
+    "model.22.conv.weight": [
+      64,
+      64,
+      3,
+      3
+    ],
+    "model.22.bn.weight": [
+      64
+    ],
+    "model.22.bn.bias": [
+      64
+    ],
+    "model.22.bn.running_mean": [
+      64
+    ],
+    "model.22.bn.running_var": [
+      64
+    ],
+    "model.22.bn.num_batches_tracked": [],
+    "model.24.cv1.conv.weight": [
+      128,
+      192,
+      1,
+      1
+    ],
+    "model.24.cv1.bn.weight": [
+      128
+    ],
+    "model.24.cv1.bn.bias": [
+      128
+    ],
+    "model.24.cv1.bn.running_mean": [
+      128
+    ],
+    "model.24.cv1.bn.running_var": [
+      128
+    ],
+    "model.24.cv1.bn.num_batches_tracked": [],
+    "model.24.cv2.conv.weight": [
+      128,
+      192,
+      1,
+      1
+    ],
+    "model.24.cv2.bn.weight": [
+      128
+    ],
+    "model.24.cv2.bn.bias": [
+      128
+    ],
+    "model.24.cv2.bn.running_mean": [
+      128
+    ],
+    "model.24.cv2.bn.running_var": [
+      128
+    ],
+    "model.24.cv2.bn.num_batches_tracked": [],
+    "model.24.m.0.cv1.conv.weight": [
+      64,
+      64,
+      3,
+      3
+    ],
+    "model.24.m.0.cv1.bn.weight": [
+      64
+    ],
+    "model.24.m.0.cv1.bn.bias": [
+      64
+    ],
+    "model.24.m.0.cv1.bn.running_mean": [
+      64
+    ],
+    "model.24.m.0.cv1.bn.running_var": [
+      64
+    ],
+    "model.24.m.0.cv1.bn.num_batches_tracked": [],
+    "model.24.m.0.cv2.conv.weight": [
+      64,
+      64,
+      3,
+      3
+    ],
+    "model.24.m.0.cv2.bn.weight": [
+      64
+    ],
+    "model.24.m.0.cv2.bn.bias": [
+      64
+    ],
+    "model.24.m.0.cv2.bn.running_mean": [
+      64
+    ],
+    "model.24.m.0.cv2.bn.running_var": [
+      64
+    ],
+    "model.24.m.0.cv2.bn.num_batches_tracked": [],
+    "model.25.conv.weight": [
+      128,
+      128,
+      3,
+      3
+    ],
+    "model.25.bn.weight": [
+      128
+    ],
+    "model.25.bn.bias": [
+      128
+    ],
+    "model.25.bn.running_mean": [
+      128
+    ],
+    "model.25.bn.running_var": [
+      128
+    ],
+    "model.25.bn.num_batches_tracked": [],
+    "model.27.cv1.conv.weight": [
+      256,
+      384,
+      1,
+      1
+    ],
+    "model.27.cv1.bn.weight": [
+      256
+    ],
+    "model.27.cv1.bn.bias": [
+      256
+    ],
+    "model.27.cv1.bn.running_mean": [
+      256
+    ],
+    "model.27.cv1.bn.running_var": [
+      256
+    ],
+    "model.27.cv1.bn.num_batches_tracked": [],
+    "model.27.cv2.conv.weight": [
+      256,
+      384,
+      1,
+      1
+    ],
+    "model.27.cv2.bn.weight": [
+      256
+    ],
+    "model.27.cv2.bn.bias": [
+      256
+    ],
+    "model.27.cv2.bn.running_mean": [
+      256
+    ],
+    "model.27.cv2.bn.running_var": [
+      256
+    ],
+    "model.27.cv2.bn.num_batches_tracked": [],
+    "model.27.m.0.cv1.conv.weight": [
+      128,
+      128,
+      3,
+      3
+    ],
+    "model.27.m.0.cv1.bn.weight": [
+      128
+    ],
+    "model.27.m.0.cv1.bn.bias": [
+      128
+    ],
+    "model.27.m.0.cv1.bn.running_mean": [
+      128
+    ],
+    "model.27.m.0.cv1.bn.running_var": [
+      128
+    ],
+    "model.27.m.0.cv1.bn.num_batches_tracked": [],
+    "model.27.m.0.cv2.conv.weight": [
+      128,
+      128,
+      3,
+      3
+    ],
+    "model.27.m.0.cv2.bn.weight": [
+      128
+    ],
+    "model.27.m.0.cv2.bn.bias": [
+      128
+    ],
+    "model.27.m.0.cv2.bn.running_mean": [
+      128
+    ],
+    "model.27.m.0.cv2.bn.running_var": [
+      128
+    ],
+    "model.27.m.0.cv2.bn.num_batches_tracked": [],
+    "model.28.cv2.0.0.conv.weight": [
+      64,
+      64,
+      3,
+      3
+    ],
+    "model.28.cv2.0.0.bn.weight": [
+      64
+    ],
+    "model.28.cv2.0.0.bn.bias": [
+      64
+    ],
+    "model.28.cv2.0.0.bn.running_mean": [
+      64
+    ],
+    "model.28.cv2.0.0.bn.running_var": [
+      64
+    ],
+    "model.28.cv2.0.0.bn.num_batches_tracked": [],
+    "model.28.cv2.0.1.conv.weight": [
+      64,
+      64,
+      3,
+      3
+    ],
+    "model.28.cv2.0.1.bn.weight": [
+      64
+    ],
+    "model.28.cv2.0.1.bn.bias": [
+      64
+    ],
+    "model.28.cv2.0.1.bn.running_mean": [
+      64
+    ],
+    "model.28.cv2.0.1.bn.running_var": [
+      64
+    ],
+    "model.28.cv2.0.1.bn.num_batches_tracked": [],
+    "model.28.cv2.0.2.weight": [
+      64,
+      64,
+      1,
+      1
+    ],
+    "model.28.cv2.0.2.bias": [
+      64
+    ],
+    "model.28.cv2.1.0.conv.weight": [
+      64,
+      128,
+      3,
+      3
+    ],
+    "model.28.cv2.1.0.bn.weight": [
+      64
+    ],
+    "model.28.cv2.1.0.bn.bias": [
+      64
+    ],
+    "model.28.cv2.1.0.bn.running_mean": [
+      64
+    ],
+    "model.28.cv2.1.0.bn.running_var": [
+      64
+    ],
+    "model.28.cv2.1.0.bn.num_batches_tracked": [],
+    "model.28.cv2.1.1.conv.weight": [
+      64,
+      64,
+      3,
+      3
+    ],
+    "model.28.cv2.1.1.bn.weight": [
+      64
+    ],
+    "model.28.cv2.1.1.bn.bias": [
+      64
+    ],
+    "model.28.cv2.1.1.bn.running_mean": [
+      64
+    ],
+    "model.28.cv2.1.1.bn.running_var": [
+      64
+    ],
+    "model.28.cv2.1.1.bn.num_batches_tracked": [],
+    "model.28.cv2.1.2.weight": [
+      64,
+      64,
+      1,
+      1
+    ],
+    "model.28.cv2.1.2.bias": [
+      64
+    ],
+    "model.28.cv2.2.0.conv.weight": [
+      64,
+      256,
+      3,
+      3
+    ],
+    "model.28.cv2.2.0.bn.weight": [
+      64
+    ],
+    "model.28.cv2.2.0.bn.bias": [
+      64
+    ],
+    "model.28.cv2.2.0.bn.running_mean": [
+      64
+    ],
+    "model.28.cv2.2.0.bn.running_var": [
+      64
+    ],
+    "model.28.cv2.2.0.bn.num_batches_tracked": [],
+    "model.28.cv2.2.1.conv.weight": [
+      64,
+      64,
+      3,
+      3
+    ],
+    "model.28.cv2.2.1.bn.weight": [
+      64
+    ],
+    "model.28.cv2.2.1.bn.bias": [
+      64
+    ],
+    "model.28.cv2.2.1.bn.running_mean": [
+      64
+    ],
+    "model.28.cv2.2.1.bn.running_var": [
+      64
+    ],
+    "model.28.cv2.2.1.bn.num_batches_tracked": [],
+    "model.28.cv2.2.2.weight": [
+      64,
+      64,
+      1,
+      1
+    ],
+    "model.28.cv2.2.2.bias": [
+      64
+    ],
+    "model.28.cv3.0.0.conv.weight": [
+      64,
+      64,
+      3,
+      3
+    ],
+    "model.28.cv3.0.0.bn.weight": [
+      64
+    ],
+    "model.28.cv3.0.0.bn.bias": [
+      64
+    ],
+    "model.28.cv3.0.0.bn.running_mean": [
+      64
+    ],
+    "model.28.cv3.0.0.bn.running_var": [
+      64
+    ],
+    "model.28.cv3.0.0.bn.num_batches_tracked": [],
+    "model.28.cv3.0.1.conv.weight": [
+      64,
+      64,
+      3,
+      3
+    ],
+    "model.28.cv3.0.1.bn.weight": [
+      64
+    ],
+    "model.28.cv3.0.1.bn.bias": [
+      64
+    ],
+    "model.28.cv3.0.1.bn.running_mean": [
+      64
+    ],
+    "model.28.cv3.0.1.bn.running_var": [
+      64
+    ],
+    "model.28.cv3.0.1.bn.num_batches_tracked": [],
+    "model.28.cv3.0.2.weight": [
+      1,
+      64,
+      1,
+      1
+    ],
+    "model.28.cv3.0.2.bias": [
+      1
+    ],
+    "model.28.cv3.1.0.conv.weight": [
+      64,
+      128,
+      3,
+      3
+    ],
+    "model.28.cv3.1.0.bn.weight": [
+      64
+    ],
+    "model.28.cv3.1.0.bn.bias": [
+      64
+    ],
+    "model.28.cv3.1.0.bn.running_mean": [
+      64
+    ],
+    "model.28.cv3.1.0.bn.running_var": [
+      64
+    ],
+    "model.28.cv3.1.0.bn.num_batches_tracked": [],
+    "model.28.cv3.1.1.conv.weight": [
+      64,
+      64,
+      3,
+      3
+    ],
+    "model.28.cv3.1.1.bn.weight": [
+      64
+    ],
+    "model.28.cv3.1.1.bn.bias": [
+      64
+    ],
+    "model.28.cv3.1.1.bn.running_mean": [
+      64
+    ],
+    "model.28.cv3.1.1.bn.running_var": [
+      64
+    ],
+    "model.28.cv3.1.1.bn.num_batches_tracked": [],
+    "model.28.cv3.1.2.weight": [
+      1,
+      64,
+      1,
+      1
+    ],
+    "model.28.cv3.1.2.bias": [
+      1
+    ],
+    "model.28.cv3.2.0.conv.weight": [
+      64,
+      256,
+      3,
+      3
+    ],
+    "model.28.cv3.2.0.bn.weight": [
+      64
+    ],
+    "model.28.cv3.2.0.bn.bias": [
+      64
+    ],
+    "model.28.cv3.2.0.bn.running_mean": [
+      64
+    ],
+    "model.28.cv3.2.0.bn.running_var": [
+      64
+    ],
+    "model.28.cv3.2.0.bn.num_batches_tracked": [],
+    "model.28.cv3.2.1.conv.weight": [
+      64,
+      64,
+      3,
+      3
+    ],
+    "model.28.cv3.2.1.bn.weight": [
+      64
+    ],
+    "model.28.cv3.2.1.bn.bias": [
+      64
+    ],
+    "model.28.cv3.2.1.bn.running_mean": [
+      64
+    ],
+    "model.28.cv3.2.1.bn.running_var": [
+      64
+    ],
+    "model.28.cv3.2.1.bn.num_batches_tracked": [],
+    "model.28.cv3.2.2.weight": [
+      1,
+      64,
+      1,
+      1
+    ],
+    "model.28.cv3.2.2.bias": [
+      1
+    ],
+    "model.28.dfl.conv.weight": [
+      1,
+      16,
+      1,
+      1
+    ],
+    "model.28.aligned.0.interact_conv.conv.weight": [
+      64,
+      64,
+      3,
+      3
+    ],
+    "model.28.aligned.0.interact_conv.bn.weight": [
+      64
+    ],
+    "model.28.aligned.0.interact_conv.bn.bias": [
+      64
+    ],
+    "model.28.aligned.0.interact_conv.bn.running_mean": [
+      64
+    ],
+    "model.28.aligned.0.interact_conv.bn.running_var": [
+      64
+    ],
+    "model.28.aligned.0.interact_conv.bn.num_batches_tracked": [],
+    "model.28.aligned.0.alignment_map.0.weight": [
+      32,
+      64,
+      1,
+      1
+    ],
+    "model.28.aligned.0.alignment_map.0.bias": [
+      32
+    ],
+    "model.28.aligned.0.alignment_map.1.weight": [
+      32
+    ],
+    "model.28.aligned.0.alignment_map.1.bias": [
+      32
+    ],
+    "model.28.aligned.0.alignment_map.1.running_mean": [
+      32
+    ],
+    "model.28.aligned.0.alignment_map.1.running_var": [
+      32
+    ],
+    "model.28.aligned.0.alignment_map.1.num_batches_tracked": [],
+    "model.28.aligned.0.alignment_map.3.weight": [
+      1,
+      32,
+      1,
+      1
+    ],
+    "model.28.aligned.0.alignment_map.3.bias": [
+      1
+    ],
+    "model.28.aligned.1.interact_conv.conv.weight": [
+      128,
+      128,
+      3,
+      3
+    ],
+    "model.28.aligned.1.interact_conv.bn.weight": [
+      128
+    ],
+    "model.28.aligned.1.interact_conv.bn.bias": [
+      128
+    ],
+    "model.28.aligned.1.interact_conv.bn.running_mean": [
+      128
+    ],
+    "model.28.aligned.1.interact_conv.bn.running_var": [
+      128
+    ],
+    "model.28.aligned.1.interact_conv.bn.num_batches_tracked": [],
+    "model.28.aligned.1.alignment_map.0.weight": [
+      64,
+      128,
+      1,
+      1
+    ],
+    "model.28.aligned.1.alignment_map.0.bias": [
+      64
+    ],
+    "model.28.aligned.1.alignment_map.1.weight": [
+      64
+    ],
+    "model.28.aligned.1.alignment_map.1.bias": [
+      64
+    ],
+    "model.28.aligned.1.alignment_map.1.running_mean": [
+      64
+    ],
+    "model.28.aligned.1.alignment_map.1.running_var": [
+      64
+    ],
+    "model.28.aligned.1.alignment_map.1.num_batches_tracked": [],
+    "model.28.aligned.1.alignment_map.3.weight": [
+      1,
+      64,
+      1,
+      1
+    ],
+    "model.28.aligned.1.alignment_map.3.bias": [
+      1
+    ],
+    "model.28.aligned.2.interact_conv.conv.weight": [
+      256,
+      256,
+      3,
+      3
+    ],
+    "model.28.aligned.2.interact_conv.bn.weight": [
+      256
+    ],
+    "model.28.aligned.2.interact_conv.bn.bias": [
+      256
+    ],
+    "model.28.aligned.2.interact_conv.bn.running_mean": [
+      256
+    ],
+    "model.28.aligned.2.interact_conv.bn.running_var": [
+      256
+    ],
+    "model.28.aligned.2.interact_conv.bn.num_batches_tracked": [],
+    "model.28.aligned.2.alignment_map.0.weight": [
+      128,
+      256,
+      1,
+      1
+    ],
+    "model.28.aligned.2.alignment_map.0.bias": [
+      128
+    ],
+    "model.28.aligned.2.alignment_map.1.weight": [
+      128
+    ],
+    "model.28.aligned.2.alignment_map.1.bias": [
+      128
+    ],
+    "model.28.aligned.2.alignment_map.1.running_mean": [
+      128
+    ],
+    "model.28.aligned.2.alignment_map.1.running_var": [
+      128
+    ],
+    "model.28.aligned.2.alignment_map.1.num_batches_tracked": [],
+    "model.28.aligned.2.alignment_map.3.weight": [
+      1,
+      128,
+      1,
+      1
+    ],
+    "model.28.aligned.2.alignment_map.3.bias": [
+      1
+    ]
+  },
+  "strict_missing_keys": [],
+  "strict_unexpected_keys": [],
+  "strict_shape_mismatches": {},
+  "strict_reconstruction": "passed"
+}

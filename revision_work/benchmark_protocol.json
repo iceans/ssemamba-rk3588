@@ -1,0 +1,18 @@
+{
+  "batch": 1,
+  "precision": "float32",
+  "channels": 8,
+  "frames": 5,
+  "resolution": [
+    640,
+    640
+  ],
+  "warmup": 50,
+  "timed_iterations": 950,
+  "include_preprocess": false,
+  "include_nms": false,
+  "synchronize_before_after": true,
+  "fuse": false,
+  "device": "cuda:1",
+  "scope": "new uniform protocol for serialized candidate graphs; not historical FPS reproduction"
+}

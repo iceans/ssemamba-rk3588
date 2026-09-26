@@ -1,0 +1,16 @@
+请整理一个 review_audit_pack.zip，供外部核查，不启动任何新增训练。
+
+纳入：
+1. series_b/protocol.json、README.md、registry.json，以及 remediation_options.md。
+2. implementation_audit.md、preflight_report.md、baseline_registry.json。
+3. run_registry.json、resolved_experiments.json。
+4. results/metrics.csv 和 results/tables 下的 CSV。
+5. 15 个正式 run 的实际生效训练/模型配置、逐 epoch 指标日志、
+   正式 TEST 原始结果，以及选中 checkpoint 的哈希、epoch、EMA 信息。
+6. 与这些运行对应的冻结训练代码、模型配置、相关模块、
+   数据加载器和评估代码；提供代码版本/哈希对应关系。
+7. writing/reviewer_coverage.md、reviewer_response_en.md。
+
+保留目录结构，不包含数据集、模型权重、大型预测缓存或环境安装目录。
+生成 FILE_INDEX.md，说明每个 run 的配置、日志、TEST 和代码位置。
+找不到的文件列入 MISSING_FILES.md，不补造内容

@@ -1,0 +1,4 @@
+model,dataset,source,AP50_percent,status
+full,unlocked,DAUB_candidate,,blocked
+STF-3DConv,unlocked,DAUB_candidate,,blocked
+DFAR,unlocked,DAUB_candidate,,blocked

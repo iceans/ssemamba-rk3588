@@ -1,0 +1,29 @@
+{
+  "id": "B_3DCONV_0",
+  "series": "B",
+  "protocol_id": "SSE_DAUB_SERIES_B_20260915",
+  "model": "stf_3dconv",
+  "seed": 0,
+  "model_yaml": "/home/dell/lxs/tsgmamba/ultralytics-main/revision_work/series_b/configs/stf_3dconv.yaml",
+  "model_yaml_sha256": "e79aa2dde954c5f830d8ba33ffc8313c21b9d816a48e2190aed2225ec324f390",
+  "lfss_depth": 4,
+  "lfss_kernel": 3,
+  "loss": [
+    7.5,
+    0.5,
+    1.5
+  ],
+  "epochs": 100,
+  "batch": 8,
+  "workers": 8,
+  "output_directory": "/home/dell/lxs/tsgmamba/ultralytics-main/revision_work/series_b/runs/B_3DCONV_0",
+  "priority": 1,
+  "command": [
+    "/opt/anaconda3/envs/mambayolo/bin/python",
+    "-m",
+    "revision_work.new_protocol.train",
+    "--task",
+    "B_3DCONV_0"
+  ],
+  "config_sha256": "bcf723c343af326a5f4e666ff54fe3b8c69157f2930c2af993c4171b1ed1b550"
+}

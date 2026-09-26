@@ -1,0 +1,40 @@
+{
+  "status": "evaluated",
+  "formal_result": false,
+  "metrics": {
+    "metrics/precision(B)": 0.8,
+    "metrics/recall(B)": 1.0,
+    "metrics/mAP50(B)": 0.995,
+    "metrics/mAP50-95(B)": 0.9949999999999999,
+    "fitness": 0.9949999999999999
+  },
+  "samples": 8,
+  "unique_keyframes": 8,
+  "empty_prediction_frames": 3,
+  "elapsed_s": 0.07031891401857138,
+  "prediction_cache": "/home/dell/lxs/tsgmamba/ultralytics-main/revision_work/series_b/preflight/external_geometry/per_frame_predictions.jsonl",
+  "prediction_cache_sha256": "2fcc0750085dbc281923e776ccb5623f3d91abb9c6e5d615bbf51a8560016c53",
+  "evaluated_sample_hash": "afff2dcd9944e956936fd9caa7551b469a628dc1cf1dddabf8b70c6a4674666e",
+  "common_keyframe_hash": "cd177300265ab78eb06f3d2a0a105226c27f65057a43adf4c8dfe3bf56e672d2",
+  "false_positives": 1,
+  "false_positives_per_frame": 0.125,
+  "working_threshold": 0.25,
+  "working_iou": 0.5,
+  "sequence_false_alarms": {
+    "Sequence88": {
+      "frames": 1,
+      "false_positives": 0,
+      "false_positives_per_frame": 0.0
+    },
+    "Sequence85": {
+      "frames": 3,
+      "false_positives": 0,
+      "false_positives_per_frame": 0.0
+    },
+    "Sequence47": {
+      "frames": 4,
+      "false_positives": 1,
+      "false_positives_per_frame": 0.25
+    }
+  }
+}

@@ -1,0 +1,56 @@
+# ============================================================================
+# TRACE 时序检测器 — 匹配真实数据契约: 输入 (B, 8, H, W)
+#   通道 0..4 = 5 个连续灰度帧 (时序序列);  通道 5..7 = 当前帧 RGB (关键帧旁路)
+# ----------------------------------------------------------------------------
+# 关键: ClipToBatch (第0层) 把 5 帧沿 batch 展开 → backbone 全程 batch 携带 T,
+#       DDP/BN/增强无感, seq_len 恒等匹配 (无整除问题, 前两版的时序退化根除);
+#       BatchToClip 在每条检测支路前把 batch 维的 T 折回, 取当前帧作检测特征。
+# 数据侧要求: nc=1; 训练器 channels=8; frame_num=5 与 n_gray 一致。
+# ============================================================================
+nc: 1
+scales:
+  s: [0.33, 0.50, 1024]
+
+backbone:
+  # ClipToBatch args: [n_gray, key_rgb, stem_ch]; stem_ch=1 → 每帧单通道进 backbone
+  - [-1, 1, ClipToBatch, [5, 3, 1]]  # 0  (B,8,H,W) → (B*5, 1, H, W)
+  - [-1, 1, Conv,    [64, 3, 2]]     # 1  P1/2   (首层 in_ch=1)
+  - [-1, 1, SPDConv, [128]]          # 2  P2/4
+  - [-1, 3, C2f,     [128, True]]    # 3
+  - [-1, 1, SpecTransSSM, [16, 5, "spectral", True, True, True, True, "input", 4.0, 4]]  # 4  P2 时序 (轻量)
+  - [-1, 1, SPDConv, [256]]          # 5  P3/8
+  - [-1, 6, C2f,     [256, True]]    # 6
+  - [-1, 1, SpecTransSSM, [32, 5, "hybrid", True, True, True, True, "input", 4.0, 8]]    # 7  P3 时序 (主力)
+  - [-1, 1, Conv,    [512, 3, 2]]    # 8  P4/16
+  - [-1, 6, C2f,     [512, True]]    # 9
+  - [-1, 1, Conv,    [1024, 3, 2]]   # 10 P5/32
+  - [-1, 3, C2f,     [1024, True]]   # 11
+  - [-1, 1, SPPF,    [1024, 5]]      # 12
+
+# 注意: 以下 neck 仍在 batch=B*T 维度上运算 (每帧独立), 检测特征在各支路末端
+#       经 BatchToClip 折回 B 维。BatchToClip 放在每个 Detect 输入前。
+head:
+  - [-1, 1, nn.Upsample, [None, 2, "nearest"]]  # 13
+  - [[-1, 9], 1, Concat, [1]]                   # 14
+  - [-1, 3, C2f, [512]]                         # 15
+  - [-1, 1, nn.Upsample, [None, 2, "nearest"]]  # 16
+  - [[-1, 7], 1, Concat, [1]]                   # 17  ← 接后时序 P3
+  - [-1, 3, C2f, [256]]                         # 18
+  - [-1, 1, nn.Upsample, [None, 2, "nearest"]]  # 19
+  - [[-1, 4], 1, Concat, [1]]                   # 20  ← 接后时序 P2
+  - [-1, 3, C2f, [128]]                         # 21  P2/4
+  - [-1, 1, Conv, [128, 3, 2]]                  # 22
+  - [[-1, 18], 1, Concat, [1]]                  # 23
+  - [-1, 3, C2f, [256]]                         # 24  P3/8
+  - [-1, 1, Conv, [256, 3, 2]]                  # 25
+  - [[-1, 15], 1, Concat, [1]]                  # 26
+  - [-1, 3, C2f, [512]]                         # 27  P4/16
+  - [-1, 1, Conv, [512, 3, 2]]                  # 28
+  - [[-1, 12], 1, Concat, [1]]                  # 29
+  - [-1, 3, C2f, [1024]]                        # 30  P5/32
+  # ---- 四条支路各自把 batch 维的 T 折回 B, 取当前帧 (fuse='last') ----
+  - [21, 1, BatchToClip, ["last", False]]       # 31  P2 → (B,128,·)
+  - [24, 1, BatchToClip, ["last", False]]       # 32  P3
+  - [27, 1, BatchToClip, ["last", False]]       # 33  P4
+  - [30, 1, BatchToClip, ["last", False]]       # 34  P5
+  - [[31, 32, 33, 34], 1, Detect, [nc]]         # 35

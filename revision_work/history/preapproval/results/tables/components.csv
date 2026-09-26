@@ -1,0 +1,8 @@
+dataset,design,SSTE,LFSS,SAAM,AP50_percent,status
+DAUB,factorial_pending,1,0,0,,blocked
+DAUB,factorial_pending,1,1,0,,blocked
+DAUB,factorial_pending,1,0,1,,blocked
+DAUB,factorial_pending,1,1,1,,blocked
+IRDST,incremental_only,1,0,0,,blocked
+IRDST,incremental_only,1,1,0,,blocked
+IRDST,incremental_only,1,1,1,,blocked

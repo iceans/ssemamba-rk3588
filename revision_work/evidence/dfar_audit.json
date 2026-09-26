@@ -1,0 +1,11 @@
+{
+  "checkpoint_candidate": "/home/dell/lxs/Anti_UAV_compare_method/DFAR-main/logs_updated/DAUB/ep010-loss1.974-val_loss1.744.pth",
+  "selection_provenance": "vid_map_coco.py commented DAUB model_path; does not by itself establish final paper checkpoint",
+  "training_seed": null,
+  "script_seed": 2023,
+  "seed_provenance": "current train_DAUB.py only; no checkpoint-linked run config",
+  "sha256": "4a6bbf67118db7f585aec723559ab6a917c77cea394aeb9e6a0661d85cb3fa33",
+  "checkpoint_type": "<class 'collections.OrderedDict'>",
+  "keys_count": 628,
+  "strict_load": "passed"
+}

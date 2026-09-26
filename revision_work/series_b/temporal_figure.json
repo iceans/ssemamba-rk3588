@@ -1,0 +1,66 @@
+{
+  "signature": "cc84fd4b80cde2495377c790c34ba140236d6940686db84a40e4b8ffca2bec83",
+  "rows": [
+    {
+      "model": "full",
+      "stride": 1,
+      "common_frames": 4683,
+      "common_keyframe_hash": "ab421faf61967f61aae171d9ac5333a10e6d3ca23a5441be1458c8172cbcd8e0",
+      "AP50_percent": 84.72557177368519,
+      "AP50_95_percent": 57.850683239316005,
+      "delta_AP50_pp": 0.0,
+      "status": "verified"
+    },
+    {
+      "model": "full",
+      "stride": 2,
+      "common_frames": 4683,
+      "common_keyframe_hash": "ab421faf61967f61aae171d9ac5333a10e6d3ca23a5441be1458c8172cbcd8e0",
+      "AP50_percent": 84.56511108319631,
+      "AP50_95_percent": 57.73330344592635,
+      "delta_AP50_pp": -0.1604606904888839,
+      "status": "verified"
+    },
+    {
+      "model": "full",
+      "stride": 4,
+      "common_frames": 4683,
+      "common_keyframe_hash": "ab421faf61967f61aae171d9ac5333a10e6d3ca23a5441be1458c8172cbcd8e0",
+      "AP50_percent": 84.44435392332836,
+      "AP50_95_percent": 57.680556984274034,
+      "delta_AP50_pp": -0.28121785035682967,
+      "status": "verified"
+    },
+    {
+      "model": "STF-3DConv",
+      "stride": 1,
+      "common_frames": 4683,
+      "common_keyframe_hash": "ab421faf61967f61aae171d9ac5333a10e6d3ca23a5441be1458c8172cbcd8e0",
+      "AP50_percent": 86.74821676889614,
+      "AP50_95_percent": 61.87745618477636,
+      "delta_AP50_pp": 0.0,
+      "status": "verified"
+    },
+    {
+      "model": "STF-3DConv",
+      "stride": 2,
+      "common_frames": 4683,
+      "common_keyframe_hash": "ab421faf61967f61aae171d9ac5333a10e6d3ca23a5441be1458c8172cbcd8e0",
+      "AP50_percent": 86.64659150367477,
+      "AP50_95_percent": 62.03805854226769,
+      "delta_AP50_pp": -0.10162526522137227,
+      "status": "verified"
+    },
+    {
+      "model": "STF-3DConv",
+      "stride": 4,
+      "common_frames": 4683,
+      "common_keyframe_hash": "ab421faf61967f61aae171d9ac5333a10e6d3ca23a5441be1458c8172cbcd8e0",
+      "AP50_percent": 86.42950211462261,
+      "AP50_95_percent": 61.993892183662226,
+      "delta_AP50_pp": -0.31871465427353307,
+      "status": "verified"
+    }
+  ],
+  "DFAR": "not verified"
+}

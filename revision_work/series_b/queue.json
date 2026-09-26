@@ -1,0 +1,14 @@
+{
+  "status": "finished",
+  "pid": 2854531,
+  "completed_at": "2026-09-17T07:16:48.940000+00:00",
+  "counts": {
+    "started": 15,
+    "trained": 15,
+    "running": 0,
+    "failed": 0,
+    "test_verified": 15
+  },
+  "scope": "approved training, corresponding TEST, available-model P1/P3 and isolated P4",
+  "remaining_gaps": "unapproved component repair runs, noninterleaved checkpoint, DFAR provenance, scene/manuscript metadata; consult registry for any failed or blocked inference rows"
+}

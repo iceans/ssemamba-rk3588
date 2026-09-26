@@ -1,0 +1,321 @@
+{
+  "resolution_complete": false,
+  "tasks": [
+    {
+      "id": "R1",
+      "status": "blocked",
+      "manifest_source": "TASKBOOK only; experiment_manifest.json missing",
+      "config_file": "/home/dell/lxs/tsgmamba/ultralytics-main/revision_work/evidence/checkpoints/runs__compare_result__ablation__Ablation__DAUB__frame5__weights__best.yaml",
+      "config_is": "extracted historical candidate, not an approved resolved training config",
+      "mapping": "baseline model and additional common seed",
+      "config_diff": {},
+      "seed": null,
+      "checkpoint": null,
+      "dependencies": [
+        "GATE_PROTOCOL",
+        "GATE_MODEL_DEFINITION"
+      ],
+      "command": null,
+      "command_unavailable_reason": "Formal baseline, initialization, loader and checkpoint-selection protocol unresolved; companion JSON manifest missing",
+      "output_directory": "/home/dell/lxs/tsgmamba/ultralytics-main/revision_work/runs/R1",
+      "split_hash": "271fc15f670504908b51076d90f4f8d6abc3a47c1a8cd81903d4672dde8ca2e9",
+      "code_sha256": "2b9984b1e1dea3dacae3159c1083a01ffa25a93455ef0ed9a546e83512e816b5"
+    },
+    {
+      "id": "R2",
+      "status": "blocked",
+      "manifest_source": "TASKBOOK only; experiment_manifest.json missing",
+      "config_file": "/home/dell/lxs/tsgmamba/ultralytics-main/revision_work/evidence/checkpoints/runs__compare_result__ablation__Ablation__DAUB__conv3d-TIMSSM__weights__best.yaml",
+      "config_is": "extracted historical candidate, not an approved resolved training config",
+      "mapping": "baseline model and additional common seed",
+      "config_diff": {},
+      "seed": null,
+      "checkpoint": null,
+      "dependencies": [
+        "GATE_PROTOCOL",
+        "GATE_MODEL_DEFINITION"
+      ],
+      "command": null,
+      "command_unavailable_reason": "Formal baseline, initialization, loader and checkpoint-selection protocol unresolved; companion JSON manifest missing",
+      "output_directory": "/home/dell/lxs/tsgmamba/ultralytics-main/revision_work/runs/R2",
+      "split_hash": "271fc15f670504908b51076d90f4f8d6abc3a47c1a8cd81903d4672dde8ca2e9",
+      "code_sha256": "2b9984b1e1dea3dacae3159c1083a01ffa25a93455ef0ed9a546e83512e816b5"
+    },
+    {
+      "id": "R3",
+      "status": "blocked",
+      "manifest_source": "TASKBOOK only; experiment_manifest.json missing",
+      "config_file": "/home/dell/lxs/tsgmamba/ultralytics-main/revision_work/evidence/checkpoints/runs__compare_result__ablation__Ablation__DAUB__frame5__weights__best.yaml",
+      "config_is": "extracted historical candidate, not an approved resolved training config",
+      "mapping": "baseline model and additional common seed",
+      "config_diff": {},
+      "seed": null,
+      "checkpoint": null,
+      "dependencies": [
+        "GATE_PROTOCOL",
+        "GATE_MODEL_DEFINITION"
+      ],
+      "command": null,
+      "command_unavailable_reason": "Formal baseline, initialization, loader and checkpoint-selection protocol unresolved; companion JSON manifest missing",
+      "output_directory": "/home/dell/lxs/tsgmamba/ultralytics-main/revision_work/runs/R3",
+      "split_hash": "271fc15f670504908b51076d90f4f8d6abc3a47c1a8cd81903d4672dde8ca2e9",
+      "code_sha256": "2b9984b1e1dea3dacae3159c1083a01ffa25a93455ef0ed9a546e83512e816b5"
+    },
+    {
+      "id": "R4",
+      "status": "blocked",
+      "manifest_source": "TASKBOOK only; experiment_manifest.json missing",
+      "config_file": "/home/dell/lxs/tsgmamba/ultralytics-main/revision_work/evidence/checkpoints/runs__compare_result__ablation__Ablation__DAUB__conv3d-TIMSSM__weights__best.yaml",
+      "config_is": "extracted historical candidate, not an approved resolved training config",
+      "mapping": "baseline model and additional common seed",
+      "config_diff": {},
+      "seed": null,
+      "checkpoint": null,
+      "dependencies": [
+        "GATE_PROTOCOL",
+        "GATE_MODEL_DEFINITION"
+      ],
+      "command": null,
+      "command_unavailable_reason": "Formal baseline, initialization, loader and checkpoint-selection protocol unresolved; companion JSON manifest missing",
+      "output_directory": "/home/dell/lxs/tsgmamba/ultralytics-main/revision_work/runs/R4",
+      "split_hash": "271fc15f670504908b51076d90f4f8d6abc3a47c1a8cd81903d4672dde8ca2e9",
+      "code_sha256": "2b9984b1e1dea3dacae3159c1083a01ffa25a93455ef0ed9a546e83512e816b5"
+    },
+    {
+      "id": "E1",
+      "status": "blocked",
+      "manifest_source": "TASKBOOK only; experiment_manifest.json missing",
+      "config_file": "/home/dell/lxs/tsgmamba/ultralytics-main/revision_work/evidence/checkpoints/runs__compare_result__ablation__Ablation__DAUB__frame5__weights__best.yaml",
+      "config_is": "extracted historical candidate, not an approved resolved training config",
+      "mapping": "Replace LFSS CCCBlock using historical SSTE baseline C2f convention while retaining Detect.aligned (SAAM)",
+      "config_diff": {
+        "head": "candidate SSTE head removes CCCBlock and adapts next C2f input channels; requires baseline definition verification"
+      },
+      "seed": null,
+      "checkpoint": null,
+      "dependencies": [
+        "GATE_PROTOCOL",
+        "GATE_MODEL_DEFINITION"
+      ],
+      "command": null,
+      "command_unavailable_reason": "Formal baseline, initialization, loader and checkpoint-selection protocol unresolved; companion JSON manifest missing",
+      "output_directory": "/home/dell/lxs/tsgmamba/ultralytics-main/revision_work/runs/E1",
+      "split_hash": "271fc15f670504908b51076d90f4f8d6abc3a47c1a8cd81903d4672dde8ca2e9",
+      "code_sha256": "2b9984b1e1dea3dacae3159c1083a01ffa25a93455ef0ed9a546e83512e816b5"
+    },
+    {
+      "id": "E2",
+      "status": "blocked",
+      "manifest_source": "TASKBOOK only; experiment_manifest.json missing",
+      "config_file": "/home/dell/lxs/tsgmamba/ultralytics-main/revision_work/evidence/checkpoints/runs__compare_result__ablation__Ablation__DAUB__frame5__weights__best.yaml",
+      "config_is": "extracted historical candidate, not an approved resolved training config",
+      "mapping": "revision_work/scripts/preflight.py:set_lfss_kernel",
+      "config_diff": {
+        "model.21.op.my_conv.*.conv.kernel_size": [
+          1,
+          1
+        ],
+        "padding": [
+          0,
+          0
+        ],
+        "n": "retain 4 for historical matched candidate, not current constructor default 1",
+        "fixed": [
+          "channels",
+          "groups",
+          "stride",
+          "dilation",
+          "bias setting",
+          "BN",
+          "activation",
+          "residual",
+          "other convolutions"
+        ]
+      },
+      "seed": null,
+      "checkpoint": null,
+      "dependencies": [
+        "GATE_PROTOCOL",
+        "GATE_MODEL_DEFINITION"
+      ],
+      "command": null,
+      "command_unavailable_reason": "Formal baseline, initialization, loader and checkpoint-selection protocol unresolved; companion JSON manifest missing",
+      "output_directory": "/home/dell/lxs/tsgmamba/ultralytics-main/revision_work/runs/E2",
+      "split_hash": "271fc15f670504908b51076d90f4f8d6abc3a47c1a8cd81903d4672dde8ca2e9",
+      "code_sha256": "2b9984b1e1dea3dacae3159c1083a01ffa25a93455ef0ed9a546e83512e816b5"
+    },
+    {
+      "id": "E3",
+      "status": "blocked",
+      "manifest_source": "TASKBOOK only; experiment_manifest.json missing",
+      "config_file": "/home/dell/lxs/tsgmamba/ultralytics-main/revision_work/evidence/checkpoints/runs__compare_result__ablation__Ablation__DAUB__frame5__weights__best.yaml",
+      "config_is": "extracted historical candidate, not an approved resolved training config",
+      "mapping": "revision_work/scripts/preflight.py:set_lfss_kernel",
+      "config_diff": {
+        "model.21.op.my_conv.*.conv.kernel_size": [
+          5,
+          5
+        ],
+        "padding": [
+          2,
+          2
+        ],
+        "n": "retain 4 for historical matched candidate, not current constructor default 1",
+        "fixed": [
+          "channels",
+          "groups",
+          "stride",
+          "dilation",
+          "bias setting",
+          "BN",
+          "activation",
+          "residual",
+          "other convolutions"
+        ]
+      },
+      "seed": null,
+      "checkpoint": null,
+      "dependencies": [
+        "GATE_PROTOCOL",
+        "GATE_MODEL_DEFINITION"
+      ],
+      "command": null,
+      "command_unavailable_reason": "Formal baseline, initialization, loader and checkpoint-selection protocol unresolved; companion JSON manifest missing",
+      "output_directory": "/home/dell/lxs/tsgmamba/ultralytics-main/revision_work/runs/E3",
+      "split_hash": "271fc15f670504908b51076d90f4f8d6abc3a47c1a8cd81903d4672dde8ca2e9",
+      "code_sha256": "2b9984b1e1dea3dacae3159c1083a01ffa25a93455ef0ed9a546e83512e816b5"
+    },
+    {
+      "id": "E4",
+      "status": "blocked",
+      "manifest_source": "TASKBOOK only; experiment_manifest.json missing",
+      "config_file": "/home/dell/lxs/tsgmamba/ultralytics-main/revision_work/evidence/checkpoints/runs__compare_result__ablation__Ablation__DAUB__frame5__weights__best.yaml",
+      "config_is": "extracted historical candidate, not an approved resolved training config",
+      "mapping": "YOLO.train keyword -> model.args -> v8DetectionLoss.hyp",
+      "config_diff": {
+        "box": 3.75
+      },
+      "seed": null,
+      "checkpoint": null,
+      "dependencies": [
+        "GATE_PROTOCOL",
+        "GATE_MODEL_DEFINITION"
+      ],
+      "command": null,
+      "command_unavailable_reason": "Formal baseline, initialization, loader and checkpoint-selection protocol unresolved; companion JSON manifest missing",
+      "output_directory": "/home/dell/lxs/tsgmamba/ultralytics-main/revision_work/runs/E4",
+      "split_hash": "271fc15f670504908b51076d90f4f8d6abc3a47c1a8cd81903d4672dde8ca2e9",
+      "code_sha256": "2b9984b1e1dea3dacae3159c1083a01ffa25a93455ef0ed9a546e83512e816b5"
+    },
+    {
+      "id": "E5",
+      "status": "blocked",
+      "manifest_source": "TASKBOOK only; experiment_manifest.json missing",
+      "config_file": "/home/dell/lxs/tsgmamba/ultralytics-main/revision_work/evidence/checkpoints/runs__compare_result__ablation__Ablation__DAUB__frame5__weights__best.yaml",
+      "config_is": "extracted historical candidate, not an approved resolved training config",
+      "mapping": "YOLO.train keyword -> model.args -> v8DetectionLoss.hyp",
+      "config_diff": {
+        "box": 15.0
+      },
+      "seed": null,
+      "checkpoint": null,
+      "dependencies": [
+        "GATE_PROTOCOL",
+        "GATE_MODEL_DEFINITION"
+      ],
+      "command": null,
+      "command_unavailable_reason": "Formal baseline, initialization, loader and checkpoint-selection protocol unresolved; companion JSON manifest missing",
+      "output_directory": "/home/dell/lxs/tsgmamba/ultralytics-main/revision_work/runs/E5",
+      "split_hash": "271fc15f670504908b51076d90f4f8d6abc3a47c1a8cd81903d4672dde8ca2e9",
+      "code_sha256": "2b9984b1e1dea3dacae3159c1083a01ffa25a93455ef0ed9a546e83512e816b5"
+    },
+    {
+      "id": "E6",
+      "status": "blocked",
+      "manifest_source": "TASKBOOK only; experiment_manifest.json missing",
+      "config_file": "/home/dell/lxs/tsgmamba/ultralytics-main/revision_work/evidence/checkpoints/runs__compare_result__ablation__Ablation__DAUB__frame5__weights__best.yaml",
+      "config_is": "extracted historical candidate, not an approved resolved training config",
+      "mapping": "YOLO.train keyword -> model.args -> v8DetectionLoss.hyp",
+      "config_diff": {
+        "cls": 0.25
+      },
+      "seed": null,
+      "checkpoint": null,
+      "dependencies": [
+        "GATE_PROTOCOL",
+        "GATE_MODEL_DEFINITION"
+      ],
+      "command": null,
+      "command_unavailable_reason": "Formal baseline, initialization, loader and checkpoint-selection protocol unresolved; companion JSON manifest missing",
+      "output_directory": "/home/dell/lxs/tsgmamba/ultralytics-main/revision_work/runs/E6",
+      "split_hash": "271fc15f670504908b51076d90f4f8d6abc3a47c1a8cd81903d4672dde8ca2e9",
+      "code_sha256": "2b9984b1e1dea3dacae3159c1083a01ffa25a93455ef0ed9a546e83512e816b5"
+    },
+    {
+      "id": "E7",
+      "status": "blocked",
+      "manifest_source": "TASKBOOK only; experiment_manifest.json missing",
+      "config_file": "/home/dell/lxs/tsgmamba/ultralytics-main/revision_work/evidence/checkpoints/runs__compare_result__ablation__Ablation__DAUB__frame5__weights__best.yaml",
+      "config_is": "extracted historical candidate, not an approved resolved training config",
+      "mapping": "YOLO.train keyword -> model.args -> v8DetectionLoss.hyp",
+      "config_diff": {
+        "cls": 1.0
+      },
+      "seed": null,
+      "checkpoint": null,
+      "dependencies": [
+        "GATE_PROTOCOL",
+        "GATE_MODEL_DEFINITION"
+      ],
+      "command": null,
+      "command_unavailable_reason": "Formal baseline, initialization, loader and checkpoint-selection protocol unresolved; companion JSON manifest missing",
+      "output_directory": "/home/dell/lxs/tsgmamba/ultralytics-main/revision_work/runs/E7",
+      "split_hash": "271fc15f670504908b51076d90f4f8d6abc3a47c1a8cd81903d4672dde8ca2e9",
+      "code_sha256": "2b9984b1e1dea3dacae3159c1083a01ffa25a93455ef0ed9a546e83512e816b5"
+    },
+    {
+      "id": "E8",
+      "status": "blocked",
+      "manifest_source": "TASKBOOK only; experiment_manifest.json missing",
+      "config_file": "/home/dell/lxs/tsgmamba/ultralytics-main/revision_work/evidence/checkpoints/runs__compare_result__ablation__Ablation__DAUB__frame5__weights__best.yaml",
+      "config_is": "extracted historical candidate, not an approved resolved training config",
+      "mapping": "YOLO.train keyword -> model.args -> v8DetectionLoss.hyp",
+      "config_diff": {
+        "dfl": 0.75
+      },
+      "seed": null,
+      "checkpoint": null,
+      "dependencies": [
+        "GATE_PROTOCOL",
+        "GATE_MODEL_DEFINITION"
+      ],
+      "command": null,
+      "command_unavailable_reason": "Formal baseline, initialization, loader and checkpoint-selection protocol unresolved; companion JSON manifest missing",
+      "output_directory": "/home/dell/lxs/tsgmamba/ultralytics-main/revision_work/runs/E8",
+      "split_hash": "271fc15f670504908b51076d90f4f8d6abc3a47c1a8cd81903d4672dde8ca2e9",
+      "code_sha256": "2b9984b1e1dea3dacae3159c1083a01ffa25a93455ef0ed9a546e83512e816b5"
+    },
+    {
+      "id": "E9",
+      "status": "blocked",
+      "manifest_source": "TASKBOOK only; experiment_manifest.json missing",
+      "config_file": "/home/dell/lxs/tsgmamba/ultralytics-main/revision_work/evidence/checkpoints/runs__compare_result__ablation__Ablation__DAUB__frame5__weights__best.yaml",
+      "config_is": "extracted historical candidate, not an approved resolved training config",
+      "mapping": "YOLO.train keyword -> model.args -> v8DetectionLoss.hyp",
+      "config_diff": {
+        "dfl": 3.0
+      },
+      "seed": null,
+      "checkpoint": null,
+      "dependencies": [
+        "GATE_PROTOCOL",
+        "GATE_MODEL_DEFINITION"
+      ],
+      "command": null,
+      "command_unavailable_reason": "Formal baseline, initialization, loader and checkpoint-selection protocol unresolved; companion JSON manifest missing",
+      "output_directory": "/home/dell/lxs/tsgmamba/ultralytics-main/revision_work/runs/E9",
+      "split_hash": "271fc15f670504908b51076d90f4f8d6abc3a47c1a8cd81903d4672dde8ca2e9",
+      "code_sha256": "2b9984b1e1dea3dacae3159c1083a01ffa25a93455ef0ed9a546e83512e816b5"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+dataset,split,group,boxes,AP50_percent,AP50_95_percent,status
+DAUB,val,d_le_3,0,,,empty
+DAUB,val,3_lt_d_le_7,0,,,empty
+DAUB,val,d_gt_7,4795,,,evaluation_blocked
+IRDST,val,d_le_3,0,,,empty
+IRDST,val,3_lt_d_le_7,618,,,evaluation_blocked
+IRDST,val,d_gt_7,20145,,,evaluation_blocked

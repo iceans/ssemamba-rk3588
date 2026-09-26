@@ -1,0 +1,12 @@
+/opt/anaconda3/envs/mambayolo/bin/python /home/dell/lxs/tsgmamba/ultralytics-main/tsgmamba_train.py
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/timm/models/layers/__init__.py:48: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+Ultralytics 8.3.234 🚀 Python-3.11.11 torch-2.0.0+cu118 CUDA:0 (NVIDIA GeForce RTX 4090, 24209MiB)
+YOLOv8s-spectrans-p3 summary (fused): 134 layers, 14,241,898 parameters, 0 gradients, 50.7 GFLOPs
+val: Scanning /home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/labels_f5.cache... 4791 images, 0 backgrounds, 0 corrupt: 100%|██████████| 4795/4795 [00:00<?, ?it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 300/300 20.0it/s 15.0s
+                   all       4795       4795     0.7589     0.8674     0.8968     0.6076
+Speed: 0.2ms preprocess, 2.2ms inference, 0.0ms loss, 0.2ms postprocess per image
+Results saved to /home/dell/lxs/tsgmamba/ultralytics-main/runs/detect/val119
+
+Process finished with exit code 0

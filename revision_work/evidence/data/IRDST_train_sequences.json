@@ -1,0 +1,296 @@
+[
+  {
+    "seq_id": "IR_001",
+    "frames": 26,
+    "first_frame": 0,
+    "last_frame": 25,
+    "missing_ids": []
+  },
+  {
+    "seq_id": "IR_003",
+    "frames": 197,
+    "first_frame": 0,
+    "last_frame": 196,
+    "missing_ids": []
+  },
+  {
+    "seq_id": "IR_005",
+    "frames": 145,
+    "first_frame": 0,
+    "last_frame": 144,
+    "missing_ids": []
+  },
+  {
+    "seq_id": "IR_007",
+    "frames": 122,
+    "first_frame": 0,
+    "last_frame": 121,
+    "missing_ids": []
+  },
+  {
+    "seq_id": "IR_009",
+    "frames": 1240,
+    "first_frame": 0,
+    "last_frame": 1239,
+    "missing_ids": []
+  },
+  {
+    "seq_id": "IR_011",
+    "frames": 452,
+    "first_frame": 0,
+    "last_frame": 451,
+    "missing_ids": []
+  },
+  {
+    "seq_id": "IR_013",
+    "frames": 220,
+    "first_frame": 0,
+    "last_frame": 219,
+    "missing_ids": []
+  },
+  {
+    "seq_id": "IR_015",
+    "frames": 381,
+    "first_frame": 0,
+    "last_frame": 380,
+    "missing_ids": []
+  },
+  {
+    "seq_id": "IR_017",
+    "frames": 566,
+    "first_frame": 0,
+    "last_frame": 565,
+    "missing_ids": []
+  },
+  {
+    "seq_id": "IR_019",
+    "frames": 119,
+    "first_frame": 0,
+    "last_frame": 118,
+    "missing_ids": []
+  },
+  {
+    "seq_id": "IR_021",
+    "frames": 486,
+    "first_frame": 0,
+    "last_frame": 485,
+    "missing_ids": []
+  },
+  {
+    "seq_id": "IR_023",
+    "frames": 65,
+    "first_frame": 0,
+    "last_frame": 64,
+    "missing_ids": []
+  },
+  {
+    "seq_id": "IR_025",
+    "frames": 475,
+    "first_frame": 0,
+    "last_frame": 474,
+    "missing_ids": []
+  },
+  {
+    "seq_id": "IR_027",
+    "frames": 139,
+    "first_frame": 0,
+    "last_frame": 138,
+    "missing_ids": []
+  },
+  {
+    "seq_id": "IR_029",
+    "frames": 296,
+    "first_frame": 0,
+    "last_frame": 295,
+    "missing_ids": []
+  },
+  {
+    "seq_id": "IR_031",
+    "frames": 104,
+    "first_frame": 0,
+    "last_frame": 103,
+    "missing_ids": []
+  },
+  {
+    "seq_id": "IR_033",
+    "frames": 312,
+    "first_frame": 0,
+    "last_frame": 311,
+    "missing_ids": []
+  },
+  {
+    "seq_id": "IR_035",
+    "frames": 16,
+    "first_frame": 0,
+    "last_frame": 15,
+    "missing_ids": []
+  },
+  {
+    "seq_id": "IR_041",
+    "frames": 312,
+    "first_frame": 0,
+    "last_frame": 311,
+    "missing_ids": []
+  },
+  {
+    "seq_id": "IR_043",
+    "frames": 124,
+    "first_frame": 0,
+    "last_frame": 123,
+    "missing_ids": []
+  },
+  {
+    "seq_id": "IR_045",
+    "frames": 1025,
+    "first_frame": 0,
+    "last_frame": 1024,
+    "missing_ids": []
+  },
+  {
+    "seq_id": "IR_049",
+    "frames": 662,
+    "first_frame": 0,
+    "last_frame": 661,
+    "missing_ids": []
+  },
+  {
+    "seq_id": "IR_051",
+    "frames": 765,
+    "first_frame": 0,
+    "last_frame": 764,
+    "missing_ids": []
+  },
+  {
+    "seq_id": "IR_055",
+    "frames": 847,
+    "first_frame": 0,
+    "last_frame": 846,
+    "missing_ids": []
+  },
+  {
+    "seq_id": "IR_057",
+    "frames": 523,
+    "first_frame": 0,
+    "last_frame": 522,
+    "missing_ids": []
+  },
+  {
+    "seq_id": "IR_059",
+    "frames": 300,
+    "first_frame": 0,
+    "last_frame": 299,
+    "missing_ids": []
+  },
+  {
+    "seq_id": "IR_061",
+    "frames": 182,
+    "first_frame": 0,
+    "last_frame": 181,
+    "missing_ids": []
+  },
+  {
+    "seq_id": "IR_063",
+    "frames": 66,
+    "first_frame": 0,
+    "last_frame": 65,
+    "missing_ids": []
+  },
+  {
+    "seq_id": "IR_065",
+    "frames": 107,
+    "first_frame": 0,
+    "last_frame": 106,
+    "missing_ids": []
+  },
+  {
+    "seq_id": "IR_067",
+    "frames": 34,
+    "first_frame": 0,
+    "last_frame": 33,
+    "missing_ids": []
+  },
+  {
+    "seq_id": "IR_069",
+    "frames": 1106,
+    "first_frame": 0,
+    "last_frame": 1105,
+    "missing_ids": []
+  },
+  {
+    "seq_id": "IR_071",
+    "frames": 427,
+    "first_frame": 0,
+    "last_frame": 426,
+    "missing_ids": []
+  },
+  {
+    "seq_id": "IR_073",
+    "frames": 286,
+    "first_frame": 0,
+    "last_frame": 285,
+    "missing_ids": []
+  },
+  {
+    "seq_id": "IR_075",
+    "frames": 341,
+    "first_frame": 0,
+    "last_frame": 340,
+    "missing_ids": []
+  },
+  {
+    "seq_id": "IR_077",
+    "frames": 912,
+    "first_frame": 0,
+    "last_frame": 911,
+    "missing_ids": []
+  },
+  {
+    "seq_id": "IR_079",
+    "frames": 575,
+    "first_frame": 0,
+    "last_frame": 574,
+    "missing_ids": []
+  },
+  {
+    "seq_id": "IR_081",
+    "frames": 224,
+    "first_frame": 0,
+    "last_frame": 223,
+    "missing_ids": []
+  },
+  {
+    "seq_id": "IR_083",
+    "frames": 1292,
+    "first_frame": 0,
+    "last_frame": 1291,
+    "missing_ids": []
+  },
+  {
+    "seq_id": "IR_085",
+    "frames": 100,
+    "first_frame": 0,
+    "last_frame": 99,
+    "missing_ids": []
+  },
+  {
+    "seq_id": "IR_087",
+    "frames": 141,
+    "first_frame": 0,
+    "last_frame": 140,
+    "missing_ids": []
+  },
+  {
+    "seq_id": "IR_089",
+    "frames": 672,
+    "first_frame": 0,
+    "last_frame": 671,
+    "missing_ids": []
+  },
+  {
+    "seq_id": "IR_091",
+    "frames": 4014,
+    "first_frame": 0,
+    "last_frame": 4013,
+    "missing_ids": []
+  }
+]

@@ -1,0 +1,13 @@
+{
+  "checked_at": "2026-09-15T03:18:36.947574+00:00",
+  "source_frames_checked": 13777,
+  "source_manifest_sha256": {
+    "train_manifest": "271fc15f670504908b51076d90f4f8d6abc3a47c1a8cd81903d4672dde8ca2e9",
+    "test_manifest": "82bcc58e16fdced421bb35c7ca04d497e0bd7d0fbe1ea0770aa306aefb739a64"
+  },
+  "target_frames_checked": 2000,
+  "exact_decoded_pixel_matches": [],
+  "excluded_entire_sequences": [],
+  "literal_sequence_identifier_intersection": [],
+  "limitation": "Exact decoded-image comparison cannot rule out transformed, cropped or reused background素材. The author README states synthetic data but does not identify every background source."
+}

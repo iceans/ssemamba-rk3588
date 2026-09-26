@@ -1,0 +1,51 @@
+[
+  {
+    "seq_id": "IR_00006",
+    "frames": 399,
+    "first_frame": 0,
+    "last_frame": 398,
+    "missing_ids": []
+  },
+  {
+    "seq_id": "IR_00011",
+    "frames": 745,
+    "first_frame": 0,
+    "last_frame": 744,
+    "missing_ids": []
+  },
+  {
+    "seq_id": "IR_00012",
+    "frames": 1500,
+    "first_frame": 0,
+    "last_frame": 1499,
+    "missing_ids": []
+  },
+  {
+    "seq_id": "IR_00015",
+    "frames": 751,
+    "first_frame": 0,
+    "last_frame": 750,
+    "missing_ids": []
+  },
+  {
+    "seq_id": "IR_00018",
+    "frames": 500,
+    "first_frame": 0,
+    "last_frame": 499,
+    "missing_ids": []
+  },
+  {
+    "seq_id": "IR_00020",
+    "frames": 400,
+    "first_frame": 0,
+    "last_frame": 399,
+    "missing_ids": []
+  },
+  {
+    "seq_id": "IR_00021",
+    "frames": 500,
+    "first_frame": 0,
+    "last_frame": 499,
+    "missing_ids": []
+  }
+]

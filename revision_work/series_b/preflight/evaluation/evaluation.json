@@ -1,0 +1,30 @@
+{
+  "status": "evaluated",
+  "formal_result": false,
+  "metrics": {
+    "metrics/precision(B)": 0.0,
+    "metrics/recall(B)": 0.0,
+    "metrics/mAP50(B)": 0.0,
+    "metrics/mAP50-95(B)": 0.0,
+    "fitness": 0.0
+  },
+  "samples": 8,
+  "unique_keyframes": 8,
+  "empty_prediction_frames": 0,
+  "elapsed_s": 0.09513044101186097,
+  "prediction_cache": "/home/dell/lxs/tsgmamba/ultralytics-main/revision_work/series_b/preflight/evaluation/per_frame_predictions.jsonl",
+  "prediction_cache_sha256": "287671bd93c8699f442ca983f0c748f4750de9bd72c715862721b9fcec4e9fc1",
+  "evaluated_sample_hash": "5498c2939c4ba8f74d5d98c1d4b24fc155ddd7694be44713493f48b12eecd8c2",
+  "common_keyframe_hash": "78cabe268865ea9928d3f0b21fad21073463ac9490da1be9413f6e24eb42fea9",
+  "false_positives": 0,
+  "false_positives_per_frame": 0.0,
+  "working_threshold": 0.25,
+  "working_iou": 0.5,
+  "sequence_false_alarms": {
+    "IR_00005": {
+      "frames": 8,
+      "false_positives": 0,
+      "false_positives_per_frame": 0.0
+    }
+  }
+}

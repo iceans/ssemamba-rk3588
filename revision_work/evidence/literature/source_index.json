@@ -1,0 +1,9 @@
+{
+  "SAIST": {
+    "url": "https://openaccess.thecvf.com/content/CVPR2025/papers/Zhang_SAIST_Segment_Any_Infrared_Small_Target_Model_Guided_by_Contrastive_CVPR_2025_paper.pdf",
+    "pdf_sha256": "5dcf3658fd97e7bef7296fe712088b21a21349567ce01cd37e62ca0567d50af0",
+    "method_pages_read": "9551-9554",
+    "extraction_tool": "pdftotext -layout"
+  },
+  "other_primary_sources": "Primary links and consulted sections are recorded in writing/technical_comparison.md"
+}

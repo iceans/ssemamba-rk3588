@@ -1,0 +1,14 @@
+% Series B; missing values are not zero.
+\begin{tabular}{llllllll}
+\hline
+model & dataset & group & GT\_boxes & AP50\_percent & AP50\_95\_percent & all\_frame\_FP\_per\_frame\_conf025 & status \\
+\hline
+full & DAUB & d\_le\_3 & 0 & -- & -- & 0.06694 & empty\_bin \\
+full & DAUB & 3\_lt\_d\_le\_7 & 0 & -- & -- & 0.06694 & empty\_bin \\
+full & DAUB & d\_gt\_7 & 4795 & 84.65799 & 57.79878 & 0.06694 & verified \\
+STF-3DConv & DAUB & d\_le\_3 & 0 & -- & -- & 0.05401 & empty\_bin \\
+STF-3DConv & DAUB & 3\_lt\_d\_le\_7 & 0 & -- & -- & 0.05401 & empty\_bin \\
+STF-3DConv & DAUB & d\_gt\_7 & 4795 & 86.63967 & 61.76070 & 0.05401 & verified \\
+IFSS\_noninterleaved & DAUB & all & 4795 & -- & -- & -- & blocked\_invalid\_or\_missing\_order\_only\_checkpoint \\
+\hline
+\end{tabular}

@@ -1,0 +1,26 @@
+{
+  "checked_at": "2026-09-15T03:20:55.149383+00:00",
+  "passed": true,
+  "budget": 15,
+  "live_tasks_adopted": [
+    {
+      "task": "B_FULL_0",
+      "gpu": 1,
+      "pid": 2844614
+    },
+    {
+      "task": "B_3DCONV_0",
+      "gpu": 0,
+      "pid": 2844615
+    }
+  ],
+  "running_tasks_not_relaunched": true,
+  "external_phase_selected_after_TEST_and_P1": true,
+  "external_frames": 2000,
+  "source_freeze_unchanged": true,
+  "workflow_hashes": {
+    "queue.py": "71b3aa19fe38912700ee968015ef9377902ff55ae5529bd1b77fff1938e130d4",
+    "refresh.py": "453fc874cd665a439cb350b8112231f4a3ee0f37bd2f37fb2afa5ccfb98d9d1a",
+    "external.py": "a9d874c59a12dddaa6976a6484a551f8db4d32d8aefb3bf70211abd7c7c16209"
+  }
+}

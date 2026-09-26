@@ -1,0 +1,4 @@
+model,dataset,split,source,seed,checkpoint,AP50_percent,AP50_95_percent,FP_per_frame_conf025,frames,status
+full,NUDT-MIRSDT,official test,DAUB,0,/home/dell/lxs/tsgmamba/ultralytics-main/revision_work/series_b/runs/B_FULL_0/weights/selected_final.pt,5.759471882484847,1.0368529964111317,0.0405,2000,verified
+STF-3DConv,NUDT-MIRSDT,official test,DAUB,0,/home/dell/lxs/tsgmamba/ultralytics-main/revision_work/series_b/runs/B_3DCONV_0/weights/selected_final.pt,8.962562780749131,1.6465447611611113,0.032,2000,verified
+DFAR,NUDT-MIRSDT,official test,DAUB,,,,,,2000,blocked

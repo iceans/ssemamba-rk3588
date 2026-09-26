@@ -1,0 +1,5 @@
+variant,kernel,n,LFSS_block_params,AP50_percent,status
+LFSS_kernel_1,1,4,72576,,correctness_passed_training_blocked
+LFSS_kernel_3,3,4,76672,,correctness_passed_training_blocked
+LFSS_kernel_5,5,4,84864,,correctness_passed_training_blocked
+LFSS_current_wosfi,,,,,invalid_order_only_definition

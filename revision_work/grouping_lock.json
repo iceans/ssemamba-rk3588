@@ -1,0 +1,26 @@
+{
+  "frozen_before_group_model_scores": true,
+  "definition": "maximum annotated bbox side in original-image pixels",
+  "thresholds_px": [
+    3,
+    7
+  ],
+  "data_summary": {
+    "DAUB": {
+      "d_gt_7": 4795
+    },
+    "IRDST": {
+      "d_gt_7": 20145,
+      "3_lt_d_le_7": 618
+    }
+  },
+  "DAUB_action": "retain empty bins explicitly; do not invent single-pixel or <=7px detections",
+  "IRDST_action": "retain nonempty (3,7] and >7 groups; <=3 empty",
+  "scene_groups": null,
+  "scene_reason": "no verified per-sequence scene labels available",
+  "group_AP_status": "DAUB >7 equals the full-set AP because all other GT bins are empty; populated only after verified TEST. Other dataset grouped AP remains unavailable.",
+  "false_alarm_working_threshold": null,
+  "threshold_reason": "source-domain predeclared working threshold is not traceable; do not choose on test",
+  "series_b_working_threshold": 0.25,
+  "series_b_working_threshold_source": "New source protocol fixed before training; approved series B"
+}

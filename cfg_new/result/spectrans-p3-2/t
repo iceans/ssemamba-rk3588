@@ -1,0 +1,946 @@
+/opt/anaconda3/envs/mambayolo/bin/python /home/dell/lxs/tsgmamba/ultralytics-main/tsgmamba_train.py
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/timm/models/layers/__init__.py:48: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+WARNING ⚠️ no model scale passed. Assuming scale='n'.
+New https://pypi.org/project/ultralytics/8.4.104 available 😃 Update with 'pip install -U ultralytics'
+Ultralytics 8.3.234 🚀 Python-3.11.11 torch-2.0.0+cu118 CUDA:0 (NVIDIA GeForce RTX 4090, 24209MiB)
+engine/trainer: agnostic_nms=False, amp=False, augment=True, auto_augment=randaugment, batch=8, bgr=0.0, box=7.5, cache=False, cfg=None, classes=None, close_mosaic=10, cls=0.5, compile=False, conf=None, copy_paste=0.0, copy_paste_mode=flip, cos_lr=False, cube=True, cutmix=0.0, data=/home/dell/lxs/tsgmamba/ultralytics-main/ultralytics/cfg/datasets/DAUB.yaml, degrees=0.0, deterministic=True, device=0, dfl=1.5, dnn=False, dropout=0.0, dynamic=False, embed=None, epochs=100, erasing=0.4, exist_ok=False, fliplr=0.5, flipud=0.0, format=torchscript, fraction=1.0, frame_num=20, freeze=None, gray=False, half=False, hsv_h=0.015, hsv_s=0.7, hsv_v=0.4, imgsz=640, int8=False, iou=0.7, keras=False, kobj=1.0, line_width=None, lr0=0.0001, lrf=0.01, mask_ratio=4, max_det=300, mixup=0.0, mod=False, mode=train, model=/home/dell/lxs/tsgmamba/ultralytics-main/cfg_new/files/yolov8-spectrans-p3.yaml, momentum=0.937, mosaic=1.0, multi_scale=False, name=train96, nbs=64, nms=False, opset=None, optimize=False, optimizer=auto, overlap_mask=True, patience=40, perspective=0.0, plots=True, pose=12.0, pretrained=True, profile=False, project=None, rect=False, resume=False, retina_masks=False, save=True, save_conf=False, save_crop=False, save_dir=/home/dell/lxs/tsgmamba/ultralytics-main/runs/detect/train96, save_frames=False, save_json=False, save_period=-1, save_txt=False, scale=0.5, seed=0, shear=0.0, show=False, show_boxes=True, show_conf=True, show_labels=True, simplify=True, single_cls=False, source=None, split=val, stream_buffer=False, task=detect, time=None, tracker=botsort.yaml, translate=0.1, val=True, verbose=True, vid_stride=1, visualize=False, warmup_bias_lr=0.1, warmup_epochs=3.0, warmup_momentum=0.8, weight_decay=0.0005, workers=8, workspace=None
+WARNING ⚠️ no model scale passed. Assuming scale='n'.
+
+                   from  n    params  module                                       arguments
+  0                  -1  1      3344  ultralytics.nn.modules.conv.Conv             [23, 16, 3, 2]
+  1                  -1  1     18496  ultralytics.nn.modules.trace_modules.SPDConv [16, 32]
+  2                  -1  1      7360  ultralytics.nn.modules.block.C2f             [32, 32, 1, True]
+  3                  -1  1     73856  ultralytics.nn.modules.trace_modules.SPDConv [32, 64]
+  4                  -1  2     49664  ultralytics.nn.modules.block.C2f             [64, 64, 2, True]
+  5                  -1  1     22514  ultralytics.nn.modules.spec_trans_ssm.SpecTransSSM[64, 32, 8, 'hybrid', True, True, True, True, 'input', 4.0, 8]
+  6                  -1  1     73984  ultralytics.nn.modules.conv.Conv             [64, 128, 3, 2]
+  7                  -1  2    197632  ultralytics.nn.modules.block.C2f             [128, 128, 2, True]
+  8                  -1  1    295424  ultralytics.nn.modules.conv.Conv             [128, 256, 3, 2]
+  9                  -1  1    460288  ultralytics.nn.modules.block.C2f             [256, 256, 1, True]
+ 10                  -1  1    164608  ultralytics.nn.modules.block.SPPF            [256, 256, 5]
+ 11                  -1  1         0  torch.nn.modules.upsampling.Upsample         [None, 2, 'nearest']
+ 12             [-1, 7]  1         0  ultralytics.nn.modules.conv.Concat           [1]
+ 13                  -1  1    148224  ultralytics.nn.modules.block.C2f             [384, 128, 1]
+ 14                  -1  1         0  torch.nn.modules.upsampling.Upsample         [None, 2, 'nearest']
+ 15             [-1, 5]  1         0  ultralytics.nn.modules.conv.Concat           [1]
+ 16                  -1  1     37248  ultralytics.nn.modules.block.C2f             [192, 64, 1]
+ 17                  -1  1         0  torch.nn.modules.upsampling.Upsample         [None, 2, 'nearest']
+ 18             [-1, 2]  1         0  ultralytics.nn.modules.conv.Concat           [1]
+ 19                  -1  1      9408  ultralytics.nn.modules.block.C2f             [96, 32, 1]
+ 20                  -1  1      9280  ultralytics.nn.modules.conv.Conv             [32, 32, 3, 2]
+ 21            [-1, 16]  1         0  ultralytics.nn.modules.conv.Concat           [1]
+ 22                  -1  1     31104  ultralytics.nn.modules.block.C2f             [96, 64, 1]
+ 23                  -1  1     36992  ultralytics.nn.modules.conv.Conv             [64, 64, 3, 2]
+ 24            [-1, 13]  1         0  ultralytics.nn.modules.conv.Concat           [1]
+ 25                  -1  1    123648  ultralytics.nn.modules.block.C2f             [192, 128, 1]
+ 26                  -1  1    147712  ultralytics.nn.modules.conv.Conv             [128, 128, 3, 2]
+ 27            [-1, 10]  1         0  ultralytics.nn.modules.conv.Concat           [1]
+ 28                  -1  1    493056  ultralytics.nn.modules.block.C2f             [384, 256, 1]
+ 29    [19, 22, 25, 28]  1   1446168  ultralytics.nn.modules.head.Detect           [1, [32, 64, 128, 256]]
+YOLOv8-spectrans-p3 summary: 206 layers, 3,850,010 parameters, 3,849,994 gradients, 16.5 GFLOPs
+
+Freezing layer 'model.29.dfl.conv.weight'
+train: Scanning /home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/train/labels_f20.cache... 8963 images, 0 backgrounds, 0 corrupt: 100%|██████████| 8982/8982 [00:00<?, ?it/s]
+val: Scanning /home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/labels_f20.cache... 4776 images, 0 backgrounds, 0 corrupt: 100%|██████████| 4795/4795 [00:00<?, ?it/s]
+Plotting labels to /home/dell/lxs/tsgmamba/ultralytics-main/runs/detect/train96/labels.jpg...
+optimizer: 'optimizer=auto' found, ignoring 'lr0=0.0001' and 'momentum=0.937' and determining best 'optimizer', 'lr0' and 'momentum' automatically...
+optimizer: SGD(lr=0.01, momentum=0.9) with parameter groups 78 weight(decay=0.0), 103 weight(decay=0.0005), 105 bias(decay=0.0)
+Image sizes 640 train, 640 val
+Using 8 dataloader workers
+Logging results to /home/dell/lxs/tsgmamba/ultralytics-main/runs/detect/train96
+Starting training for 100 epochs...
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: grid_sampler_2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: reflection_pad2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+      1/100      4.49G      3.691      5.458      2.602         15        640: 100% ━━━━━━━━━━━╸ 1120/1123 9.2it/s 3:16<0.3s[SpecTransSSM] WARNING: N=6 既不能被缓存 T=None 也不能被 seq_len=8 整除, 回退 T=1 (本层无时序递归!). 检查 ClipToBatch 是否在 backbone 入口, 及通道排布契约。
+      1/100      4.49G      3.687      5.452        2.6         13        640: 100% ━━━━━━━━━━━━ 1123/1123 5.7it/s 3:16
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 300/300 7.6it/s 39.5s
+                   all       4795       4795     0.5999     0.6213     0.6682     0.4021
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: grid_sampler_2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: reflection_pad2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+      2/100      5.62G      1.485      1.675      1.276         13        640: 100% ━━━━━━━━━━━━ 1123/1123 6.6it/s 2:49
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 300/300 6.9it/s 43.7s
+                   all       4795       4795     0.3186     0.5570     0.3400     0.1675
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: grid_sampler_2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: reflection_pad2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+      3/100      5.62G      1.399      1.439      1.181         14        640: 100% ━━━━━━━━━━━━ 1123/1123 6.7it/s 2:47
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 300/300 9.1it/s 32.8s
+                   all       4795       4795     0.6579     0.5502     0.5772     0.3500
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: grid_sampler_2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: reflection_pad2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+      4/100      5.62G      1.351      1.326      1.138         18        640: 100% ━━━━━━━━━━━━ 1123/1123 6.7it/s 2:47
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 300/300 8.9it/s 33.6s
+                   all       4795       4795     0.7512     0.7554     0.8331     0.4780
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: grid_sampler_2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: reflection_pad2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+      5/100      5.62G      1.313      1.197      1.115         11        640: 100% ━━━━━━━━━━━━ 1123/1123 6.7it/s 2:47
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 300/300 7.0it/s 42.8s
+                   all       4795       4795     0.7163     0.7408     0.7813     0.4833
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: grid_sampler_2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: reflection_pad2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+      6/100      5.62G      1.281      1.094      1.101         11        640: 100% ━━━━━━━━━━━━ 1123/1123 6.8it/s 2:46
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 300/300 5.8it/s 51.9s
+                   all       4795       4795     0.6250     0.6613     0.6031     0.2792
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: grid_sampler_2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: reflection_pad2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+      7/100      5.62G      1.244      1.021      1.086         14        640: 100% ━━━━━━━━━━━━ 1123/1123 6.7it/s 2:48
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 300/300 7.4it/s 40.7s
+                   all       4795       4795     0.7402     0.7952     0.8559     0.5229
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: grid_sampler_2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: reflection_pad2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+      8/100      5.62G      1.209     0.9685      1.073         11        640: 100% ━━━━━━━━━━━━ 1123/1123 6.8it/s 2:46
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 300/300 7.5it/s 39.9s
+                   all       4795       4795     0.7794     0.7589     0.8224     0.4834
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: grid_sampler_2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: reflection_pad2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+      9/100      5.62G       1.17     0.9052      1.057         12        640: 100% ━━━━━━━━━━━━ 1123/1123 6.6it/s 2:49
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 300/300 6.0it/s 49.7s
+                   all       4795       4795     0.7497     0.8187     0.8418     0.5264
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: grid_sampler_2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: reflection_pad2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+     10/100      5.62G      1.153     0.8718       1.05         12        640: 100% ━━━━━━━━━━━━ 1123/1123 6.7it/s 2:46
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 300/300 7.0it/s 42.8s
+                   all       4795       4795     0.6665     0.8288     0.8048     0.5155
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: grid_sampler_2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: reflection_pad2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+     11/100      5.62G      1.127     0.8516      1.043         13        640: 100% ━━━━━━━━━━━━ 1123/1123 6.8it/s 2:46
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 300/300 6.5it/s 46.4s
+                   all       4795       4795     0.7643     0.8201     0.8582     0.5295
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: grid_sampler_2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: reflection_pad2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+     12/100      5.62G      1.114     0.8219      1.041         14        640: 100% ━━━━━━━━━━━━ 1123/1123 6.7it/s 2:48
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 300/300 7.2it/s 41.9s
+                   all       4795       4795     0.7323     0.7889     0.8322     0.5189
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: grid_sampler_2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: reflection_pad2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+     13/100      5.62G      1.094     0.8051       1.03         12        640: 100% ━━━━━━━━━━━━ 1123/1123 6.7it/s 2:47
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 300/300 6.5it/s 46.0s
+                   all       4795       4795     0.7296     0.8131     0.8338     0.5005
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: grid_sampler_2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: reflection_pad2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+     14/100      5.62G      1.072     0.7803      1.022         16        640: 100% ━━━━━━━━━━━━ 1123/1123 6.7it/s 2:47
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 300/300 7.1it/s 42.2s
+                   all       4795       4795     0.6835     0.8448     0.8079     0.4988
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: grid_sampler_2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: reflection_pad2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+     15/100      5.62G      1.055     0.7589      1.018         15        640: 100% ━━━━━━━━━━━━ 1123/1123 6.8it/s 2:46
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 300/300 6.8it/s 44.2s
+                   all       4795       4795     0.6536     0.8012     0.7645     0.4982
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: grid_sampler_2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: reflection_pad2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+     16/100      5.62G      1.046     0.7465      1.012         13        640: 100% ━━━━━━━━━━━━ 1123/1123 6.7it/s 2:47
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 300/300 6.6it/s 45.3s
+                   all       4795       4795     0.7773     0.8590     0.8878     0.5651
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: grid_sampler_2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: reflection_pad2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+     17/100      5.62G      1.036      0.732       1.01         14        640: 100% ━━━━━━━━━━━━ 1123/1123 6.7it/s 2:47
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 300/300 6.9it/s 43.7s
+                   all       4795       4795     0.7552     0.8584     0.8661     0.5189
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: grid_sampler_2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: reflection_pad2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+     18/100      5.62G      1.032     0.7273       1.01         18        640: 100% ━━━━━━━━━━━━ 1123/1123 6.8it/s 2:46
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 300/300 6.7it/s 44.8s
+                   all       4795       4795     0.7459     0.8661     0.8629     0.5571
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: grid_sampler_2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: reflection_pad2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+     19/100      5.62G      1.013     0.7011      1.004         17        640: 100% ━━━━━━━━━━━━ 1123/1123 6.7it/s 2:47
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 300/300 6.8it/s 44.0s
+                   all       4795       4795     0.7801     0.8073     0.8647     0.5565
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: grid_sampler_2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: reflection_pad2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+     20/100      5.62G      1.002       0.68     0.9998         11        640: 100% ━━━━━━━━━━━━ 1123/1123 6.7it/s 2:47
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 300/300 6.6it/s 45.6s
+                   all       4795       4795     0.7549     0.7740     0.8252     0.5309
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: grid_sampler_2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: reflection_pad2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+     21/100      5.62G     0.9846      0.682     0.9937         14        640: 100% ━━━━━━━━━━━━ 1123/1123 6.7it/s 2:47
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 300/300 8.1it/s 37.0s
+                   all       4795       4795     0.7909     0.8036     0.8589     0.5496
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: grid_sampler_2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: reflection_pad2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+     22/100      5.62G     0.9846     0.6726     0.9914         12        640: 100% ━━━━━━━━━━━━ 1123/1123 6.7it/s 2:48
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 300/300 7.3it/s 40.8s
+                   all       4795       4795     0.7561     0.7816     0.8095     0.5250
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: grid_sampler_2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: reflection_pad2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+     23/100      5.62G     0.9735      0.651     0.9905         17        640: 100% ━━━━━━━━━━━━ 1123/1123 6.7it/s 2:47
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 300/300 7.0it/s 42.7s
+                   all       4795       4795     0.7423     0.8181     0.8444     0.5432
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: grid_sampler_2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: reflection_pad2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+     24/100      5.62G     0.9662     0.6519     0.9876         17        640: 100% ━━━━━━━━━━━━ 1123/1123 6.7it/s 2:47
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 300/300 6.9it/s 43.5s
+                   all       4795       4795     0.7077     0.8133     0.8234     0.5421
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: grid_sampler_2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: reflection_pad2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+     25/100      5.62G     0.9574     0.6439     0.9851         10        640: 100% ━━━━━━━━━━━━ 1123/1123 6.8it/s 2:46
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 300/300 6.6it/s 45.8s
+                   all       4795       4795     0.7296     0.8002     0.8351     0.5440
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: grid_sampler_2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: reflection_pad2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+     26/100      5.62G     0.9468     0.6341     0.9844         14        640: 100% ━━━━━━━━━━━━ 1123/1123 6.7it/s 2:47
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 300/300 7.2it/s 41.5s
+                   all       4795       4795     0.7254     0.8184     0.8305     0.5299
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: grid_sampler_2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: reflection_pad2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+     27/100      5.62G     0.9386     0.6233     0.9811         15        640: 100% ━━━━━━━━━━━━ 1123/1123 6.7it/s 2:47
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 300/300 6.7it/s 44.9s
+                   all       4795       4795     0.7352     0.8044     0.8229     0.5461
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: grid_sampler_2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: reflection_pad2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+     28/100      5.62G     0.9261     0.6194     0.9781         17        640: 100% ━━━━━━━━━━━━ 1123/1123 6.8it/s 2:46
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 300/300 6.9it/s 43.2s
+                   all       4795       4795     0.7333     0.8242     0.8401     0.5535
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: grid_sampler_2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: reflection_pad2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+     29/100      5.62G      0.928     0.6094     0.9767         13        640: 100% ━━━━━━━━━━━━ 1123/1123 6.6it/s 2:49
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 300/300 6.2it/s 48.0s
+                   all       4795       4795     0.7987     0.8421     0.8858     0.5680
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: grid_sampler_2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: reflection_pad2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+     30/100      5.62G     0.9191     0.6036     0.9784         14        640: 100% ━━━━━━━━━━━━ 1123/1123 6.7it/s 2:47
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 300/300 6.4it/s 46.8s
+                   all       4795       4795     0.8041     0.8528     0.8841     0.5791
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: grid_sampler_2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: reflection_pad2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+     31/100      5.62G     0.9162      0.602     0.9763         14        640: 100% ━━━━━━━━━━━━ 1123/1123 6.7it/s 2:47
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 300/300 7.1it/s 42.4s
+                   all       4795       4795     0.7552     0.8701     0.8720     0.5689
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: grid_sampler_2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: reflection_pad2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+     32/100      5.62G     0.9052     0.5998     0.9739         16        640: 100% ━━━━━━━━━━━━ 1123/1123 6.7it/s 2:47
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 300/300 7.4it/s 40.5s
+                   all       4795       4795     0.7425     0.7670     0.8351     0.5489
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: grid_sampler_2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: reflection_pad2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+     33/100      5.62G     0.9052      0.594     0.9749         13        640: 100% ━━━━━━━━━━━━ 1123/1123 6.7it/s 2:48
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 300/300 7.1it/s 42.0s
+                   all       4795       4795     0.7321     0.7877     0.8264     0.5400
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: grid_sampler_2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: reflection_pad2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+     34/100      5.62G      0.895     0.5838     0.9702         18        640: 100% ━━━━━━━━━━━━ 1123/1123 6.6it/s 2:49
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 300/300 6.9it/s 43.4s
+                   all       4795       4795     0.7413     0.8227     0.8563     0.5630
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: grid_sampler_2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: reflection_pad2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+     35/100      5.62G     0.8883     0.5807     0.9651         20        640: 100% ━━━━━━━━━━━━ 1123/1123 6.7it/s 2:47
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 300/300 7.5it/s 39.9s
+                   all       4795       4795     0.7815     0.8050     0.8671     0.5789
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: grid_sampler_2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: reflection_pad2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+     36/100      5.62G     0.8865     0.5702      0.968         12        640: 100% ━━━━━━━━━━━━ 1123/1123 6.7it/s 2:47
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 300/300 6.7it/s 45.0s
+                   all       4795       4795     0.7191     0.8346     0.8338     0.5539
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: grid_sampler_2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: reflection_pad2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+     37/100      5.62G     0.8814       0.57     0.9656         12        640: 100% ━━━━━━━━━━━━ 1123/1123 6.7it/s 2:47
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 300/300 6.7it/s 44.6s
+                   all       4795       4795     0.7498     0.8304     0.8491     0.5686
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: grid_sampler_2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: reflection_pad2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+     38/100      5.62G     0.8792     0.5673      0.966         14        640: 100% ━━━━━━━━━━━━ 1123/1123 6.8it/s 2:46
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 300/300 6.4it/s 47.2s
+                   all       4795       4795     0.7874     0.7975     0.8640     0.5808
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: grid_sampler_2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: reflection_pad2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+     39/100      5.62G     0.8685     0.5579     0.9608         16        640: 100% ━━━━━━━━━━━━ 1123/1123 6.7it/s 2:48
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 300/300 6.6it/s 45.4s
+                   all       4795       4795     0.7350     0.8684     0.8639     0.5775
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: grid_sampler_2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: reflection_pad2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+     40/100      5.62G     0.8629     0.5597     0.9629         15        640: 100% ━━━━━━━━━━━━ 1123/1123 6.7it/s 2:47
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 300/300 6.3it/s 47.6s
+                   all       4795       4795     0.7442     0.8788     0.8586     0.5640
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: grid_sampler_2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: reflection_pad2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+     41/100      5.62G     0.8533     0.5492     0.9592         11        640: 100% ━━━━━━━━━━━━ 1123/1123 6.7it/s 2:47
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 300/300 6.7it/s 45.0s
+                   all       4795       4795     0.7606     0.8599     0.8716     0.5811
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: grid_sampler_2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: reflection_pad2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+     42/100      5.62G     0.8531     0.5445     0.9609         15        640: 100% ━━━━━━━━━━━━ 1123/1123 6.7it/s 2:47
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 300/300 7.1it/s 42.1s
+                   all       4795       4795     0.7463     0.8590     0.8639     0.5730
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: grid_sampler_2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: reflection_pad2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+     43/100      5.62G     0.8492     0.5536     0.9584         14        640: 100% ━━━━━━━━━━━━ 1123/1123 6.7it/s 2:47
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 300/300 6.7it/s 44.5s
+                   all       4795       4795     0.7546     0.8551     0.8592     0.5685
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: grid_sampler_2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: reflection_pad2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+     44/100      5.62G     0.8459     0.5395     0.9583         16        640: 100% ━━━━━━━━━━━━ 1123/1123 6.6it/s 2:50
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 300/300 7.1it/s 42.2s
+                   all       4795       4795     0.7652     0.8537     0.8746     0.5809
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: grid_sampler_2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: reflection_pad2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+     45/100      5.62G     0.8392     0.5393     0.9562         13        640: 100% ━━━━━━━━━━━━ 1123/1123 6.7it/s 2:47
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 300/300 6.7it/s 44.5s
+                   all       4795       4795     0.7675     0.8626     0.8739     0.5742
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: grid_sampler_2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: reflection_pad2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+     46/100      5.62G     0.8358     0.5345     0.9553         11        640: 100% ━━━━━━━━━━━━ 1123/1123 6.8it/s 2:46
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 300/300 7.6it/s 39.4s
+                   all       4795       4795     0.7483     0.8346     0.8543     0.5722
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: grid_sampler_2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: reflection_pad2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+     47/100      5.62G     0.8326     0.5304      0.954         16        640: 100% ━━━━━━━━━━━━ 1123/1123 6.7it/s 2:49
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 300/300 6.9it/s 43.7s
+                   all       4795       4795     0.7523     0.8425     0.8659     0.5714
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: grid_sampler_2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: reflection_pad2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+     48/100      5.62G     0.8267     0.5312     0.9525         10        640: 100% ━━━━━━━━━━━━ 1123/1123 6.7it/s 2:47
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 300/300 8.2it/s 36.7s
+                   all       4795       4795     0.7861     0.8584     0.8918     0.5859
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: grid_sampler_2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: reflection_pad2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+     49/100      5.62G     0.8158     0.5212     0.9497         12        640: 100% ━━━━━━━━━━━━ 1123/1123 6.7it/s 2:47
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 300/300 8.4it/s 35.7s
+                   all       4795       4795     0.7842     0.8767     0.8985     0.5946
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: grid_sampler_2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: reflection_pad2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+     50/100      5.62G     0.8136     0.5212     0.9523         10        640: 100% ━━━━━━━━━━━━ 1123/1123 6.7it/s 2:47
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 300/300 6.4it/s 46.7s
+                   all       4795       4795     0.7577     0.8374     0.8637     0.5758
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: grid_sampler_2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: reflection_pad2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+     51/100      5.62G     0.8099     0.5206     0.9503         14        640: 100% ━━━━━━━━━━━━ 1123/1123 6.7it/s 2:47
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 300/300 9.2it/s 32.7s
+                   all       4795       4795     0.7593     0.8335     0.8685     0.5814
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: grid_sampler_2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: reflection_pad2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+     52/100      5.62G     0.8044     0.5101     0.9482         11        640: 100% ━━━━━━━━━━━━ 1123/1123 6.8it/s 2:46
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 300/300 8.2it/s 36.6s
+                   all       4795       4795     0.7756     0.8659     0.8877     0.5893
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: grid_sampler_2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: reflection_pad2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+     53/100      5.62G     0.8022     0.5077     0.9469         20        640: 100% ━━━━━━━━━━━━ 1123/1123 6.7it/s 2:48
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 300/300 7.4it/s 40.3s
+                   all       4795       4795     0.7618     0.8657     0.8837     0.5856
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: grid_sampler_2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: reflection_pad2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+     54/100      5.62G     0.8066     0.5064     0.9498         14        640: 100% ━━━━━━━━━━━━ 1123/1123 6.7it/s 2:47
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 300/300 7.0it/s 43.1s
+                   all       4795       4795     0.7399     0.8582     0.8678     0.5768
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: grid_sampler_2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: reflection_pad2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+     55/100      5.62G     0.7959     0.5064     0.9423         13        640: 100% ━━━━━━━━━━━━ 1123/1123 6.7it/s 2:47
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 300/300 6.4it/s 47.0s
+                   all       4795       4795     0.7601     0.8455     0.8754     0.5828
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: grid_sampler_2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: reflection_pad2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+     56/100      5.62G     0.7941      0.502     0.9452         16        640: 100% ━━━━━━━━━━━━ 1123/1123 6.7it/s 2:47
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 300/300 7.8it/s 38.4s
+                   all       4795       4795     0.7466     0.8549     0.8670     0.5820
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: grid_sampler_2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: reflection_pad2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+     57/100      5.62G     0.7954     0.5089     0.9456         12        640: 100% ━━━━━━━━━━━━ 1123/1123 6.7it/s 2:47
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 300/300 7.4it/s 40.6s
+                   all       4795       4795     0.7481     0.8430     0.8682     0.5833
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: grid_sampler_2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: reflection_pad2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+     58/100      5.62G       0.78     0.4994     0.9433         12        640: 100% ━━━━━━━━━━━━ 1123/1123 6.7it/s 2:47
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 300/300 6.7it/s 44.7s
+                   all       4795       4795     0.7550     0.8505     0.8732     0.5832
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: grid_sampler_2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: reflection_pad2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+     59/100      5.62G     0.7792      0.493     0.9429         13        640: 100% ━━━━━━━━━━━━ 1123/1123 6.7it/s 2:46
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 300/300 8.7it/s 34.5s
+                   all       4795       4795     0.7367     0.8611     0.8710     0.5817
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: grid_sampler_2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: reflection_pad2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+     60/100      5.62G     0.7813      0.503     0.9446         19        640: 100% ━━━━━━━━━━━━ 1123/1123 6.7it/s 2:47
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 300/300 8.4it/s 35.8s
+                   all       4795       4795     0.7307     0.8523     0.8668     0.5815
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: grid_sampler_2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: reflection_pad2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+     61/100      5.62G     0.7707     0.4935     0.9399         17        640: 100% ━━━━━━━━━━━━ 1123/1123 6.7it/s 2:47
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 300/300 6.9it/s 43.7s
+                   all       4795       4795     0.7471     0.8342     0.8669     0.5790
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: grid_sampler_2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: reflection_pad2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+     62/100      5.62G     0.7742      0.495     0.9421         12        640: 100% ━━━━━━━━━━━━ 1123/1123 6.8it/s 2:46
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 300/300 7.0it/s 43.1s
+                   all       4795       4795     0.7522     0.8273     0.8719     0.5833
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: grid_sampler_2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: reflection_pad2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+     63/100      5.62G     0.7659     0.4883     0.9389         11        640: 100% ━━━━━━━━━━━━ 1123/1123 6.7it/s 2:47
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 300/300 7.1it/s 42.4s
+                   all       4795       4795     0.7371     0.8405     0.8652     0.5800
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: grid_sampler_2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: reflection_pad2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+     64/100      5.62G     0.7614     0.4784     0.9394         15        640: 100% ━━━━━━━━━━━━ 1123/1123 6.7it/s 2:48
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 300/300 6.9it/s 43.4s
+                   all       4795       4795     0.7448     0.8229     0.8594     0.5733
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: grid_sampler_2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: reflection_pad2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+     65/100      5.62G     0.7637     0.4818     0.9409         13        640: 100% ━━━━━━━━━━━━ 1123/1123 6.7it/s 2:47
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 300/300 6.7it/s 45.0s
+                   all       4795       4795     0.7490     0.8060     0.8544     0.5693
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: grid_sampler_2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: reflection_pad2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+     66/100      5.62G     0.7596     0.4806     0.9369         12        640: 100% ━━━━━━━━━━━━ 1123/1123 6.7it/s 2:47
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 300/300 6.1it/s 49.1s
+                   all       4795       4795     0.7372     0.8570     0.8680     0.5771
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: grid_sampler_2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: reflection_pad2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+     67/100      5.62G     0.7523     0.4729     0.9356         18        640: 100% ━━━━━━━━━━━━ 1123/1123 6.7it/s 2:47
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 300/300 7.6it/s 39.4s
+                   all       4795       4795     0.7427     0.8599     0.8747     0.5819
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: grid_sampler_2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: reflection_pad2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+     68/100      5.62G     0.7503     0.4738      0.938         14        640: 100% ━━━━━━━━━━━━ 1123/1123 6.7it/s 2:47
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 300/300 8.2it/s 36.4s
+                   all       4795       4795     0.7485     0.8390     0.8709     0.5832
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: grid_sampler_2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: reflection_pad2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+     69/100      5.62G     0.7416     0.4672     0.9341         12        640: 100% ━━━━━━━━━━━━ 1123/1123 6.8it/s 2:46
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 300/300 7.6it/s 39.2s
+                   all       4795       4795     0.7378     0.8182     0.8592     0.5751
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: grid_sampler_2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: reflection_pad2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+     70/100      5.62G     0.7438     0.4712     0.9352         17        640: 100% ━━━━━━━━━━━━ 1123/1123 6.7it/s 2:47
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 300/300 6.5it/s 45.9s
+                   all       4795       4795     0.7280     0.8357     0.8589     0.5747
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: grid_sampler_2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: reflection_pad2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+     71/100      5.62G      0.735     0.4714     0.9314         10        640: 100% ━━━━━━━━━━━━ 1123/1123 6.8it/s 2:46
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 300/300 8.9it/s 33.9s
+                   all       4795       4795     0.7330     0.8481     0.8664     0.5825
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: grid_sampler_2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: reflection_pad2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+     72/100      5.62G     0.7332     0.4701     0.9322         13        640: 100% ━━━━━━━━━━━━ 1123/1123 6.8it/s 2:46
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 300/300 6.5it/s 46.2s
+                   all       4795       4795     0.7202     0.8269     0.8521     0.5757
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: grid_sampler_2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: reflection_pad2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+     73/100      5.62G     0.7342     0.4608      0.932         14        640: 100% ━━━━━━━━━━━━ 1123/1123 6.7it/s 2:47
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 300/300 6.8it/s 44.3s
+                   all       4795       4795     0.7299     0.8083     0.8474     0.5714
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: grid_sampler_2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: reflection_pad2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+     74/100      5.62G     0.7335     0.4614     0.9313         15        640: 100% ━━━━━━━━━━━━ 1123/1123 6.7it/s 2:48
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 300/300 6.3it/s 47.8s
+                   all       4795       4795     0.7317     0.8225     0.8559     0.5750
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: grid_sampler_2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: reflection_pad2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+     75/100      5.62G     0.7251      0.457     0.9304         13        640: 100% ━━━━━━━━━━━━ 1123/1123 6.7it/s 2:47
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 300/300 6.0it/s 50.4s
+                   all       4795       4795     0.7300     0.8259     0.8568     0.5745
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: grid_sampler_2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: reflection_pad2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+     76/100      5.62G     0.7292     0.4555       0.93         11        640: 100% ━━━━━━━━━━━━ 1123/1123 6.7it/s 2:46
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 300/300 6.7it/s 44.8s
+                   all       4795       4795     0.7350     0.8268     0.8627     0.5796
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: grid_sampler_2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: reflection_pad2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+     77/100      5.62G     0.7148     0.4525     0.9259         13        640: 100% ━━━━━━━━━━━━ 1123/1123 6.7it/s 2:47
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 300/300 6.6it/s 45.2s
+                   all       4795       4795     0.7394     0.8332     0.8679     0.5824
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: grid_sampler_2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: reflection_pad2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+     78/100      5.62G     0.7138     0.4567      0.926         13        640: 100% ━━━━━━━━━━━━ 1123/1123 6.8it/s 2:46
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 300/300 6.0it/s 49.6s
+                   all       4795       4795     0.7472     0.8302     0.8699     0.5840
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: grid_sampler_2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: reflection_pad2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+     79/100      5.62G     0.7176     0.4472     0.9279         15        640: 100% ━━━━━━━━━━━━ 1123/1123 6.7it/s 2:47
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 300/300 6.8it/s 44.0s
+                   all       4795       4795     0.7431     0.8395     0.8726     0.5855
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: grid_sampler_2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: reflection_pad2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+     80/100      5.62G     0.7108     0.4443     0.9258         17        640: 100% ━━━━━━━━━━━━ 1123/1123 6.7it/s 2:47
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 300/300 6.4it/s 46.5s
+                   all       4795       4795     0.7441     0.8304     0.8666     0.5821
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: grid_sampler_2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: reflection_pad2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+     81/100      5.62G     0.7082      0.442     0.9251         12        640: 100% ━━━━━━━━━━━━ 1123/1123 6.8it/s 2:46
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 300/300 6.3it/s 47.3s
+                   all       4795       4795     0.7442     0.8354     0.8673     0.5829
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: grid_sampler_2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: reflection_pad2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+     82/100      5.62G      0.707     0.4474     0.9263         13        640: 100% ━━━━━━━━━━━━ 1123/1123 6.7it/s 2:49
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 300/300 8.0it/s 37.3s
+                   all       4795       4795     0.7349     0.8244     0.8611     0.5782
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: grid_sampler_2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: reflection_pad2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+     83/100      5.62G     0.7022     0.4295     0.9272         17        640: 100% ━━━━━━━━━━━━ 1123/1123 6.7it/s 2:47
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 300/300 8.4it/s 35.9s
+                   all       4795       4795     0.7412     0.8212     0.8627     0.5777
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: grid_sampler_2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: reflection_pad2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+     84/100      5.62G     0.7031      0.435     0.9245         12        640: 100% ━━━━━━━━━━━━ 1123/1123 6.6it/s 2:50
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 300/300 6.2it/s 48.7s
+                   all       4795       4795     0.7327     0.8294     0.8627     0.5770
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: grid_sampler_2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: reflection_pad2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+     85/100      5.62G     0.6906     0.4315     0.9225         15        640: 100% ━━━━━━━━━━━━ 1123/1123 6.7it/s 2:47
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 300/300 7.3it/s 41.3s
+                   all       4795       4795     0.7376     0.8237     0.8619     0.5770
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: grid_sampler_2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: reflection_pad2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+     86/100      5.62G     0.6972     0.4369     0.9226         11        640: 100% ━━━━━━━━━━━━ 1123/1123 6.7it/s 2:47
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 300/300 6.6it/s 45.1s
+                   all       4795       4795     0.7354     0.8167     0.8612     0.5766
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: grid_sampler_2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: reflection_pad2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+     87/100      5.62G     0.6875     0.4269     0.9216         17        640: 100% ━━━━━━━━━━━━ 1123/1123 6.7it/s 2:47
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 300/300 7.0it/s 42.7s
+                   all       4795       4795     0.7410     0.8148     0.8613     0.5781
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: grid_sampler_2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: reflection_pad2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+     88/100      5.62G     0.6844     0.4224     0.9176         12        640: 100% ━━━━━━━━━━━━ 1123/1123 6.7it/s 2:48
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 300/300 6.4it/s 46.9s
+                   all       4795       4795     0.7362     0.8166     0.8606     0.5764
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: grid_sampler_2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/autograd/__init__.py:200: UserWarning: reflection_pad2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:71.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+     89/100      5.62G     0.6847     0.4194      0.921         16        640: 100% ━━━━━━━━━━━━ 1123/1123 6.8it/s 2:46
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 300/300 10.8it/s 27.7s
+                   all       4795       4795     0.7204     0.8223     0.8576     0.5744
+EarlyStopping: Training stopped early as no improvement observed in last 40 epochs. Best results observed at epoch 49, best model saved as best.pt.
+To update EarlyStopping(patience=40) pass a new patience value, i.e. `patience=300` or use `patience=0` to disable EarlyStopping.
+
+89 epochs completed in 5.212 hours.
+Optimizer stripped from /home/dell/lxs/tsgmamba/ultralytics-main/runs/detect/train96/weights/last.pt, 8.2MB
+Optimizer stripped from /home/dell/lxs/tsgmamba/ultralytics-main/runs/detect/train96/weights/best.pt, 8.2MB
+
+Validating /home/dell/lxs/tsgmamba/ultralytics-main/runs/detect/train96/weights/best.pt...
+Ultralytics 8.3.234 🚀 Python-3.11.11 torch-2.0.0+cu118 CUDA:0 (NVIDIA GeForce RTX 4090, 24209MiB)
+YOLOv8-spectrans-p3 summary (fused): 134 layers, 3,844,106 parameters, 0 gradients, 16.3 GFLOPs
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 300/300 7.4it/s 40.4s
+                   all       4795       4795     0.7858     0.8606     0.8965     0.5898
+Speed: 0.9ms preprocess, 4.3ms inference, 0.0ms loss, 0.5ms postprocess per image
+Results saved to /home/dell/lxs/tsgmamba/ultralytics-main/runs/detect/train96
+Ultralytics 8.3.234 🚀 Python-3.11.11 torch-2.0.0+cu118 CUDA:0 (NVIDIA GeForce RTX 4090, 24209MiB)
+YOLOv8-spectrans-p3 summary (fused): 134 layers, 3,844,106 parameters, 0 gradients, 16.3 GFLOPs
+val: Scanning /home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/labels_f5.cache... 4791 images, 0 backgrounds, 0 corrupt: 100%|██████████| 4795/4795 [00:00<?, ?it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 0% ──────────── 0/300  0.5s
+Traceback (most recent call last):
+  File "/home/dell/lxs/tsgmamba/ultralytics-main/tsgmamba_train.py", line 34, in <module>
+    model.val(data="/home/dell/lxs/tsgmamba/ultralytics-main/ultralytics/cfg/datasets/DAUB.yaml",imgsz=640,rect=False,frame_num=5,device=[0],
+  File "/home/dell/lxs/tsgmamba/ultralytics-main/ultralytics/engine/model.py", line 611, in val
+    validator(model=self.model)
+  File "/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/utils/_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dell/lxs/tsgmamba/ultralytics-main/ultralytics/engine/validator.py", line 267, in __call__
+    preds = model(batch["img"], augment=augment)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dell/lxs/tsgmamba/ultralytics-main/ultralytics/nn/autobackend.py", line 656, in forward
+    y = self.model(im, augment=augment, visualize=visualize, embed=embed, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dell/lxs/tsgmamba/ultralytics-main/ultralytics/nn/tasks.py", line 148, in forward
+    return self.predict(x, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dell/lxs/tsgmamba/ultralytics-main/ultralytics/nn/tasks.py", line 165, in predict
+    return self._predict_once(x, profile, visualize, embed)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dell/lxs/tsgmamba/ultralytics-main/ultralytics/nn/tasks.py", line 187, in _predict_once
+    x = m(x)  # run
+        ^^^^
+  File "/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dell/lxs/tsgmamba/ultralytics-main/ultralytics/nn/modules/conv.py", line 89, in forward_fuse
+    return self.act(self.conv(x))
+                    ^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/nn/modules/conv.py", line 463, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/nn/modules/conv.py", line 459, in _conv_forward
+    return F.conv2d(input, weight, bias, self.stride,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Given groups=1, weight of size [16, 23, 3, 3], expected input[16, 8, 640, 640] to have 23 channels, but got 8 channels instead
+Exception in thread Thread-15 (_pin_memory_loop):
+Traceback (most recent call last):
+  File "/opt/anaconda3/envs/mambayolo/lib/python3.11/threading.py", line 1045, in _bootstrap_inner
+    self.run()
+  File "/opt/anaconda3/envs/mambayolo/lib/python3.11/threading.py", line 982, in run
+    self._target(*self._args, **self._kwargs)
+  File "/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/utils/data/_utils/pin_memory.py", line 51, in _pin_memory_loop
+    do_one_step()
+  File "/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/utils/data/_utils/pin_memory.py", line 28, in do_one_step
+    r = in_queue.get(timeout=MP_STATUS_CHECK_INTERVAL)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mambayolo/lib/python3.11/multiprocessing/queues.py", line 122, in get
+    return _ForkingPickler.loads(res)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mambayolo/lib/python3.11/site-packages/torch/multiprocessing/reductions.py", line 307, in rebuild_storage_fd
+    fd = df.detach()
+         ^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mambayolo/lib/python3.11/multiprocessing/resource_sharer.py", line 58, in detach
+    return reduction.recv_handle(conn)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mambayolo/lib/python3.11/multiprocessing/reduction.py", line 189, in recv_handle
+    return recvfds(s, 1)[0]
+           ^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/mambayolo/lib/python3.11/multiprocessing/reduction.py", line 157, in recvfds
+    msg, ancdata, flags, addr = sock.recvmsg(1, socket.CMSG_SPACE(bytes_size))
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+Process finished with exit code 1

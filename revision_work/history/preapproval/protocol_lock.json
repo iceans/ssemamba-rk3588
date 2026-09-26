@@ -1,0 +1,170 @@
+{
+  "status": "blocked",
+  "formal_training_locked": false,
+  "created_at": "2026-09-14T19:23:32.399009+00:00",
+  "code_sha256": "2b9984b1e1dea3dacae3159c1083a01ffa25a93455ef0ed9a546e83512e816b5",
+  "BASE_SEED": null,
+  "COMMON_SEEDS": null,
+  "MISSING_SEEDS": null,
+  "historical_observed_seeds": {
+    "fullsize_model": 0,
+    "conv3d-TIMSSM": 0
+  },
+  "reason": "Known seed values belong to runs without a valid comparable independent protocol; do not count them as valid third seeds",
+  "datasets": {
+    "DAUB": {
+      "train": {
+        "path": "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/train/images",
+        "num_frames": 8982,
+        "num_sequences": 10,
+        "num_boxes": 8982,
+        "groups": {
+          "d_gt_7": 8982
+        },
+        "manifest_sha256": "271fc15f670504908b51076d90f4f8d6abc3a47c1a8cd81903d4672dde8ca2e9",
+        "sequence_list_sha256": "1b58a4b8bf44d006ba6f9a8ffa2703b5efe0562d9de87711ec7bbea8651c448c",
+        "frames_with_errors": 0,
+        "empty_frames": 0,
+        "common_stride_frames": 8822,
+        "excluded_short_sequences": 0,
+        "hash_scope": "paths, image sizes and dimensions, full label bytes; not full image content"
+      },
+      "val": {
+        "path": "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images",
+        "num_frames": 4795,
+        "num_sequences": 7,
+        "num_boxes": 4795,
+        "groups": {
+          "d_gt_7": 4795
+        },
+        "manifest_sha256": "82bcc58e16fdced421bb35c7ca04d497e0bd7d0fbe1ea0770aa306aefb739a64",
+        "sequence_list_sha256": "c5313a5276e12e1d61a19dff8f62ce33cb04e65b44afab3aa9ad811a50fe9179",
+        "frames_with_errors": 0,
+        "empty_frames": 0,
+        "common_stride_frames": 4683,
+        "excluded_short_sequences": 0,
+        "hash_scope": "paths, image sizes and dimensions, full label bytes; not full image content"
+      },
+      "sequence_id_overlap": {
+        "train__val": []
+      },
+      "content_overlap_status": "Sequence/frame IDs checked. Renamed/derived background overlap not yet established.",
+      "test_is_used_as_val": true
+    },
+    "IRDST": {
+      "train": {
+        "path": "/home/dell/lxs/Anti_UAV_dataset/IRDST/yolo_dataset_png/images/train",
+        "num_frames": 20398,
+        "num_sequences": 42,
+        "num_boxes": 21038,
+        "groups": {
+          "d_gt_7": 20478,
+          "3_lt_d_le_7": 560
+        },
+        "manifest_sha256": "b27ae8997073734d1274210017ea4bb17c1e57cc102eadb134a3ca52d82c1285",
+        "sequence_list_sha256": "8efbd4e1eb7c77d511980405388c465cf8ce1acc04d7c409100cc7eee8fdc33f",
+        "frames_with_errors": 0,
+        "empty_frames": 0,
+        "common_stride_frames": 19726,
+        "excluded_short_sequences": 1,
+        "hash_scope": "paths, image sizes and dimensions, full label bytes; not full image content"
+      },
+      "val": {
+        "path": "/home/dell/lxs/Anti_UAV_dataset/IRDST/yolo_dataset_png/images/val",
+        "num_frames": 20258,
+        "num_sequences": 43,
+        "num_boxes": 20763,
+        "groups": {
+          "d_gt_7": 20145,
+          "3_lt_d_le_7": 618
+        },
+        "manifest_sha256": "e89d9947d5b918ec0eed659a4d6d2e333a36ea6536ec0b3180085dab89c26ed8",
+        "sequence_list_sha256": "29c61ff0ec5d4a68107d53a748e216af1b0dae17a15e77fb2faa45a76f324d17",
+        "frames_with_errors": 0,
+        "empty_frames": 0,
+        "common_stride_frames": 19570,
+        "excluded_short_sequences": 0,
+        "hash_scope": "paths, image sizes and dimensions, full label bytes; not full image content"
+      },
+      "sequence_id_overlap": {
+        "train__val": []
+      },
+      "content_overlap_status": "Sequence/frame IDs checked. Renamed/derived background overlap not yet established.",
+      "test_is_used_as_val": false
+    }
+  },
+  "evaluation_diagnostic": {
+    "imgsz": 640,
+    "frame_num": 5,
+    "channels": 8,
+    "batch": 8,
+    "conf": 0.001,
+    "iou": 0.7,
+    "max_det": 300,
+    "half": false,
+    "rect": false,
+    "workers": 0,
+    "split": "val",
+    "physical_set": "DAUB/yolo_format/test/images",
+    "evaluator": "current local DetectionValidator",
+    "checkpoint_selection": "historical best.pt; diagnostic only"
+  },
+  "historical_discrepancies": {
+    "candidate_full_epochs": 20,
+    "candidate_3dconv_epochs": 20,
+    "candidate_init": "DAUB trained complete-model checkpoint",
+    "optimizer_argument": "auto",
+    "lr0_argument": 0.0001,
+    "cos_lr": false,
+    "loss": [
+      7.5,
+      0.5,
+      1.5
+    ],
+    "physical_batch": 8,
+    "nbs": 64,
+    "steady_state_accumulation": 8,
+    "steady_state_effective_batch": 64,
+    "actual_optimizer": "not recoverable from stripped optimizer state; current auto rule is insufficient historical proof",
+    "lfss_supplement_layers": {
+      "current_constructor": 1,
+      "historical_frame5_and_3dconv": 4
+    },
+    "frame_tensor_order": [
+      "gray_i",
+      "gray_i-1",
+      "gray_i-2",
+      "gray_i-3",
+      "gray_i-4",
+      "key_R",
+      "key_G",
+      "key_B"
+    ]
+  },
+  "new_training_proposal_not_approved": {
+    "epochs": 100,
+    "imgsz": 640,
+    "frame_num": 5,
+    "batch": 8,
+    "nbs": 64,
+    "optimizer": "Adam",
+    "lr0": 0.001,
+    "cos_lr": true,
+    "lrf": 0.01,
+    "amp": false,
+    "box": 7.5,
+    "cls": 0.5,
+    "dfl": 1.5,
+    "seeds": [
+      0,
+      2027,
+      3407
+    ],
+    "initialization": "same random initialization rule, no DAUB-trained complete-model initialization",
+    "checkpoint_selection": "fixed final epoch 100; no test-driven checkpoint selection",
+    "base_graph_candidate": "matched frame5 / conv3d-TIMSSM graphs; user must confirm original Ours(n) definition",
+    "loader": "proposal: one clip per keyframe, [g_i-4,g_i-3,g_i-2,g_i-1,g_i,R_i,G_i,B_i], earliest-frame replication at sequence start; not approved",
+    "count": 15,
+    "extra_over_default_13": 2
+  }
+}

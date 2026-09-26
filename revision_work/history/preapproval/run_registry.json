@@ -1,0 +1,770 @@
+{
+  "status": "blocked",
+  "created_at": "2026-09-14T19:23:32.399009+00:00",
+  "formal_training_budget": 13,
+  "new_formal_trainings_started": 0,
+  "new_formal_trainings_completed": 0,
+  "formal_reused": 0,
+  "formal_tests_verified": 0,
+  "diagnostic_evaluations_completed": 2,
+  "training_failures": 0,
+  "incomplete_training_slots": 13,
+  "tasks": [
+    {
+      "id": "R1",
+      "kind": "training",
+      "status": "blocked",
+      "dependencies": [
+        "GATE_PROTOCOL",
+        "GATE_MODEL_DEFINITION"
+      ],
+      "reason": "Formal baseline, initialization, loader and checkpoint-selection protocol unresolved; companion JSON manifest missing",
+      "artifacts": [],
+      "updated_at": "2026-09-14T19:23:32.399009+00:00",
+      "formal_result": false,
+      "code_sha256": "2b9984b1e1dea3dacae3159c1083a01ffa25a93455ef0ed9a546e83512e816b5"
+    },
+    {
+      "id": "TEST_R1",
+      "kind": "formal_test",
+      "status": "blocked",
+      "dependencies": [
+        "R1",
+        "GATE_PROTOCOL"
+      ],
+      "reason": "Waiting for a valid trained or reused checkpoint and frozen test protocol",
+      "artifacts": [],
+      "updated_at": "2026-09-14T19:23:32.399009+00:00",
+      "formal_result": false,
+      "code_sha256": "2b9984b1e1dea3dacae3159c1083a01ffa25a93455ef0ed9a546e83512e816b5"
+    },
+    {
+      "id": "R2",
+      "kind": "training",
+      "status": "blocked",
+      "dependencies": [
+        "GATE_PROTOCOL",
+        "GATE_MODEL_DEFINITION"
+      ],
+      "reason": "Formal baseline, initialization, loader and checkpoint-selection protocol unresolved; companion JSON manifest missing",
+      "artifacts": [],
+      "updated_at": "2026-09-14T19:23:32.399009+00:00",
+      "formal_result": false,
+      "code_sha256": "2b9984b1e1dea3dacae3159c1083a01ffa25a93455ef0ed9a546e83512e816b5"
+    },
+    {
+      "id": "TEST_R2",
+      "kind": "formal_test",
+      "status": "blocked",
+      "dependencies": [
+        "R2",
+        "GATE_PROTOCOL"
+      ],
+      "reason": "Waiting for a valid trained or reused checkpoint and frozen test protocol",
+      "artifacts": [],
+      "updated_at": "2026-09-14T19:23:32.399009+00:00",
+      "formal_result": false,
+      "code_sha256": "2b9984b1e1dea3dacae3159c1083a01ffa25a93455ef0ed9a546e83512e816b5"
+    },
+    {
+      "id": "R3",
+      "kind": "training",
+      "status": "blocked",
+      "dependencies": [
+        "GATE_PROTOCOL",
+        "GATE_MODEL_DEFINITION"
+      ],
+      "reason": "Formal baseline, initialization, loader and checkpoint-selection protocol unresolved; companion JSON manifest missing",
+      "artifacts": [],
+      "updated_at": "2026-09-14T19:23:32.399009+00:00",
+      "formal_result": false,
+      "code_sha256": "2b9984b1e1dea3dacae3159c1083a01ffa25a93455ef0ed9a546e83512e816b5"
+    },
+    {
+      "id": "TEST_R3",
+      "kind": "formal_test",
+      "status": "blocked",
+      "dependencies": [
+        "R3",
+        "GATE_PROTOCOL"
+      ],
+      "reason": "Waiting for a valid trained or reused checkpoint and frozen test protocol",
+      "artifacts": [],
+      "updated_at": "2026-09-14T19:23:32.399009+00:00",
+      "formal_result": false,
+      "code_sha256": "2b9984b1e1dea3dacae3159c1083a01ffa25a93455ef0ed9a546e83512e816b5"
+    },
+    {
+      "id": "R4",
+      "kind": "training",
+      "status": "blocked",
+      "dependencies": [
+        "GATE_PROTOCOL",
+        "GATE_MODEL_DEFINITION"
+      ],
+      "reason": "Formal baseline, initialization, loader and checkpoint-selection protocol unresolved; companion JSON manifest missing",
+      "artifacts": [],
+      "updated_at": "2026-09-14T19:23:32.399009+00:00",
+      "formal_result": false,
+      "code_sha256": "2b9984b1e1dea3dacae3159c1083a01ffa25a93455ef0ed9a546e83512e816b5"
+    },
+    {
+      "id": "TEST_R4",
+      "kind": "formal_test",
+      "status": "blocked",
+      "dependencies": [
+        "R4",
+        "GATE_PROTOCOL"
+      ],
+      "reason": "Waiting for a valid trained or reused checkpoint and frozen test protocol",
+      "artifacts": [],
+      "updated_at": "2026-09-14T19:23:32.399009+00:00",
+      "formal_result": false,
+      "code_sha256": "2b9984b1e1dea3dacae3159c1083a01ffa25a93455ef0ed9a546e83512e816b5"
+    },
+    {
+      "id": "E1",
+      "kind": "training",
+      "status": "blocked",
+      "dependencies": [
+        "GATE_PROTOCOL",
+        "GATE_MODEL_DEFINITION"
+      ],
+      "reason": "Formal baseline, initialization, loader and checkpoint-selection protocol unresolved; companion JSON manifest missing",
+      "artifacts": [],
+      "updated_at": "2026-09-14T19:23:32.399009+00:00",
+      "formal_result": false,
+      "code_sha256": "2b9984b1e1dea3dacae3159c1083a01ffa25a93455ef0ed9a546e83512e816b5"
+    },
+    {
+      "id": "TEST_E1",
+      "kind": "formal_test",
+      "status": "blocked",
+      "dependencies": [
+        "E1",
+        "GATE_PROTOCOL"
+      ],
+      "reason": "Waiting for a valid trained or reused checkpoint and frozen test protocol",
+      "artifacts": [],
+      "updated_at": "2026-09-14T19:23:32.399009+00:00",
+      "formal_result": false,
+      "code_sha256": "2b9984b1e1dea3dacae3159c1083a01ffa25a93455ef0ed9a546e83512e816b5"
+    },
+    {
+      "id": "E2",
+      "kind": "training",
+      "status": "blocked",
+      "dependencies": [
+        "GATE_PROTOCOL",
+        "GATE_MODEL_DEFINITION"
+      ],
+      "reason": "Formal baseline, initialization, loader and checkpoint-selection protocol unresolved; companion JSON manifest missing",
+      "artifacts": [],
+      "updated_at": "2026-09-14T19:23:32.399009+00:00",
+      "formal_result": false,
+      "code_sha256": "2b9984b1e1dea3dacae3159c1083a01ffa25a93455ef0ed9a546e83512e816b5"
+    },
+    {
+      "id": "TEST_E2",
+      "kind": "formal_test",
+      "status": "blocked",
+      "dependencies": [
+        "E2",
+        "GATE_PROTOCOL"
+      ],
+      "reason": "Waiting for a valid trained or reused checkpoint and frozen test protocol",
+      "artifacts": [],
+      "updated_at": "2026-09-14T19:23:32.399009+00:00",
+      "formal_result": false,
+      "code_sha256": "2b9984b1e1dea3dacae3159c1083a01ffa25a93455ef0ed9a546e83512e816b5"
+    },
+    {
+      "id": "E3",
+      "kind": "training",
+      "status": "blocked",
+      "dependencies": [
+        "GATE_PROTOCOL",
+        "GATE_MODEL_DEFINITION"
+      ],
+      "reason": "Formal baseline, initialization, loader and checkpoint-selection protocol unresolved; companion JSON manifest missing",
+      "artifacts": [],
+      "updated_at": "2026-09-14T19:23:32.399009+00:00",
+      "formal_result": false,
+      "code_sha256": "2b9984b1e1dea3dacae3159c1083a01ffa25a93455ef0ed9a546e83512e816b5"
+    },
+    {
+      "id": "TEST_E3",
+      "kind": "formal_test",
+      "status": "blocked",
+      "dependencies": [
+        "E3",
+        "GATE_PROTOCOL"
+      ],
+      "reason": "Waiting for a valid trained or reused checkpoint and frozen test protocol",
+      "artifacts": [],
+      "updated_at": "2026-09-14T19:23:32.399009+00:00",
+      "formal_result": false,
+      "code_sha256": "2b9984b1e1dea3dacae3159c1083a01ffa25a93455ef0ed9a546e83512e816b5"
+    },
+    {
+      "id": "E4",
+      "kind": "training",
+      "status": "blocked",
+      "dependencies": [
+        "GATE_PROTOCOL",
+        "GATE_MODEL_DEFINITION"
+      ],
+      "reason": "Formal baseline, initialization, loader and checkpoint-selection protocol unresolved; companion JSON manifest missing",
+      "artifacts": [],
+      "updated_at": "2026-09-14T19:23:32.399009+00:00",
+      "formal_result": false,
+      "code_sha256": "2b9984b1e1dea3dacae3159c1083a01ffa25a93455ef0ed9a546e83512e816b5"
+    },
+    {
+      "id": "TEST_E4",
+      "kind": "formal_test",
+      "status": "blocked",
+      "dependencies": [
+        "E4",
+        "GATE_PROTOCOL"
+      ],
+      "reason": "Waiting for a valid trained or reused checkpoint and frozen test protocol",
+      "artifacts": [],
+      "updated_at": "2026-09-14T19:23:32.399009+00:00",
+      "formal_result": false,
+      "code_sha256": "2b9984b1e1dea3dacae3159c1083a01ffa25a93455ef0ed9a546e83512e816b5"
+    },
+    {
+      "id": "E5",
+      "kind": "training",
+      "status": "blocked",
+      "dependencies": [
+        "GATE_PROTOCOL",
+        "GATE_MODEL_DEFINITION"
+      ],
+      "reason": "Formal baseline, initialization, loader and checkpoint-selection protocol unresolved; companion JSON manifest missing",
+      "artifacts": [],
+      "updated_at": "2026-09-14T19:23:32.399009+00:00",
+      "formal_result": false,
+      "code_sha256": "2b9984b1e1dea3dacae3159c1083a01ffa25a93455ef0ed9a546e83512e816b5"
+    },
+    {
+      "id": "TEST_E5",
+      "kind": "formal_test",
+      "status": "blocked",
+      "dependencies": [
+        "E5",
+        "GATE_PROTOCOL"
+      ],
+      "reason": "Waiting for a valid trained or reused checkpoint and frozen test protocol",
+      "artifacts": [],
+      "updated_at": "2026-09-14T19:23:32.399009+00:00",
+      "formal_result": false,
+      "code_sha256": "2b9984b1e1dea3dacae3159c1083a01ffa25a93455ef0ed9a546e83512e816b5"
+    },
+    {
+      "id": "E6",
+      "kind": "training",
+      "status": "blocked",
+      "dependencies": [
+        "GATE_PROTOCOL",
+        "GATE_MODEL_DEFINITION"
+      ],
+      "reason": "Formal baseline, initialization, loader and checkpoint-selection protocol unresolved; companion JSON manifest missing",
+      "artifacts": [],
+      "updated_at": "2026-09-14T19:23:32.399009+00:00",
+      "formal_result": false,
+      "code_sha256": "2b9984b1e1dea3dacae3159c1083a01ffa25a93455ef0ed9a546e83512e816b5"
+    },
+    {
+      "id": "TEST_E6",
+      "kind": "formal_test",
+      "status": "blocked",
+      "dependencies": [
+        "E6",
+        "GATE_PROTOCOL"
+      ],
+      "reason": "Waiting for a valid trained or reused checkpoint and frozen test protocol",
+      "artifacts": [],
+      "updated_at": "2026-09-14T19:23:32.399009+00:00",
+      "formal_result": false,
+      "code_sha256": "2b9984b1e1dea3dacae3159c1083a01ffa25a93455ef0ed9a546e83512e816b5"
+    },
+    {
+      "id": "E7",
+      "kind": "training",
+      "status": "blocked",
+      "dependencies": [
+        "GATE_PROTOCOL",
+        "GATE_MODEL_DEFINITION"
+      ],
+      "reason": "Formal baseline, initialization, loader and checkpoint-selection protocol unresolved; companion JSON manifest missing",
+      "artifacts": [],
+      "updated_at": "2026-09-14T19:23:32.399009+00:00",
+      "formal_result": false,
+      "code_sha256": "2b9984b1e1dea3dacae3159c1083a01ffa25a93455ef0ed9a546e83512e816b5"
+    },
+    {
+      "id": "TEST_E7",
+      "kind": "formal_test",
+      "status": "blocked",
+      "dependencies": [
+        "E7",
+        "GATE_PROTOCOL"
+      ],
+      "reason": "Waiting for a valid trained or reused checkpoint and frozen test protocol",
+      "artifacts": [],
+      "updated_at": "2026-09-14T19:23:32.399009+00:00",
+      "formal_result": false,
+      "code_sha256": "2b9984b1e1dea3dacae3159c1083a01ffa25a93455ef0ed9a546e83512e816b5"
+    },
+    {
+      "id": "E8",
+      "kind": "training",
+      "status": "blocked",
+      "dependencies": [
+        "GATE_PROTOCOL",
+        "GATE_MODEL_DEFINITION"
+      ],
+      "reason": "Formal baseline, initialization, loader and checkpoint-selection protocol unresolved; companion JSON manifest missing",
+      "artifacts": [],
+      "updated_at": "2026-09-14T19:23:32.399009+00:00",
+      "formal_result": false,
+      "code_sha256": "2b9984b1e1dea3dacae3159c1083a01ffa25a93455ef0ed9a546e83512e816b5"
+    },
+    {
+      "id": "TEST_E8",
+      "kind": "formal_test",
+      "status": "blocked",
+      "dependencies": [
+        "E8",
+        "GATE_PROTOCOL"
+      ],
+      "reason": "Waiting for a valid trained or reused checkpoint and frozen test protocol",
+      "artifacts": [],
+      "updated_at": "2026-09-14T19:23:32.399009+00:00",
+      "formal_result": false,
+      "code_sha256": "2b9984b1e1dea3dacae3159c1083a01ffa25a93455ef0ed9a546e83512e816b5"
+    },
+    {
+      "id": "E9",
+      "kind": "training",
+      "status": "blocked",
+      "dependencies": [
+        "GATE_PROTOCOL",
+        "GATE_MODEL_DEFINITION"
+      ],
+      "reason": "Formal baseline, initialization, loader and checkpoint-selection protocol unresolved; companion JSON manifest missing",
+      "artifacts": [],
+      "updated_at": "2026-09-14T19:23:32.399009+00:00",
+      "formal_result": false,
+      "code_sha256": "2b9984b1e1dea3dacae3159c1083a01ffa25a93455ef0ed9a546e83512e816b5"
+    },
+    {
+      "id": "TEST_E9",
+      "kind": "formal_test",
+      "status": "blocked",
+      "dependencies": [
+        "E9",
+        "GATE_PROTOCOL"
+      ],
+      "reason": "Waiting for a valid trained or reused checkpoint and frozen test protocol",
+      "artifacts": [],
+      "updated_at": "2026-09-14T19:23:32.399009+00:00",
+      "formal_result": false,
+      "code_sha256": "2b9984b1e1dea3dacae3159c1083a01ffa25a93455ef0ed9a546e83512e816b5"
+    },
+    {
+      "id": "P1_full_s1",
+      "kind": "inference",
+      "status": "blocked",
+      "dependencies": [
+        "GATE_PROTOCOL",
+        "GATE_SOURCE_full"
+      ],
+      "reason": "Source checkpoint/protocol provenance gate unresolved; 4683-frame common manifest is ready",
+      "artifacts": [],
+      "updated_at": "2026-09-14T19:23:32.399009+00:00",
+      "formal_result": false,
+      "code_sha256": "2b9984b1e1dea3dacae3159c1083a01ffa25a93455ef0ed9a546e83512e816b5"
+    },
+    {
+      "id": "P1_full_s2",
+      "kind": "inference",
+      "status": "blocked",
+      "dependencies": [
+        "GATE_PROTOCOL",
+        "GATE_SOURCE_full"
+      ],
+      "reason": "Source checkpoint/protocol provenance gate unresolved; 4683-frame common manifest is ready",
+      "artifacts": [],
+      "updated_at": "2026-09-14T19:23:32.399009+00:00",
+      "formal_result": false,
+      "code_sha256": "2b9984b1e1dea3dacae3159c1083a01ffa25a93455ef0ed9a546e83512e816b5"
+    },
+    {
+      "id": "P1_full_s4",
+      "kind": "inference",
+      "status": "blocked",
+      "dependencies": [
+        "GATE_PROTOCOL",
+        "GATE_SOURCE_full"
+      ],
+      "reason": "Source checkpoint/protocol provenance gate unresolved; 4683-frame common manifest is ready",
+      "artifacts": [],
+      "updated_at": "2026-09-14T19:23:32.399009+00:00",
+      "formal_result": false,
+      "code_sha256": "2b9984b1e1dea3dacae3159c1083a01ffa25a93455ef0ed9a546e83512e816b5"
+    },
+    {
+      "id": "P1_stf_3dconv_s1",
+      "kind": "inference",
+      "status": "blocked",
+      "dependencies": [
+        "GATE_PROTOCOL",
+        "GATE_SOURCE_stf_3dconv"
+      ],
+      "reason": "Source checkpoint/protocol provenance gate unresolved; 4683-frame common manifest is ready",
+      "artifacts": [],
+      "updated_at": "2026-09-14T19:23:32.399009+00:00",
+      "formal_result": false,
+      "code_sha256": "2b9984b1e1dea3dacae3159c1083a01ffa25a93455ef0ed9a546e83512e816b5"
+    },
+    {
+      "id": "P1_stf_3dconv_s2",
+      "kind": "inference",
+      "status": "blocked",
+      "dependencies": [
+        "GATE_PROTOCOL",
+        "GATE_SOURCE_stf_3dconv"
+      ],
+      "reason": "Source checkpoint/protocol provenance gate unresolved; 4683-frame common manifest is ready",
+      "artifacts": [],
+      "updated_at": "2026-09-14T19:23:32.399009+00:00",
+      "formal_result": false,
+      "code_sha256": "2b9984b1e1dea3dacae3159c1083a01ffa25a93455ef0ed9a546e83512e816b5"
+    },
+    {
+      "id": "P1_stf_3dconv_s4",
+      "kind": "inference",
+      "status": "blocked",
+      "dependencies": [
+        "GATE_PROTOCOL",
+        "GATE_SOURCE_stf_3dconv"
+      ],
+      "reason": "Source checkpoint/protocol provenance gate unresolved; 4683-frame common manifest is ready",
+      "artifacts": [],
+      "updated_at": "2026-09-14T19:23:32.399009+00:00",
+      "formal_result": false,
+      "code_sha256": "2b9984b1e1dea3dacae3159c1083a01ffa25a93455ef0ed9a546e83512e816b5"
+    },
+    {
+      "id": "P1_DFAR_s1",
+      "kind": "inference",
+      "status": "blocked",
+      "dependencies": [
+        "GATE_PROTOCOL",
+        "GATE_SOURCE_DFAR"
+      ],
+      "reason": "Source checkpoint/protocol provenance gate unresolved; 4683-frame common manifest is ready",
+      "artifacts": [],
+      "updated_at": "2026-09-14T19:23:32.399009+00:00",
+      "formal_result": false,
+      "code_sha256": "2b9984b1e1dea3dacae3159c1083a01ffa25a93455ef0ed9a546e83512e816b5"
+    },
+    {
+      "id": "P1_DFAR_s2",
+      "kind": "inference",
+      "status": "blocked",
+      "dependencies": [
+        "GATE_PROTOCOL",
+        "GATE_SOURCE_DFAR"
+      ],
+      "reason": "Source checkpoint/protocol provenance gate unresolved; 4683-frame common manifest is ready",
+      "artifacts": [],
+      "updated_at": "2026-09-14T19:23:32.399009+00:00",
+      "formal_result": false,
+      "code_sha256": "2b9984b1e1dea3dacae3159c1083a01ffa25a93455ef0ed9a546e83512e816b5"
+    },
+    {
+      "id": "P1_DFAR_s4",
+      "kind": "inference",
+      "status": "blocked",
+      "dependencies": [
+        "GATE_PROTOCOL",
+        "GATE_SOURCE_DFAR"
+      ],
+      "reason": "Source checkpoint/protocol provenance gate unresolved; 4683-frame common manifest is ready",
+      "artifacts": [],
+      "updated_at": "2026-09-14T19:23:32.399009+00:00",
+      "formal_result": false,
+      "code_sha256": "2b9984b1e1dea3dacae3159c1083a01ffa25a93455ef0ed9a546e83512e816b5"
+    },
+    {
+      "id": "P2_full",
+      "kind": "inference",
+      "status": "blocked",
+      "dependencies": [
+        "GATE_PROTOCOL",
+        "GATE_SOURCE_full",
+        "GATE_GROUP_EVALUATOR"
+      ],
+      "reason": "No verified model row; DAUB <=3 and (3,7] box-size groups are empty; scene metadata unverified",
+      "artifacts": [],
+      "updated_at": "2026-09-14T19:23:32.399009+00:00",
+      "formal_result": false,
+      "code_sha256": "2b9984b1e1dea3dacae3159c1083a01ffa25a93455ef0ed9a546e83512e816b5"
+    },
+    {
+      "id": "P2_stf_3dconv",
+      "kind": "inference",
+      "status": "blocked",
+      "dependencies": [
+        "GATE_PROTOCOL",
+        "GATE_SOURCE_stf_3dconv",
+        "GATE_GROUP_EVALUATOR"
+      ],
+      "reason": "No verified model row; DAUB <=3 and (3,7] box-size groups are empty; scene metadata unverified",
+      "artifacts": [],
+      "updated_at": "2026-09-14T19:23:32.399009+00:00",
+      "formal_result": false,
+      "code_sha256": "2b9984b1e1dea3dacae3159c1083a01ffa25a93455ef0ed9a546e83512e816b5"
+    },
+    {
+      "id": "P2_IFSS_noninterleaved",
+      "kind": "inference",
+      "status": "blocked",
+      "dependencies": [
+        "GATE_PROTOCOL",
+        "GATE_SOURCE_IFSS_noninterleaved",
+        "GATE_GROUP_EVALUATOR"
+      ],
+      "reason": "No verified model row; DAUB <=3 and (3,7] box-size groups are empty; scene metadata unverified",
+      "artifacts": [],
+      "updated_at": "2026-09-14T19:23:32.399009+00:00",
+      "formal_result": false,
+      "code_sha256": "2b9984b1e1dea3dacae3159c1083a01ffa25a93455ef0ed9a546e83512e816b5"
+    },
+    {
+      "id": "P3_full",
+      "kind": "inference",
+      "status": "blocked",
+      "dependencies": [
+        "GATE_PROTOCOL",
+        "GATE_SOURCE_full",
+        "GATE_EXTERNAL"
+      ],
+      "reason": "Frozen external dataset and source checkpoint provenance not ready",
+      "artifacts": [],
+      "updated_at": "2026-09-14T19:23:32.399009+00:00",
+      "formal_result": false,
+      "code_sha256": "2b9984b1e1dea3dacae3159c1083a01ffa25a93455ef0ed9a546e83512e816b5"
+    },
+    {
+      "id": "P3_stf_3dconv",
+      "kind": "inference",
+      "status": "blocked",
+      "dependencies": [
+        "GATE_PROTOCOL",
+        "GATE_SOURCE_stf_3dconv",
+        "GATE_EXTERNAL"
+      ],
+      "reason": "Frozen external dataset and source checkpoint provenance not ready",
+      "artifacts": [],
+      "updated_at": "2026-09-14T19:23:32.399009+00:00",
+      "formal_result": false,
+      "code_sha256": "2b9984b1e1dea3dacae3159c1083a01ffa25a93455ef0ed9a546e83512e816b5"
+    },
+    {
+      "id": "P3_DFAR",
+      "kind": "inference",
+      "status": "blocked",
+      "dependencies": [
+        "GATE_PROTOCOL",
+        "GATE_SOURCE_DFAR",
+        "GATE_EXTERNAL"
+      ],
+      "reason": "Frozen external dataset and source checkpoint provenance not ready",
+      "artifacts": [],
+      "updated_at": "2026-09-14T19:23:32.399009+00:00",
+      "formal_result": false,
+      "code_sha256": "2b9984b1e1dea3dacae3159c1083a01ffa25a93455ef0ed9a546e83512e816b5"
+    },
+    {
+      "id": "P4_full",
+      "kind": "inference",
+      "status": "blocked",
+      "dependencies": [
+        "GATE_PROTOCOL",
+        "GATE_SOURCE_full"
+      ],
+      "reason": "Candidate latency measured under new protocol; formal AP/graph comparability remains blocked",
+      "artifacts": [
+        "evidence/preflight_cuda_1.json",
+        "benchmark_protocol.json"
+      ],
+      "updated_at": "2026-09-14T19:23:32.399009+00:00",
+      "formal_result": false,
+      "code_sha256": "2b9984b1e1dea3dacae3159c1083a01ffa25a93455ef0ed9a546e83512e816b5"
+    },
+    {
+      "id": "P4_stf_3dconv",
+      "kind": "inference",
+      "status": "blocked",
+      "dependencies": [
+        "GATE_PROTOCOL",
+        "GATE_SOURCE_stf_3dconv"
+      ],
+      "reason": "Candidate latency measured under new protocol; formal AP/graph comparability remains blocked",
+      "artifacts": [
+        "evidence/preflight_cuda_1.json",
+        "benchmark_protocol.json"
+      ],
+      "updated_at": "2026-09-14T19:23:32.399009+00:00",
+      "formal_result": false,
+      "code_sha256": "2b9984b1e1dea3dacae3159c1083a01ffa25a93455ef0ed9a546e83512e816b5"
+    },
+    {
+      "id": "REEVAL_DIAGNOSTIC_conv3d-TIMSSM",
+      "kind": "diagnostic_inference",
+      "status": "evaluated",
+      "dependencies": [],
+      "reason": "Not an independent test or verified baseline",
+      "artifacts": [
+        "runs/REEVAL_DIAGNOSTIC_conv3d-TIMSSM"
+      ],
+      "updated_at": "2026-09-14T19:23:32.399009+00:00",
+      "formal_result": false,
+      "code_sha256": "2b9984b1e1dea3dacae3159c1083a01ffa25a93455ef0ed9a546e83512e816b5"
+    },
+    {
+      "id": "REEVAL_DIAGNOSTIC_fullsize_model",
+      "kind": "diagnostic_inference",
+      "status": "evaluated",
+      "dependencies": [],
+      "reason": "Not an independent test or verified baseline",
+      "artifacts": [
+        "runs/REEVAL_DIAGNOSTIC_fullsize_model"
+      ],
+      "updated_at": "2026-09-14T19:23:32.399009+00:00",
+      "formal_result": false,
+      "code_sha256": "2b9984b1e1dea3dacae3159c1083a01ffa25a93455ef0ed9a546e83512e816b5"
+    },
+    {
+      "id": "AUDIT_CHECKPOINTS",
+      "kind": "audit",
+      "status": "complete",
+      "dependencies": [],
+      "reason": "",
+      "artifacts": [
+        "evidence/checkpoint_audit.json"
+      ],
+      "updated_at": "2026-09-14T19:23:32.399009+00:00",
+      "formal_result": false,
+      "code_sha256": "2b9984b1e1dea3dacae3159c1083a01ffa25a93455ef0ed9a546e83512e816b5"
+    },
+    {
+      "id": "AUDIT_DATA",
+      "kind": "audit",
+      "status": "complete",
+      "dependencies": [],
+      "reason": "",
+      "artifacts": [
+        "evidence/data/summary.json",
+        "evidence/sample_audit.json"
+      ],
+      "updated_at": "2026-09-14T19:23:32.399009+00:00",
+      "formal_result": false,
+      "code_sha256": "2b9984b1e1dea3dacae3159c1083a01ffa25a93455ef0ed9a546e83512e816b5"
+    },
+    {
+      "id": "PREFLIGHT_CPU",
+      "kind": "correctness",
+      "status": "complete",
+      "dependencies": [],
+      "reason": "",
+      "artifacts": [
+        "evidence/preflight_cpu.json"
+      ],
+      "updated_at": "2026-09-14T19:23:32.399009+00:00",
+      "formal_result": false,
+      "code_sha256": "2b9984b1e1dea3dacae3159c1083a01ffa25a93455ef0ed9a546e83512e816b5"
+    },
+    {
+      "id": "PREFLIGHT_GPU",
+      "kind": "correctness",
+      "status": "complete",
+      "dependencies": [],
+      "reason": "",
+      "artifacts": [
+        "evidence/preflight_cuda_1.json"
+      ],
+      "updated_at": "2026-09-14T19:23:32.399009+00:00",
+      "formal_result": false,
+      "code_sha256": "2b9984b1e1dea3dacae3159c1083a01ffa25a93455ef0ed9a546e83512e816b5"
+    },
+    {
+      "id": "WRITING_DRAFTS",
+      "kind": "writing",
+      "status": "complete",
+      "dependencies": [],
+      "reason": "Draft artifacts only; reviewer acceptance and manuscript application are separate",
+      "artifacts": [
+        "writing/technical_comparison.md",
+        "writing/reviewer_response_en.md",
+        "writing/manuscript_revision_snippets.md",
+        "writing/reviewer_coverage.md"
+      ],
+      "updated_at": "2026-09-14T19:23:32.399009+00:00",
+      "formal_result": false,
+      "code_sha256": "2b9984b1e1dea3dacae3159c1083a01ffa25a93455ef0ed9a546e83512e816b5"
+    },
+    {
+      "id": "WRITING_ACCEPTANCE",
+      "kind": "writing",
+      "status": "blocked",
+      "dependencies": [
+        "WRITING_DRAFTS"
+      ],
+      "reason": "Exact reviewer mapping, manuscript edit and formal result paragraphs require missing source documents and verified experiments",
+      "artifacts": [],
+      "updated_at": "2026-09-14T19:23:32.399009+00:00",
+      "formal_result": false,
+      "code_sha256": "2b9984b1e1dea3dacae3159c1083a01ffa25a93455ef0ed9a546e83512e816b5"
+    }
+  ],
+  "gates": {
+    "GATE_PROTOCOL": {
+      "status": "blocked",
+      "reason": "Independent baseline training, seed, loader and checkpoint-selection protocol unresolved"
+    },
+    "GATE_MODEL_DEFINITION": {
+      "status": "blocked",
+      "reason": "Authoritative manifest and original Ours(n)/E1 definition missing"
+    },
+    "GATE_SOURCE_full": {
+      "status": "blocked",
+      "reason": "No verified full model source checkpoint"
+    },
+    "GATE_SOURCE_stf_3dconv": {
+      "status": "blocked",
+      "reason": "No verified comparable STF-3DConv source checkpoint"
+    },
+    "GATE_SOURCE_DFAR": {
+      "status": "blocked",
+      "reason": "Strict loading passed; checkpoint-tied training provenance missing"
+    },
+    "GATE_SOURCE_IFSS_noninterleaved": {
+      "status": "blocked",
+      "reason": "No valid same-stream order-only checkpoint established"
+    },
+    "GATE_GROUP_EVALUATOR": {
+      "status": "blocked",
+      "reason": "Ignore-aware grouped AP, fixed working threshold and scene metadata not established"
+    },
+    "GATE_EXTERNAL": {
+      "status": "blocked",
+      "reason": "One official external dataset/split and overlap audit not frozen"
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "scope": "Current added audit/report scripts; original model code is in source_manifest.json",
+  "files": {
+    "revision_work/scripts/audit_checkpoints.py": "729312b691f9ce9be75bfaf7a92c75088fd88822fd2d753c85cf7ed7ae1224c8",
+    "revision_work/scripts/audit_data.py": "a3f734cde9fba7a742f5bab69f376f5384866aec1ec30cead0321a1c29227eca",
+    "revision_work/scripts/audit_samples.py": "369ca3a7b18503e77ff80d2c2388aed7e2fd10b9190b20143a6db07e5d84e469",
+    "revision_work/scripts/build_deliverables.py": "b992689ff8619551b368a78320c54cd7b2a120e136df5c679650de8e4591de82",
+    "revision_work/scripts/diagnostic_reeval.py": "c6744d4505bcea298aeb5eb6c667453a4f1fbf5c2afcc8dcdbe5c5dfce7766cb",
+    "revision_work/scripts/finalize_artifacts.py": "535c5cfded778ced89223e6162f3df3c8872e3fa9d00e200eb2440f79765db2e",
+    "revision_work/scripts/preflight.py": "1e2db14a99600ab0620d7faf5614747701abe8c44407399d53d6c6c280dece46",
+    "revision_work/scripts/scan_pairing.py": "16a9581ec0521edfd4fc53f438ffb7171027b22c64defda1bf8d5763f2283a07"
+  },
+  "scripts_sha256": "1fcd27dd237d0d70decdcfe4e3e212b5a4fa62d734fbd06639b578bdbf336b35",
+  "warning": "Current script manifest is not claimed as an immutable historical training version"
+}

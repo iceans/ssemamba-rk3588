@@ -1,0 +1,101 @@
+{
+  "device": "cuda:1",
+  "torch": "2.0.0+cu118",
+  "formal_training": false,
+  "formal_metrics": false,
+  "lfss_kernels": [
+    {
+      "kernel": 1,
+      "paths": [
+        "op.my_conv.0.conv"
+      ],
+      "n": 1,
+      "shape": [
+        2,
+        8,
+        6,
+        10
+      ],
+      "params": 1984,
+      "passed": true
+    },
+    {
+      "kernel": 3,
+      "paths": [
+        "op.my_conv.0.conv"
+      ],
+      "n": 1,
+      "shape": [
+        2,
+        8,
+        6,
+        10
+      ],
+      "params": 2112,
+      "passed": true
+    },
+    {
+      "kernel": 5,
+      "paths": [
+        "op.my_conv.0.conv"
+      ],
+      "n": 1,
+      "shape": [
+        2,
+        8,
+        6,
+        10
+      ],
+      "params": 2368,
+      "passed": true
+    }
+  ],
+  "stf": {
+    "shape": [
+      2,
+      16,
+      16,
+      24
+    ],
+    "dcn_calls": 4,
+    "passed": true
+  },
+  "stf_3dconv": {
+    "shape": [
+      2,
+      16,
+      16,
+      24
+    ],
+    "passed": true
+  },
+  "historical_serialized_forward_diagnostic": [
+    {
+      "name": "fullsize_model",
+      "formal_test": false,
+      "reason": "historical definition/protocol gates have not passed",
+      "passed": true,
+      "shape": [
+        1,
+        5,
+        8400
+      ],
+      "elapsed_s": 0.09790745796635747,
+      "peak_allocated_bytes": 381212672
+    },
+    {
+      "name": "conv3d-TIMSSM",
+      "formal_test": false,
+      "reason": "historical definition/protocol gates have not passed",
+      "passed": true,
+      "shape": [
+        1,
+        5,
+        8400
+      ],
+      "elapsed_s": 0.017262302106246352,
+      "peak_allocated_bytes": 264260096
+    }
+  ],
+  "elapsed_s": 0.6815353769343346
+}

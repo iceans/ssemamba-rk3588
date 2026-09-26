@@ -1,0 +1,222 @@
+{
+  "status": "verified",
+  "frozen_at": "2026-09-15T03:18:37.636497+00:00",
+  "dataset": "NUDT-MIRSDT",
+  "protocol_id": "P3_NUDT_MIRSDT_OFFICIAL_TEST_20260915",
+  "selection_basis": "Official split, mask availability and accessible author release; no candidate target-model scores used",
+  "frozen_before_target_model_scores": true,
+  "target_model_evaluations_before_freeze": 0,
+  "source_protocol_id": "SSE_DAUB_SERIES_B_20260915",
+  "source_sha256": "bdbe7bc9067bee939e302f686aa021dbe0465204a14543bb938f50021806f418",
+  "adapter": "/home/dell/lxs/tsgmamba/ultralytics-main/revision_work/new_protocol/external.py",
+  "adapter_sha256": "a9d874c59a12dddaa6976a6484a551f8db4d32d8aefb3bf70211abd7c7c16209",
+  "official_repository": "https://github.com/TinaLRJ/Multi-frame-infrared-small-target-detection-DTUM",
+  "archive_source": "https://drive.google.com/file/d/1mjFJmsaNoLhALaaL1_3N4qpAPCiBCqXy/view",
+  "archive_sha256": "ee90d464a7b4b85b15f4aa175bb49fa312e049170ae181d3e9e28691f0496321",
+  "archive_bytes": 1027614117,
+  "official_test_list": "/home/dell/lxs/tsgmamba/ultralytics-main/revision_work/evidence/external/NUDT-MIRSDT/test.txt",
+  "official_test_list_sha256": "eb039aa35aaabab2eae559b9d627e53d3fa114eb0410f343498f154c81a9d5d0",
+  "official_train_list": "/home/dell/lxs/tsgmamba/ultralytics-main/revision_work/evidence/external/NUDT-MIRSDT/train.txt",
+  "official_train_list_sha256": "31e71368775adbc6c893bcb29ae1f39df6ffc83a693f42f84a4322bcf5235a8c",
+  "official_test_frames": 2000,
+  "official_test_sequences": 20,
+  "split": "official test",
+  "frames": 2000,
+  "sequences": 20,
+  "manifest": "/home/dell/lxs/tsgmamba/ultralytics-main/revision_work/series_b/external/NUDT-MIRSDT_test_frames.jsonl",
+  "manifest_sha256": "67489bd731dbf2c920496791457e7d2b13ace321541488faf2b4fe5bade86d4e",
+  "excluded_sequences": [],
+  "annotation_source": "Official masks; Mix/NNNNN.mat test-list entries map to images/NNNNN.png and masks/NNNNN.png",
+  "box_conversion": "mask > 0; 8-connected components; half-open [xmin,ymin,xmax+1,ymax+1]; each component one class-0 GT; no GT confidence",
+  "GT_boxes": 1729,
+  "GT_size_counts": {
+    "3_lt_d_le_7": 977,
+    "d_gt_7": 651,
+    "d_le_3": 101
+  },
+  "empty_GT_frames": 271,
+  "input": "Source ClipDataset unchanged: five chronological grayscale frames, keyframe RGB replicated from grayscale, first-frame replication, letterbox640, uint8/255",
+  "sampling": "One unique clip per official test keyframe; stride1; frames1..100 verified for every included sequence",
+  "boundary_shape_checks": [
+    [
+      "Sequence101",
+      1
+    ],
+    [
+      "Sequence101",
+      100
+    ],
+    [
+      "Sequence105",
+      1
+    ],
+    [
+      "Sequence105",
+      100
+    ],
+    [
+      "Sequence119",
+      1
+    ],
+    [
+      "Sequence119",
+      100
+    ],
+    [
+      "Sequence47",
+      1
+    ],
+    [
+      "Sequence47",
+      100
+    ],
+    [
+      "Sequence56",
+      1
+    ],
+    [
+      "Sequence56",
+      100
+    ],
+    [
+      "Sequence59",
+      1
+    ],
+    [
+      "Sequence59",
+      100
+    ],
+    [
+      "Sequence76",
+      1
+    ],
+    [
+      "Sequence76",
+      100
+    ],
+    [
+      "Sequence85",
+      1
+    ],
+    [
+      "Sequence85",
+      100
+    ],
+    [
+      "Sequence86",
+      1
+    ],
+    [
+      "Sequence86",
+      100
+    ],
+    [
+      "Sequence87",
+      1
+    ],
+    [
+      "Sequence87",
+      100
+    ],
+    [
+      "Sequence88",
+      1
+    ],
+    [
+      "Sequence88",
+      100
+    ],
+    [
+      "Sequence89",
+      1
+    ],
+    [
+      "Sequence89",
+      100
+    ],
+    [
+      "Sequence90",
+      1
+    ],
+    [
+      "Sequence90",
+      100
+    ],
+    [
+      "Sequence91",
+      1
+    ],
+    [
+      "Sequence91",
+      100
+    ],
+    [
+      "Sequence92",
+      1
+    ],
+    [
+      "Sequence92",
+      100
+    ],
+    [
+      "Sequence93",
+      1
+    ],
+    [
+      "Sequence93",
+      100
+    ],
+    [
+      "Sequence94",
+      1
+    ],
+    [
+      "Sequence94",
+      100
+    ],
+    [
+      "Sequence95",
+      1
+    ],
+    [
+      "Sequence95",
+      100
+    ],
+    [
+      "Sequence96",
+      1
+    ],
+    [
+      "Sequence96",
+      100
+    ],
+    [
+      "Sequence97",
+      1
+    ],
+    [
+      "Sequence97",
+      100
+    ]
+  ],
+  "evaluation": {
+    "conf": 0.001,
+    "nms_iou": 0.7,
+    "max_det": 300,
+    "half": false,
+    "batch": 8,
+    "fuse": false,
+    "working_threshold": 0.25,
+    "working_iou": 0.5,
+    "working_threshold_source": "a priori source protocol, fixed before new model scores",
+    "metrics": "local DetectionValidator and DetMetrics, AP50 and AP50-95"
+  },
+  "source_models": {
+    "full": "B_FULL_0",
+    "STF-3DConv": "B_3DCONV_0"
+  },
+  "checkpoint_rule": "DAUB seed0 fixed epoch100 EMA, chosen before target evaluation; no target training, tuning or seed/epoch selection",
+  "DFAR": "blocked: source-training provenance not verified",
+  "independence_limitation": "No claim of complete background-source independence; exact duplicate audit and unresolved transformed/shared background provenance are reported separately",
+  "release_note": "Author README mentions120 sequences; published lists define80 train and20 test. Evaluation follows the20 listed sequences only."
+}

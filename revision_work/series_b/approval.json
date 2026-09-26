@@ -1,0 +1,13 @@
+{
+  "approved_at": "2026-09-15T02:46:58.378510+00:00",
+  "user_message": "批准新批准新的协议与增加训练预算",
+  "scope": "Previous proposal B: new common protocol and fifteen complete DAUB trainings",
+  "full_training_budget": 15,
+  "additional_over_default": 2,
+  "not_included": [
+    "two extra component baselines required for a 17-run series",
+    "IRDST training",
+    "new scan-order/placement/baseline training",
+    "target-domain training"
+  ]
+}

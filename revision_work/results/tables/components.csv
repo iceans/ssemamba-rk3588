@@ -1,0 +1,8 @@
+dataset,design,LFSS,SAAM,AP50_percent,status
+DAUB,factorial_partial,0,0,,blocked_old_row_invalid_extra_training_not_approved
+DAUB,factorial_partial,1,0,,blocked_old_row_invalid_extra_training_not_approved
+DAUB,factorial_partial,0,1,85.48434724759551,verified
+DAUB,factorial_partial,1,1,84.65799244880756,verified
+IRDST,incremental_only,0,0,,blocked_historical_provenance
+IRDST,incremental_only,1,0,,blocked_historical_provenance
+IRDST,incremental_only,1,1,,blocked_historical_provenance

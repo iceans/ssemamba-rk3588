@@ -1,0 +1,5 @@
+id,kernel,n,parameters,FLOPs,AP50_percent,status
+E2,1,4,4010389,,86.82337596386238,verified
+B_FULL_0,3,4,4014485,,84.65799244880756,verified
+E3,5,4,4022677,,91.54839434799673,verified
+old_order_only,,,,,,invalid_or_untraceable_order_only_definition

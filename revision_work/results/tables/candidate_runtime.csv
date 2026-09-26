@@ -1,0 +1,3 @@
+model,params,mean_latency_ms,clips_per_second,peak_allocated_MiB,FLOPs,status
+fullsize_model,3993877,9.63084143807033,103.83308731956068,365.35009765625,,candidate_graph_only
+conv3d-TIMSSM,4011822,3.8733794716627976,258.1724840842179,253.28515625,,candidate_graph_only

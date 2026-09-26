@@ -1,0 +1,10 @@
+model,stride,common_frames,AP50_percent,AP50_95_percent,delta_pp,status
+full,1,4683,,,,blocked
+full,2,4683,,,,blocked
+full,4,4683,,,,blocked
+STF-3DConv,1,4683,,,,blocked
+STF-3DConv,2,4683,,,,blocked
+STF-3DConv,4,4683,,,,blocked
+DFAR,1,4683,,,,blocked
+DFAR,2,4683,,,,blocked
+DFAR,4,4683,,,,blocked

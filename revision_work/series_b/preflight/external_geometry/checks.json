@@ -1,0 +1,47 @@
+{
+  "passed": true,
+  "checked_at": "2026-09-15T03:25:19.576564+00:00",
+  "device": "CPU",
+  "formal_model_metrics": false,
+  "description": "Artificial GT-coordinate predictions plus one known false positive; no trained model or target scoring used",
+  "source_samples": [
+    [
+      "Sequence88",
+      2
+    ],
+    [
+      "Sequence85",
+      1
+    ],
+    [
+      "Sequence85",
+      3
+    ],
+    [
+      "Sequence85",
+      2
+    ],
+    [
+      "Sequence47",
+      1
+    ],
+    [
+      "Sequence47",
+      3
+    ],
+    [
+      "Sequence47",
+      17
+    ],
+    [
+      "Sequence47",
+      18
+    ]
+  ],
+  "native_box_roundtrip_tolerance_px": 0.001,
+  "positive_frames": 4,
+  "negative_GT_frames": 4,
+  "expected_false_positives": 1,
+  "expected_FP_per_frame": 0.125,
+  "empty_predictions_preserved": 3
+}

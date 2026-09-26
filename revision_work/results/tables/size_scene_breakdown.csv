@@ -1,0 +1,8 @@
+model,dataset,group,GT_boxes,AP50_percent,AP50_95_percent,all_frame_FP_per_frame_conf025,status
+full,DAUB,d_le_3,0,,,0.06694473409801877,empty_bin
+full,DAUB,3_lt_d_le_7,0,,,0.06694473409801877,empty_bin
+full,DAUB,d_gt_7,4795,84.65799244880756,57.798779345376495,0.06694473409801877,verified
+STF-3DConv,DAUB,d_le_3,0,,,0.05401459854014599,empty_bin
+STF-3DConv,DAUB,3_lt_d_le_7,0,,,0.05401459854014599,empty_bin
+STF-3DConv,DAUB,d_gt_7,4795,86.63967434147912,61.76069777665945,0.05401459854014599,verified
+IFSS_noninterleaved,DAUB,all,4795,,,,blocked_invalid_or_missing_order_only_checkpoint

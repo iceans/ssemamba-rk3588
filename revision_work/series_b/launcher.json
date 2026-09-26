@@ -1,0 +1,29 @@
+{
+  "pid": 2854531,
+  "launched_at": "2026-09-15T03:21:52.930793+00:00",
+  "command": [
+    "/opt/anaconda3/envs/mambayolo/bin/python",
+    "-m",
+    "revision_work.new_protocol.queue",
+    "--gpus",
+    "1",
+    "0"
+  ],
+  "stdout": "/home/dell/lxs/tsgmamba/ultralytics-main/revision_work/series_b/queue.stdout.log",
+  "training_budget": 15,
+  "initial_launch": {
+    "pid": 2844607,
+    "launched_at": "2026-09-15T03:02:29.075530+00:00",
+    "command": [
+      "/opt/anaconda3/envs/mambayolo/bin/python",
+      "-m",
+      "revision_work.new_protocol.queue",
+      "--gpus",
+      "1",
+      "0"
+    ],
+    "stdout": "/home/dell/lxs/tsgmamba/ultralytics-main/revision_work/series_b/queue.stdout.log",
+    "training_budget": 15
+  },
+  "reason": "Add frozen official external inference and workflow reporting; existing training processes adopted"
+}

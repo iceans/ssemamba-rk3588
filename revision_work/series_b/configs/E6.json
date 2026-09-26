@@ -1,0 +1,29 @@
+{
+  "id": "E6",
+  "series": "B",
+  "protocol_id": "SSE_DAUB_SERIES_B_20260915",
+  "model": "full",
+  "seed": 0,
+  "model_yaml": "/home/dell/lxs/tsgmamba/ultralytics-main/revision_work/series_b/configs/full.yaml",
+  "model_yaml_sha256": "d0236f596f0eaeeed9f7011cd9fe63ce30eaaf8c15ba4ee2ab4ff7dbb96fb614",
+  "lfss_depth": 4,
+  "lfss_kernel": 3,
+  "loss": [
+    7.5,
+    0.25,
+    1.5
+  ],
+  "epochs": 100,
+  "batch": 8,
+  "workers": 8,
+  "output_directory": "/home/dell/lxs/tsgmamba/ultralytics-main/revision_work/series_b/runs/E6",
+  "priority": 11,
+  "command": [
+    "/opt/anaconda3/envs/mambayolo/bin/python",
+    "-m",
+    "revision_work.new_protocol.train",
+    "--task",
+    "E6"
+  ],
+  "config_sha256": "a622b313e6df52db66763d5f917711ddf97dec00a157e7618f0402fa2309fb8f"
+}

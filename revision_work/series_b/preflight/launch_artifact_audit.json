@@ -1,0 +1,33 @@
+{
+  "checked_at": "2026-09-15T03:26:19.587145+00:00",
+  "passed": true,
+  "formal_training_budget": 15,
+  "frozen_training_source_files": 198,
+  "training_source_sha256": "bdbe7bc9067bee939e302f686aa021dbe0465204a14543bb938f50021806f418",
+  "external_protocol_sha256": "51b40ffe064d59ed38fc22c7ecc18f90306ba1f8069d3e35585ae3f0ac4cbefd",
+  "artifact_rows_retained": 93,
+  "formal_model_metric_rows": 0,
+  "csv_latex_pairs": 11,
+  "external_adapter_geometry_check": "passed",
+  "existing_trainings_restarted": 0,
+  "addon_source_snapshot": "/home/dell/lxs/tsgmamba/ultralytics-main/revision_work/series_b/external_source_snapshot.tar.gz",
+  "addon_source_snapshot_sha256": "bc361e5d2810a6cbe0daf0c3b7e900bdb4bc58651a2be608a3ee2f48a9d99671",
+  "addon_files": {
+    "revision_work/new_protocol/external.py": "a9d874c59a12dddaa6976a6484a551f8db4d32d8aefb3bf70211abd7c7c16209",
+    "revision_work/new_protocol/queue.py": "71b3aa19fe38912700ee968015ef9377902ff55ae5529bd1b77fff1938e130d4",
+    "revision_work/new_protocol/refresh.py": "453fc874cd665a439cb350b8112231f4a3ee0f37bd2f37fb2afa5ccfb98d9d1a",
+    "revision_work/scripts/check_external_geometry.py": "4230d9141bd77bccafd2c586e3e58654eaf259f14c7fb2fb1ccb8c10a43a98ba",
+    "revision_work/series_b/external/protocol.json": "51b40ffe064d59ed38fc22c7ecc18f90306ba1f8069d3e35585ae3f0ac4cbefd",
+    "revision_work/series_b/external/overlap_audit.json": "2b59335b6ac688f3b86cefbb1af3e18c276a5585b8b071c7e73a6288d2f15c2c",
+    "revision_work/series_b/external/NUDT-MIRSDT_test_frames.jsonl": "67489bd731dbf2c920496791457e7d2b13ace321541488faf2b4fe5bade86d4e",
+    "revision_work/series_b/preflight/queue_external_audit.json": "62e464568a29b3dab1d02e164d1ed819923a02a6666a57e81f2eff062bc49719",
+    "revision_work/series_b/preflight/queue_reload_audit.json": "cc6dfe878235956679cbae8bb3bd272271fecdaf055690265be5c50273d422f8",
+    "revision_work/series_b/preflight/external_geometry/checks.json": "98dda2bef18f31fba4ec6c4196722fa7113337f9a9bae267e6109f75149e572c",
+    "revision_work/evidence/external/NUDT-MIRSDT/source_audit.json": "d39360771fbe57235f896310f27c6f522482a708204f4202ecf1003554eeae63",
+    "revision_work/evidence/external/NUDT-MIRSDT/download.json": "6d1bff754924efaec3b55d0636e56a2073af0ffafdc9f75c9c704d4b2645f997",
+    "revision_work/evidence/external/NUDT-MIRSDT/train.txt": "31e71368775adbc6c893bcb29ae1f39df6ffc83a693f42f84a4322bcf5235a8c",
+    "revision_work/evidence/external/NUDT-MIRSDT/test.txt": "eb039aa35aaabab2eae559b9d627e53d3fa114eb0410f343498f154c81a9d5d0",
+    "revision_work/evidence/external/NUDT-MIRSDT/README.md": "fd7721146b590bf93f6f3d9e6187d63aa125440e4581a976cee683cd3826460d"
+  },
+  "scope": "Configuration, source, dataset, queue and artifact consistency; training/testing still running or pending"
+}

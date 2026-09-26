@@ -1,0 +1,3 @@
+model,historical_val_AP50_percent,diagnostic_AP50_percent,diagnostic_AP50_95_percent,delta_AP50_pp,samples,unique_keyframes,formal
+conv3d-TIMSSM,94.876,94.86842366297542,63.06616100533182,-0.0075763370245840456,4795,4763,no
+fullsize_model,94.998,87.58793069747595,58.02961522909945,-7.410069302524047,4795,4763,no

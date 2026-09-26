@@ -1,0 +1,11 @@
+{
+  "status": "downloaded",
+  "downloaded_at": "2026-09-15T03:17:14.049265+00:00",
+  "source_url": "https://drive.google.com/file/d/1mjFJmsaNoLhALaaL1_3N4qpAPCiBCqXy/view",
+  "official_repository": "https://github.com/TinaLRJ/Multi-frame-infrared-small-target-detection-DTUM",
+  "path": "revision_work/evidence/external/NUDT-MIRSDT/NUDT-MIRSDT.zip",
+  "bytes": 1027614117,
+  "sha256": "ee90d464a7b4b85b15f4aa175bb49fa312e049170ae181d3e9e28691f0496321",
+  "elapsed_s": 423.37811129004695,
+  "formal_target_evaluation_run": false
+}

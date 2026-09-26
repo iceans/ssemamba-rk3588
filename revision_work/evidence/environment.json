@@ -1,0 +1,30 @@
+{
+  "python": "3.11.11 (main, Dec 11 2024, 16:28:39) [GCC 11.2.0]",
+  "executable": "/opt/anaconda3/envs/mambayolo/bin/python",
+  "platform": "Linux-6.2.0-35-generic-x86_64-with-glibc2.35",
+  "packages": {
+    "torch": "2.0.0+cu118",
+    "torchvision": "0.15.1+cu118",
+    "numpy": "1.26.4",
+    "scipy": "1.15.2",
+    "timm": "1.0.15",
+    "einops": "0.8.1",
+    "triton": "3.6.0",
+    "opencv-python": "4.10.0.84",
+    "PyYAML": "6.0.2",
+    "matplotlib": "3.10.1"
+  },
+  "cuda_build": "11.8",
+  "driver": "535.288.01",
+  "gpus": [
+    "NVIDIA GeForce RTX 4090",
+    "NVIDIA GeForce RTX 4090"
+  ],
+  "gpu_access": "requires execution outside sandbox; verified with real CUDA kernels",
+  "selective_scan_actual_backend": "selective_scan_cuda_oflex (current implementation ignores requested backend)",
+  "dcn": "torchvision.ops.DeformConv2d; exercised successfully",
+  "ssm_core_extension": "installed; import passed",
+  "mamba_ssm": "not installed; not required by this code path",
+  "disk_free_bytes": 104626372608,
+  "global_environment_changed": false
+}

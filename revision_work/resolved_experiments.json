@@ -1,0 +1,442 @@
+{
+  "resolution_complete": true,
+  "preflight_pending": false,
+  "tasks": [
+    {
+      "id": "B_FULL_0",
+      "series": "B",
+      "protocol_id": "SSE_DAUB_SERIES_B_20260915",
+      "model": "full",
+      "seed": 0,
+      "model_yaml": "/home/dell/lxs/tsgmamba/ultralytics-main/revision_work/series_b/configs/full.yaml",
+      "model_yaml_sha256": "d0236f596f0eaeeed9f7011cd9fe63ce30eaaf8c15ba4ee2ab4ff7dbb96fb614",
+      "lfss_depth": 4,
+      "lfss_kernel": 3,
+      "loss": [
+        7.5,
+        0.5,
+        1.5
+      ],
+      "epochs": 100,
+      "batch": 8,
+      "workers": 8,
+      "output_directory": "/home/dell/lxs/tsgmamba/ultralytics-main/revision_work/series_b/runs/B_FULL_0",
+      "priority": 0,
+      "command": [
+        "/opt/anaconda3/envs/mambayolo/bin/python",
+        "-m",
+        "revision_work.new_protocol.train",
+        "--task",
+        "B_FULL_0"
+      ],
+      "config_sha256": "50ea5eadca9e93c516f1448c94b21cbfc941a14e447d6acbeb47c99504b3d6c3"
+    },
+    {
+      "id": "B_3DCONV_0",
+      "series": "B",
+      "protocol_id": "SSE_DAUB_SERIES_B_20260915",
+      "model": "stf_3dconv",
+      "seed": 0,
+      "model_yaml": "/home/dell/lxs/tsgmamba/ultralytics-main/revision_work/series_b/configs/stf_3dconv.yaml",
+      "model_yaml_sha256": "e79aa2dde954c5f830d8ba33ffc8313c21b9d816a48e2190aed2225ec324f390",
+      "lfss_depth": 4,
+      "lfss_kernel": 3,
+      "loss": [
+        7.5,
+        0.5,
+        1.5
+      ],
+      "epochs": 100,
+      "batch": 8,
+      "workers": 8,
+      "output_directory": "/home/dell/lxs/tsgmamba/ultralytics-main/revision_work/series_b/runs/B_3DCONV_0",
+      "priority": 1,
+      "command": [
+        "/opt/anaconda3/envs/mambayolo/bin/python",
+        "-m",
+        "revision_work.new_protocol.train",
+        "--task",
+        "B_3DCONV_0"
+      ],
+      "config_sha256": "bcf723c343af326a5f4e666ff54fe3b8c69157f2930c2af993c4171b1ed1b550"
+    },
+    {
+      "id": "R1",
+      "series": "B",
+      "protocol_id": "SSE_DAUB_SERIES_B_20260915",
+      "model": "full",
+      "seed": 2027,
+      "model_yaml": "/home/dell/lxs/tsgmamba/ultralytics-main/revision_work/series_b/configs/full.yaml",
+      "model_yaml_sha256": "d0236f596f0eaeeed9f7011cd9fe63ce30eaaf8c15ba4ee2ab4ff7dbb96fb614",
+      "lfss_depth": 4,
+      "lfss_kernel": 3,
+      "loss": [
+        7.5,
+        0.5,
+        1.5
+      ],
+      "epochs": 100,
+      "batch": 8,
+      "workers": 8,
+      "output_directory": "/home/dell/lxs/tsgmamba/ultralytics-main/revision_work/series_b/runs/R1",
+      "priority": 2,
+      "command": [
+        "/opt/anaconda3/envs/mambayolo/bin/python",
+        "-m",
+        "revision_work.new_protocol.train",
+        "--task",
+        "R1"
+      ],
+      "config_sha256": "32c113b674a74631ac5cc30446c9c74b425dff25d63b6096a76ed692fe1ec167"
+    },
+    {
+      "id": "R2",
+      "series": "B",
+      "protocol_id": "SSE_DAUB_SERIES_B_20260915",
+      "model": "stf_3dconv",
+      "seed": 2027,
+      "model_yaml": "/home/dell/lxs/tsgmamba/ultralytics-main/revision_work/series_b/configs/stf_3dconv.yaml",
+      "model_yaml_sha256": "e79aa2dde954c5f830d8ba33ffc8313c21b9d816a48e2190aed2225ec324f390",
+      "lfss_depth": 4,
+      "lfss_kernel": 3,
+      "loss": [
+        7.5,
+        0.5,
+        1.5
+      ],
+      "epochs": 100,
+      "batch": 8,
+      "workers": 8,
+      "output_directory": "/home/dell/lxs/tsgmamba/ultralytics-main/revision_work/series_b/runs/R2",
+      "priority": 3,
+      "command": [
+        "/opt/anaconda3/envs/mambayolo/bin/python",
+        "-m",
+        "revision_work.new_protocol.train",
+        "--task",
+        "R2"
+      ],
+      "config_sha256": "89e28e625333faa86b35cb985034e64adf949995c20b7f1a059b56f4487553a8"
+    },
+    {
+      "id": "R3",
+      "series": "B",
+      "protocol_id": "SSE_DAUB_SERIES_B_20260915",
+      "model": "full",
+      "seed": 3407,
+      "model_yaml": "/home/dell/lxs/tsgmamba/ultralytics-main/revision_work/series_b/configs/full.yaml",
+      "model_yaml_sha256": "d0236f596f0eaeeed9f7011cd9fe63ce30eaaf8c15ba4ee2ab4ff7dbb96fb614",
+      "lfss_depth": 4,
+      "lfss_kernel": 3,
+      "loss": [
+        7.5,
+        0.5,
+        1.5
+      ],
+      "epochs": 100,
+      "batch": 8,
+      "workers": 8,
+      "output_directory": "/home/dell/lxs/tsgmamba/ultralytics-main/revision_work/series_b/runs/R3",
+      "priority": 4,
+      "command": [
+        "/opt/anaconda3/envs/mambayolo/bin/python",
+        "-m",
+        "revision_work.new_protocol.train",
+        "--task",
+        "R3"
+      ],
+      "config_sha256": "81820c673fe66374db8f34ad2fea333cffefe5761c7874defc415a16df4cdf6d"
+    },
+    {
+      "id": "R4",
+      "series": "B",
+      "protocol_id": "SSE_DAUB_SERIES_B_20260915",
+      "model": "stf_3dconv",
+      "seed": 3407,
+      "model_yaml": "/home/dell/lxs/tsgmamba/ultralytics-main/revision_work/series_b/configs/stf_3dconv.yaml",
+      "model_yaml_sha256": "e79aa2dde954c5f830d8ba33ffc8313c21b9d816a48e2190aed2225ec324f390",
+      "lfss_depth": 4,
+      "lfss_kernel": 3,
+      "loss": [
+        7.5,
+        0.5,
+        1.5
+      ],
+      "epochs": 100,
+      "batch": 8,
+      "workers": 8,
+      "output_directory": "/home/dell/lxs/tsgmamba/ultralytics-main/revision_work/series_b/runs/R4",
+      "priority": 5,
+      "command": [
+        "/opt/anaconda3/envs/mambayolo/bin/python",
+        "-m",
+        "revision_work.new_protocol.train",
+        "--task",
+        "R4"
+      ],
+      "config_sha256": "90dad8cac3c7277aa347247a336b3ecc22a1363ed9a69f62a022874eeebc23b5"
+    },
+    {
+      "id": "E1",
+      "series": "B",
+      "protocol_id": "SSE_DAUB_SERIES_B_20260915",
+      "model": "sste_saam",
+      "seed": 0,
+      "model_yaml": "/home/dell/lxs/tsgmamba/ultralytics-main/revision_work/series_b/configs/sste_saam.yaml",
+      "model_yaml_sha256": "6f8525405fd768dd316926daa333a8a39af7ebfb888eda8378c2ef19f862818e",
+      "lfss_depth": 4,
+      "lfss_kernel": 3,
+      "loss": [
+        7.5,
+        0.5,
+        1.5
+      ],
+      "epochs": 100,
+      "batch": 8,
+      "workers": 8,
+      "output_directory": "/home/dell/lxs/tsgmamba/ultralytics-main/revision_work/series_b/runs/E1",
+      "priority": 6,
+      "command": [
+        "/opt/anaconda3/envs/mambayolo/bin/python",
+        "-m",
+        "revision_work.new_protocol.train",
+        "--task",
+        "E1"
+      ],
+      "config_sha256": "a5bfde7161a34f5a8e56ef781d152b2cb40204087e57afb98fbdb4d663d1e2cb"
+    },
+    {
+      "id": "E2",
+      "series": "B",
+      "protocol_id": "SSE_DAUB_SERIES_B_20260915",
+      "model": "full",
+      "seed": 0,
+      "model_yaml": "/home/dell/lxs/tsgmamba/ultralytics-main/revision_work/series_b/configs/full.yaml",
+      "model_yaml_sha256": "d0236f596f0eaeeed9f7011cd9fe63ce30eaaf8c15ba4ee2ab4ff7dbb96fb614",
+      "lfss_depth": 4,
+      "lfss_kernel": 1,
+      "loss": [
+        7.5,
+        0.5,
+        1.5
+      ],
+      "epochs": 100,
+      "batch": 8,
+      "workers": 8,
+      "output_directory": "/home/dell/lxs/tsgmamba/ultralytics-main/revision_work/series_b/runs/E2",
+      "priority": 7,
+      "command": [
+        "/opt/anaconda3/envs/mambayolo/bin/python",
+        "-m",
+        "revision_work.new_protocol.train",
+        "--task",
+        "E2"
+      ],
+      "config_sha256": "d72ea1511088ac68092aede931a745bcf2102b2a0dfdc722fc00470f5520a6f8"
+    },
+    {
+      "id": "E3",
+      "series": "B",
+      "protocol_id": "SSE_DAUB_SERIES_B_20260915",
+      "model": "full",
+      "seed": 0,
+      "model_yaml": "/home/dell/lxs/tsgmamba/ultralytics-main/revision_work/series_b/configs/full.yaml",
+      "model_yaml_sha256": "d0236f596f0eaeeed9f7011cd9fe63ce30eaaf8c15ba4ee2ab4ff7dbb96fb614",
+      "lfss_depth": 4,
+      "lfss_kernel": 5,
+      "loss": [
+        7.5,
+        0.5,
+        1.5
+      ],
+      "epochs": 100,
+      "batch": 8,
+      "workers": 8,
+      "output_directory": "/home/dell/lxs/tsgmamba/ultralytics-main/revision_work/series_b/runs/E3",
+      "priority": 8,
+      "command": [
+        "/opt/anaconda3/envs/mambayolo/bin/python",
+        "-m",
+        "revision_work.new_protocol.train",
+        "--task",
+        "E3"
+      ],
+      "config_sha256": "c7dc59b94aa7a0fb5b71b31ddfcb422ef029eb7dff2497944e4a86b29625366b"
+    },
+    {
+      "id": "E4",
+      "series": "B",
+      "protocol_id": "SSE_DAUB_SERIES_B_20260915",
+      "model": "full",
+      "seed": 0,
+      "model_yaml": "/home/dell/lxs/tsgmamba/ultralytics-main/revision_work/series_b/configs/full.yaml",
+      "model_yaml_sha256": "d0236f596f0eaeeed9f7011cd9fe63ce30eaaf8c15ba4ee2ab4ff7dbb96fb614",
+      "lfss_depth": 4,
+      "lfss_kernel": 3,
+      "loss": [
+        3.75,
+        0.5,
+        1.5
+      ],
+      "epochs": 100,
+      "batch": 8,
+      "workers": 8,
+      "output_directory": "/home/dell/lxs/tsgmamba/ultralytics-main/revision_work/series_b/runs/E4",
+      "priority": 9,
+      "command": [
+        "/opt/anaconda3/envs/mambayolo/bin/python",
+        "-m",
+        "revision_work.new_protocol.train",
+        "--task",
+        "E4"
+      ],
+      "config_sha256": "41576f8d8dd8e3a6d9c1ceb10f10dc3e47907da6d324c6080bf99ac16843d2a2"
+    },
+    {
+      "id": "E5",
+      "series": "B",
+      "protocol_id": "SSE_DAUB_SERIES_B_20260915",
+      "model": "full",
+      "seed": 0,
+      "model_yaml": "/home/dell/lxs/tsgmamba/ultralytics-main/revision_work/series_b/configs/full.yaml",
+      "model_yaml_sha256": "d0236f596f0eaeeed9f7011cd9fe63ce30eaaf8c15ba4ee2ab4ff7dbb96fb614",
+      "lfss_depth": 4,
+      "lfss_kernel": 3,
+      "loss": [
+        15.0,
+        0.5,
+        1.5
+      ],
+      "epochs": 100,
+      "batch": 8,
+      "workers": 8,
+      "output_directory": "/home/dell/lxs/tsgmamba/ultralytics-main/revision_work/series_b/runs/E5",
+      "priority": 10,
+      "command": [
+        "/opt/anaconda3/envs/mambayolo/bin/python",
+        "-m",
+        "revision_work.new_protocol.train",
+        "--task",
+        "E5"
+      ],
+      "config_sha256": "568e77bbf404674e1789c74a1fc571bfb6be7ecac7f4709a724449f3115fc272"
+    },
+    {
+      "id": "E6",
+      "series": "B",
+      "protocol_id": "SSE_DAUB_SERIES_B_20260915",
+      "model": "full",
+      "seed": 0,
+      "model_yaml": "/home/dell/lxs/tsgmamba/ultralytics-main/revision_work/series_b/configs/full.yaml",
+      "model_yaml_sha256": "d0236f596f0eaeeed9f7011cd9fe63ce30eaaf8c15ba4ee2ab4ff7dbb96fb614",
+      "lfss_depth": 4,
+      "lfss_kernel": 3,
+      "loss": [
+        7.5,
+        0.25,
+        1.5
+      ],
+      "epochs": 100,
+      "batch": 8,
+      "workers": 8,
+      "output_directory": "/home/dell/lxs/tsgmamba/ultralytics-main/revision_work/series_b/runs/E6",
+      "priority": 11,
+      "command": [
+        "/opt/anaconda3/envs/mambayolo/bin/python",
+        "-m",
+        "revision_work.new_protocol.train",
+        "--task",
+        "E6"
+      ],
+      "config_sha256": "a622b313e6df52db66763d5f917711ddf97dec00a157e7618f0402fa2309fb8f"
+    },
+    {
+      "id": "E7",
+      "series": "B",
+      "protocol_id": "SSE_DAUB_SERIES_B_20260915",
+      "model": "full",
+      "seed": 0,
+      "model_yaml": "/home/dell/lxs/tsgmamba/ultralytics-main/revision_work/series_b/configs/full.yaml",
+      "model_yaml_sha256": "d0236f596f0eaeeed9f7011cd9fe63ce30eaaf8c15ba4ee2ab4ff7dbb96fb614",
+      "lfss_depth": 4,
+      "lfss_kernel": 3,
+      "loss": [
+        7.5,
+        1.0,
+        1.5
+      ],
+      "epochs": 100,
+      "batch": 8,
+      "workers": 8,
+      "output_directory": "/home/dell/lxs/tsgmamba/ultralytics-main/revision_work/series_b/runs/E7",
+      "priority": 12,
+      "command": [
+        "/opt/anaconda3/envs/mambayolo/bin/python",
+        "-m",
+        "revision_work.new_protocol.train",
+        "--task",
+        "E7"
+      ],
+      "config_sha256": "35983dcc4331ce6f438d99d98d701e906f407d69b4984e310ca119343bfa2213"
+    },
+    {
+      "id": "E8",
+      "series": "B",
+      "protocol_id": "SSE_DAUB_SERIES_B_20260915",
+      "model": "full",
+      "seed": 0,
+      "model_yaml": "/home/dell/lxs/tsgmamba/ultralytics-main/revision_work/series_b/configs/full.yaml",
+      "model_yaml_sha256": "d0236f596f0eaeeed9f7011cd9fe63ce30eaaf8c15ba4ee2ab4ff7dbb96fb614",
+      "lfss_depth": 4,
+      "lfss_kernel": 3,
+      "loss": [
+        7.5,
+        0.5,
+        0.75
+      ],
+      "epochs": 100,
+      "batch": 8,
+      "workers": 8,
+      "output_directory": "/home/dell/lxs/tsgmamba/ultralytics-main/revision_work/series_b/runs/E8",
+      "priority": 13,
+      "command": [
+        "/opt/anaconda3/envs/mambayolo/bin/python",
+        "-m",
+        "revision_work.new_protocol.train",
+        "--task",
+        "E8"
+      ],
+      "config_sha256": "60fa4095ca8a352c0742f3970eb1c084632aeb509296681470c449004a206531"
+    },
+    {
+      "id": "E9",
+      "series": "B",
+      "protocol_id": "SSE_DAUB_SERIES_B_20260915",
+      "model": "full",
+      "seed": 0,
+      "model_yaml": "/home/dell/lxs/tsgmamba/ultralytics-main/revision_work/series_b/configs/full.yaml",
+      "model_yaml_sha256": "d0236f596f0eaeeed9f7011cd9fe63ce30eaaf8c15ba4ee2ab4ff7dbb96fb614",
+      "lfss_depth": 4,
+      "lfss_kernel": 3,
+      "loss": [
+        7.5,
+        0.5,
+        3.0
+      ],
+      "epochs": 100,
+      "batch": 8,
+      "workers": 8,
+      "output_directory": "/home/dell/lxs/tsgmamba/ultralytics-main/revision_work/series_b/runs/E9",
+      "priority": 14,
+      "command": [
+        "/opt/anaconda3/envs/mambayolo/bin/python",
+        "-m",
+        "revision_work.new_protocol.train",
+        "--task",
+        "E9"
+      ],
+      "config_sha256": "3efd6a593ec7f08e03cab01e689468a86394c917459340608d202cb4bd1e5646"
+    }
+  ],
+  "source_sha256": "bdbe7bc9067bee939e302f686aa021dbe0465204a14543bb938f50021806f418"
+}

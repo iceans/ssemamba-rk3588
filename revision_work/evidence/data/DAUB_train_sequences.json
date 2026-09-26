@@ -1,0 +1,72 @@
+[
+  {
+    "seq_id": "IR_00005",
+    "frames": 3000,
+    "first_frame": 0,
+    "last_frame": 2999,
+    "missing_ids": []
+  },
+  {
+    "seq_id": "IR_00008",
+    "frames": 399,
+    "first_frame": 0,
+    "last_frame": 398,
+    "missing_ids": []
+  },
+  {
+    "seq_id": "IR_00009",
+    "frames": 399,
+    "first_frame": 0,
+    "last_frame": 398,
+    "missing_ids": []
+  },
+  {
+    "seq_id": "IR_00010",
+    "frames": 401,
+    "first_frame": 0,
+    "last_frame": 400,
+    "missing_ids": []
+  },
+  {
+    "seq_id": "IR_00013",
+    "frames": 763,
+    "first_frame": 0,
+    "last_frame": 762,
+    "missing_ids": []
+  },
+  {
+    "seq_id": "IR_00014",
+    "frames": 1426,
+    "first_frame": 0,
+    "last_frame": 1425,
+    "missing_ids": []
+  },
+  {
+    "seq_id": "IR_00016",
+    "frames": 293,
+    "first_frame": 0,
+    "last_frame": 292,
+    "missing_ids": []
+  },
+  {
+    "seq_id": "IR_00017",
+    "frames": 500,
+    "first_frame": 0,
+    "last_frame": 499,
+    "missing_ids": []
+  },
+  {
+    "seq_id": "IR_00019",
+    "frames": 1301,
+    "first_frame": 0,
+    "last_frame": 1300,
+    "missing_ids": []
+  },
+  {
+    "seq_id": "IR_00022",
+    "frames": 500,
+    "first_frame": 0,
+    "last_frame": 499,
+    "missing_ids": []
+  }
+]

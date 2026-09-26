@@ -1,0 +1,67 @@
+==================== frame7 (TsgMamba/DAUB) RK3588 板端验证记录 ====================
+
+板子: RK3588-Tronlong, Linux 5.10.209-rt89, aarch64, 内存 7.7 GB
+      NPU driver 0.9.6 (编入内核 CONFIG_ROCKCHIP_RKNPU=y，无法单独升级)
+      系统 librknnrt.so  2.0.0b0
+      conda rknn env: rknn-toolkit-lite2 2.3.2
+连接: ssh -o BatchMode=yes Tronlong@192.168.50.2  (免密可用)
+
+--------------------------------------------------------------------------------
+[0] 基线
+  - 板载旧模型 best_fp16.rknn (标准 YOLOv8n, 3ch):
+      load/init OK, infer 59.8 ms
+  - 最小 10 通道模型 (Conv 10->8 groups=2 ->16):
+      load/init OK, infer 1.9 ms   => 10 通道本身、grouped depthwise 均支持
+
+--------------------------------------------------------------------------------
+[1] 用系统运行时 2.0.0b0 加载 frame7
+  模型由 rknn-toolkit2 2.3.2 构建。
+  - 640 (faithful DCN / GridSample):
+        load_rknn OK, init_runtime 段错误 (Segmentation fault)
+  - 640 (DCN 用普通卷积近似):
+        load_rknn OK, init_runtime 段错误；不同 core_mask(0/1/2/4) 均崩溃
+  - 192 (未分块):
+        load/init 通过, 但推理 "failed to submit! op id:1 Conv:/model.0"，
+        输出为无效值 (18.6 s)
+  原因: 并行扫描的 Pad 使张量长度达到 1.5L
+        640 -> 774144, 192 -> 78848，均超过 NPU 维度上限(约 65535)。
+
+--------------------------------------------------------------------------------
+[2] 用 librknnrt 2.3.2 覆盖 (bind-mount, 无需 root)
+  unshare -rm + mount --bind ~/frame7_deploy/lib/librknnrt.so /usr/lib/librknnrt.so
+  - 版本: librknnrt 2.3.2 (429f97ae6b)，driver 仍为 0.9.6
+  - frame7-conv-640: load/init OK，推理在
+        Slice:/model.3/mamba/op/Slice_38  (输入张量 1x8x512256x16) 提交失败
+    dmesg: "RKNPU: job timeout ... task counter: 0x638, elapsed 264635058us"
+           "RKNPU: soft reset"
+  - 同一 2.3.2 运行时跑旧 3ch 模型: "RKNPU: job commit failed, ret:-22"
+        => 2.3.2 运行时与 0.9.6 驱动不兼容（所有 job 被拒）
+
+--------------------------------------------------------------------------------
+[3] 分块扫描 (chunked parallel scan) 后的结果
+  将序列长度维拆为 (num_chunk, chunk)，chunk 取 L 的因子，避免 Pad 产生长维：
+    640: 512000 -> (25, 20480) 等；192: 46080 -> (2, 23040)
+  但 640 仍有 512000 维出现在跨扫描/BC 投影
+    (Concat/Gather/Transpose/Conv(MatMul#2)/Split，5 帧 x 320x320 拉平)
+  - 192 chunked + 运行时 2.0.0b0:
+        推理推进到 op122
+        "failed to submit! Mul:/model.3/mamba/op/Mul_24"
+        输入 (1,8,46080,1) x (1,8,46080,16) -> (1,8,46080,16)
+        仍失败 (18.7 s 输出无效值)
+
+--------------------------------------------------------------------------------
+[4] 结论
+  在当前板端 NPU 栈 (driver 0.9.6 + librknnrt 2.0.0b0) 下, frame7 **无法运行**:
+    1) 2.3.2 运行时支持更多算子，但与 0.9.6 驱动不兼容 (job commit failed / ret -22)；
+    2) 2.0.0b0 运行时不支持 GridSample，且对长序列扫描/广播 Mul 提交失败；
+    3) 模型把 5 帧 x H x W 拉平成 512000 长度的序列做 SSM 与 BC 投影，
+       远超 NPU 单张量维度上限，且并行扫描展开成上百个超大算子。
+  驱动编入内核，升级需重新烧写/编译 BSP (需 root)。
+
+--------------------------------------------------------------------------------
+[5] 可行方向
+  A. 升级板端 BSP / NPU 驱动到与 librknnrt 2.3.2 匹配的版本 (需 root/烧写)，
+     再配合“全链路分块”(跨扫描、BC 投影也分块)。
+  B. 大幅降分辨率 (<=224) + 全链路分块 + 普通卷积 DCN，先跑通低精度版本。
+  C. 为该边缘场景重新设计轻量时序模型（替换 SSM、减少 frame_num），重训/蒸馏。
+  D. 该模型继续用于 GPU 离线推理，不落地 RK3588。

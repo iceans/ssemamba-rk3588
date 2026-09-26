@@ -1,0 +1,672 @@
+{
+  "num_requested": 4795,
+  "num_unique_loaded_keyframes": 4763,
+  "omitted_nominal_frames": [
+    "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00006_00000.bmp",
+    "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00006_00001.bmp",
+    "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00006_00002.bmp",
+    "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00006_00003.bmp",
+    "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00006_00004.bmp",
+    "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00006_00005.bmp",
+    "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00006_00006.bmp",
+    "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00006_00007.bmp",
+    "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00011_00000.bmp",
+    "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00011_00001.bmp",
+    "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00011_00002.bmp",
+    "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00011_00003.bmp",
+    "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00012_00000.bmp",
+    "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00012_00001.bmp",
+    "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00012_00002.bmp",
+    "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00012_00003.bmp",
+    "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00015_00000.bmp",
+    "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00015_00001.bmp",
+    "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00015_00002.bmp",
+    "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00015_00003.bmp",
+    "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00018_00000.bmp",
+    "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00018_00001.bmp",
+    "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00018_00002.bmp",
+    "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00018_00003.bmp",
+    "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00020_00000.bmp",
+    "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00020_00001.bmp",
+    "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00020_00002.bmp",
+    "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00020_00003.bmp",
+    "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00021_00000.bmp",
+    "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00021_00001.bmp",
+    "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00021_00002.bmp",
+    "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00021_00003.bmp"
+  ],
+  "duplicate_keyframes": {
+    "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00021_00499.bmp": 9,
+    "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00006_00398.bmp": 5,
+    "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00011_00744.bmp": 5,
+    "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00012_01499.bmp": 5,
+    "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00015_00750.bmp": 5,
+    "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00018_00499.bmp": 5,
+    "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00020_00399.bmp": 5
+  },
+  "cross_sequence_windows": [],
+  "sample_checks": [
+    {
+      "index": 0,
+      "nominal_file": "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00006_00004.bmp",
+      "label_file": "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00021_00499.bmp",
+      "loaded_clip": [
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00021_00499.bmp",
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00021_00499.bmp",
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00021_00499.bmp",
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00021_00499.bmp",
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00021_00499.bmp"
+      ],
+      "one_sequence": true,
+      "keyframe_matches_label": true,
+      "coordinate_max_abs_error_px": 0.0,
+      "network_shape": [
+        8,
+        640,
+        640
+      ]
+    },
+    {
+      "index": 1,
+      "nominal_file": "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00006_00005.bmp",
+      "label_file": "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00021_00499.bmp",
+      "loaded_clip": [
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00021_00499.bmp",
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00021_00499.bmp",
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00021_00499.bmp",
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00021_00499.bmp",
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00021_00499.bmp"
+      ],
+      "one_sequence": true,
+      "keyframe_matches_label": true,
+      "coordinate_max_abs_error_px": 0.0,
+      "network_shape": [
+        8,
+        640,
+        640
+      ]
+    },
+    {
+      "index": 4,
+      "nominal_file": "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00006_00008.bmp",
+      "label_file": "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00006_00008.bmp",
+      "loaded_clip": [
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00006_00004.bmp",
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00006_00005.bmp",
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00006_00006.bmp",
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00006_00007.bmp",
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00006_00008.bmp"
+      ],
+      "one_sequence": true,
+      "keyframe_matches_label": true,
+      "coordinate_max_abs_error_px": 0.0,
+      "network_shape": [
+        8,
+        640,
+        640
+      ]
+    },
+    {
+      "index": 10,
+      "nominal_file": "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00006_00014.bmp",
+      "label_file": "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00006_00014.bmp",
+      "loaded_clip": [
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00006_00010.bmp",
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00006_00011.bmp",
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00006_00012.bmp",
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00006_00013.bmp",
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00006_00014.bmp"
+      ],
+      "one_sequence": true,
+      "keyframe_matches_label": true,
+      "coordinate_max_abs_error_px": 0.0,
+      "network_shape": [
+        8,
+        640,
+        640
+      ]
+    },
+    {
+      "index": 394,
+      "nominal_file": "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00006_00398.bmp",
+      "label_file": "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00006_00398.bmp",
+      "loaded_clip": [
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00006_00394.bmp",
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00006_00395.bmp",
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00006_00396.bmp",
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00006_00397.bmp",
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00006_00398.bmp"
+      ],
+      "one_sequence": true,
+      "keyframe_matches_label": true,
+      "coordinate_max_abs_error_px": 0.0,
+      "network_shape": [
+        8,
+        640,
+        640
+      ]
+    },
+    {
+      "index": 395,
+      "nominal_file": "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00011_00000.bmp",
+      "label_file": "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00006_00398.bmp",
+      "loaded_clip": [
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00006_00394.bmp",
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00006_00395.bmp",
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00006_00396.bmp",
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00006_00397.bmp",
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00006_00398.bmp"
+      ],
+      "one_sequence": true,
+      "keyframe_matches_label": true,
+      "coordinate_max_abs_error_px": 0.0,
+      "network_shape": [
+        8,
+        640,
+        640
+      ]
+    },
+    {
+      "index": 396,
+      "nominal_file": "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00011_00001.bmp",
+      "label_file": "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00006_00398.bmp",
+      "loaded_clip": [
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00006_00394.bmp",
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00006_00395.bmp",
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00006_00396.bmp",
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00006_00397.bmp",
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00006_00398.bmp"
+      ],
+      "one_sequence": true,
+      "keyframe_matches_label": true,
+      "coordinate_max_abs_error_px": 0.0,
+      "network_shape": [
+        8,
+        640,
+        640
+      ]
+    },
+    {
+      "index": 399,
+      "nominal_file": "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00011_00004.bmp",
+      "label_file": "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00011_00004.bmp",
+      "loaded_clip": [
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00011_00000.bmp",
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00011_00001.bmp",
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00011_00002.bmp",
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00011_00003.bmp",
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00011_00004.bmp"
+      ],
+      "one_sequence": true,
+      "keyframe_matches_label": true,
+      "coordinate_max_abs_error_px": 0.0,
+      "network_shape": [
+        8,
+        640,
+        640
+      ]
+    },
+    {
+      "index": 1139,
+      "nominal_file": "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00011_00744.bmp",
+      "label_file": "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00011_00744.bmp",
+      "loaded_clip": [
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00011_00740.bmp",
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00011_00741.bmp",
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00011_00742.bmp",
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00011_00743.bmp",
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00011_00744.bmp"
+      ],
+      "one_sequence": true,
+      "keyframe_matches_label": true,
+      "coordinate_max_abs_error_px": 0.0,
+      "network_shape": [
+        8,
+        640,
+        640
+      ]
+    },
+    {
+      "index": 1140,
+      "nominal_file": "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00012_00000.bmp",
+      "label_file": "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00011_00744.bmp",
+      "loaded_clip": [
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00011_00740.bmp",
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00011_00741.bmp",
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00011_00742.bmp",
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00011_00743.bmp",
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00011_00744.bmp"
+      ],
+      "one_sequence": true,
+      "keyframe_matches_label": true,
+      "coordinate_max_abs_error_px": 0.0,
+      "network_shape": [
+        8,
+        640,
+        640
+      ]
+    },
+    {
+      "index": 1141,
+      "nominal_file": "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00012_00001.bmp",
+      "label_file": "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00011_00744.bmp",
+      "loaded_clip": [
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00011_00740.bmp",
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00011_00741.bmp",
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00011_00742.bmp",
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00011_00743.bmp",
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00011_00744.bmp"
+      ],
+      "one_sequence": true,
+      "keyframe_matches_label": true,
+      "coordinate_max_abs_error_px": 0.0,
+      "network_shape": [
+        8,
+        640,
+        640
+      ]
+    },
+    {
+      "index": 1144,
+      "nominal_file": "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00012_00004.bmp",
+      "label_file": "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00012_00004.bmp",
+      "loaded_clip": [
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00012_00000.bmp",
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00012_00001.bmp",
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00012_00002.bmp",
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00012_00003.bmp",
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00012_00004.bmp"
+      ],
+      "one_sequence": true,
+      "keyframe_matches_label": true,
+      "coordinate_max_abs_error_px": 0.0,
+      "network_shape": [
+        8,
+        640,
+        640
+      ]
+    },
+    {
+      "index": 2639,
+      "nominal_file": "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00012_01499.bmp",
+      "label_file": "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00012_01499.bmp",
+      "loaded_clip": [
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00012_01495.bmp",
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00012_01496.bmp",
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00012_01497.bmp",
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00012_01498.bmp",
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00012_01499.bmp"
+      ],
+      "one_sequence": true,
+      "keyframe_matches_label": true,
+      "coordinate_max_abs_error_px": 0.0,
+      "network_shape": [
+        8,
+        640,
+        640
+      ]
+    },
+    {
+      "index": 2640,
+      "nominal_file": "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00015_00000.bmp",
+      "label_file": "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00012_01499.bmp",
+      "loaded_clip": [
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00012_01495.bmp",
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00012_01496.bmp",
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00012_01497.bmp",
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00012_01498.bmp",
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00012_01499.bmp"
+      ],
+      "one_sequence": true,
+      "keyframe_matches_label": true,
+      "coordinate_max_abs_error_px": 0.0,
+      "network_shape": [
+        8,
+        640,
+        640
+      ]
+    },
+    {
+      "index": 2641,
+      "nominal_file": "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00015_00001.bmp",
+      "label_file": "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00012_01499.bmp",
+      "loaded_clip": [
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00012_01495.bmp",
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00012_01496.bmp",
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00012_01497.bmp",
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00012_01498.bmp",
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00012_01499.bmp"
+      ],
+      "one_sequence": true,
+      "keyframe_matches_label": true,
+      "coordinate_max_abs_error_px": 0.0,
+      "network_shape": [
+        8,
+        640,
+        640
+      ]
+    },
+    {
+      "index": 2644,
+      "nominal_file": "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00015_00004.bmp",
+      "label_file": "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00015_00004.bmp",
+      "loaded_clip": [
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00015_00000.bmp",
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00015_00001.bmp",
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00015_00002.bmp",
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00015_00003.bmp",
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00015_00004.bmp"
+      ],
+      "one_sequence": true,
+      "keyframe_matches_label": true,
+      "coordinate_max_abs_error_px": 3.814697265625e-06,
+      "network_shape": [
+        8,
+        640,
+        640
+      ]
+    },
+    {
+      "index": 3390,
+      "nominal_file": "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00015_00750.bmp",
+      "label_file": "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00015_00750.bmp",
+      "loaded_clip": [
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00015_00746.bmp",
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00015_00747.bmp",
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00015_00748.bmp",
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00015_00749.bmp",
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00015_00750.bmp"
+      ],
+      "one_sequence": true,
+      "keyframe_matches_label": true,
+      "coordinate_max_abs_error_px": 0.0,
+      "network_shape": [
+        8,
+        640,
+        640
+      ]
+    },
+    {
+      "index": 3391,
+      "nominal_file": "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00018_00000.bmp",
+      "label_file": "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00015_00750.bmp",
+      "loaded_clip": [
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00015_00746.bmp",
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00015_00747.bmp",
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00015_00748.bmp",
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00015_00749.bmp",
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00015_00750.bmp"
+      ],
+      "one_sequence": true,
+      "keyframe_matches_label": true,
+      "coordinate_max_abs_error_px": 0.0,
+      "network_shape": [
+        8,
+        640,
+        640
+      ]
+    },
+    {
+      "index": 3392,
+      "nominal_file": "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00018_00001.bmp",
+      "label_file": "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00015_00750.bmp",
+      "loaded_clip": [
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00015_00746.bmp",
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00015_00747.bmp",
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00015_00748.bmp",
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00015_00749.bmp",
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00015_00750.bmp"
+      ],
+      "one_sequence": true,
+      "keyframe_matches_label": true,
+      "coordinate_max_abs_error_px": 0.0,
+      "network_shape": [
+        8,
+        640,
+        640
+      ]
+    },
+    {
+      "index": 3395,
+      "nominal_file": "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00018_00004.bmp",
+      "label_file": "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00018_00004.bmp",
+      "loaded_clip": [
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00018_00000.bmp",
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00018_00001.bmp",
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00018_00002.bmp",
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00018_00003.bmp",
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00018_00004.bmp"
+      ],
+      "one_sequence": true,
+      "keyframe_matches_label": true,
+      "coordinate_max_abs_error_px": 0.0,
+      "network_shape": [
+        8,
+        640,
+        640
+      ]
+    },
+    {
+      "index": 3890,
+      "nominal_file": "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00018_00499.bmp",
+      "label_file": "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00018_00499.bmp",
+      "loaded_clip": [
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00018_00495.bmp",
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00018_00496.bmp",
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00018_00497.bmp",
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00018_00498.bmp",
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00018_00499.bmp"
+      ],
+      "one_sequence": true,
+      "keyframe_matches_label": true,
+      "coordinate_max_abs_error_px": 3.814697265625e-06,
+      "network_shape": [
+        8,
+        640,
+        640
+      ]
+    },
+    {
+      "index": 3891,
+      "nominal_file": "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00020_00000.bmp",
+      "label_file": "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00018_00499.bmp",
+      "loaded_clip": [
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00018_00495.bmp",
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00018_00496.bmp",
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00018_00497.bmp",
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00018_00498.bmp",
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00018_00499.bmp"
+      ],
+      "one_sequence": true,
+      "keyframe_matches_label": true,
+      "coordinate_max_abs_error_px": 3.814697265625e-06,
+      "network_shape": [
+        8,
+        640,
+        640
+      ]
+    },
+    {
+      "index": 3892,
+      "nominal_file": "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00020_00001.bmp",
+      "label_file": "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00018_00499.bmp",
+      "loaded_clip": [
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00018_00495.bmp",
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00018_00496.bmp",
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00018_00497.bmp",
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00018_00498.bmp",
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00018_00499.bmp"
+      ],
+      "one_sequence": true,
+      "keyframe_matches_label": true,
+      "coordinate_max_abs_error_px": 3.814697265625e-06,
+      "network_shape": [
+        8,
+        640,
+        640
+      ]
+    },
+    {
+      "index": 3895,
+      "nominal_file": "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00020_00004.bmp",
+      "label_file": "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00020_00004.bmp",
+      "loaded_clip": [
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00020_00000.bmp",
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00020_00001.bmp",
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00020_00002.bmp",
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00020_00003.bmp",
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00020_00004.bmp"
+      ],
+      "one_sequence": true,
+      "keyframe_matches_label": true,
+      "coordinate_max_abs_error_px": 7.62939453125e-06,
+      "network_shape": [
+        8,
+        640,
+        640
+      ]
+    },
+    {
+      "index": 4290,
+      "nominal_file": "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00020_00399.bmp",
+      "label_file": "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00020_00399.bmp",
+      "loaded_clip": [
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00020_00395.bmp",
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00020_00396.bmp",
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00020_00397.bmp",
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00020_00398.bmp",
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00020_00399.bmp"
+      ],
+      "one_sequence": true,
+      "keyframe_matches_label": true,
+      "coordinate_max_abs_error_px": 0.0,
+      "network_shape": [
+        8,
+        640,
+        640
+      ]
+    },
+    {
+      "index": 4291,
+      "nominal_file": "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00021_00000.bmp",
+      "label_file": "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00020_00399.bmp",
+      "loaded_clip": [
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00020_00395.bmp",
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00020_00396.bmp",
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00020_00397.bmp",
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00020_00398.bmp",
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00020_00399.bmp"
+      ],
+      "one_sequence": true,
+      "keyframe_matches_label": true,
+      "coordinate_max_abs_error_px": 0.0,
+      "network_shape": [
+        8,
+        640,
+        640
+      ]
+    },
+    {
+      "index": 4292,
+      "nominal_file": "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00021_00001.bmp",
+      "label_file": "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00020_00399.bmp",
+      "loaded_clip": [
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00020_00395.bmp",
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00020_00396.bmp",
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00020_00397.bmp",
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00020_00398.bmp",
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00020_00399.bmp"
+      ],
+      "one_sequence": true,
+      "keyframe_matches_label": true,
+      "coordinate_max_abs_error_px": 0.0,
+      "network_shape": [
+        8,
+        640,
+        640
+      ]
+    },
+    {
+      "index": 4295,
+      "nominal_file": "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00021_00004.bmp",
+      "label_file": "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00021_00004.bmp",
+      "loaded_clip": [
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00021_00000.bmp",
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00021_00001.bmp",
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00021_00002.bmp",
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00021_00003.bmp",
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00021_00004.bmp"
+      ],
+      "one_sequence": true,
+      "keyframe_matches_label": true,
+      "coordinate_max_abs_error_px": 0.0,
+      "network_shape": [
+        8,
+        640,
+        640
+      ]
+    },
+    {
+      "index": 4790,
+      "nominal_file": "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00021_00499.bmp",
+      "label_file": "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00021_00499.bmp",
+      "loaded_clip": [
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00021_00495.bmp",
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00021_00496.bmp",
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00021_00497.bmp",
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00021_00498.bmp",
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00021_00499.bmp"
+      ],
+      "one_sequence": true,
+      "keyframe_matches_label": true,
+      "coordinate_max_abs_error_px": 0.0,
+      "network_shape": [
+        8,
+        640,
+        640
+      ]
+    },
+    {
+      "index": 4794,
+      "nominal_file": "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00021_00499.bmp",
+      "label_file": "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00021_00499.bmp",
+      "loaded_clip": [
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00021_00495.bmp",
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00021_00496.bmp",
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00021_00497.bmp",
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00021_00498.bmp",
+        "/home/dell/lxs/Anti_UAV_dataset/DAUB/yolo_format/test/images/IR_00021_00499.bmp"
+      ],
+      "one_sequence": true,
+      "keyframe_matches_label": true,
+      "coordinate_max_abs_error_px": 0.0,
+      "network_shape": [
+        8,
+        640,
+        640
+      ]
+    }
+  ],
+  "channel_order_probe": [
+    5,
+    4,
+    3,
+    2,
+    1,
+    103,
+    102,
+    101
+  ],
+  "channel_semantics": [
+    "gray_i",
+    "gray_i-1",
+    "gray_i-2",
+    "gray_i-3",
+    "gray_i-4",
+    "key_R",
+    "key_G",
+    "key_B"
+  ],
+  "stf_reference_note": "TimeMambaStem uses its last temporal feature as alignment reference; under current Format this is the oldest source frame.",
+  "formal_training_gate": "blocked: duplication/omission and reverse-order convention require an explicit protocol decision; no dataset code changed"
+}

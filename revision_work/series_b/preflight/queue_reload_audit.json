@@ -1,0 +1,69 @@
+{
+  "checked_at": "2026-09-15T03:21:53.131182+00:00",
+  "passed": true,
+  "previous_manager_pid": 2844607,
+  "new_manager_pid": 2854531,
+  "unchanged_training_processes": [
+    {
+      "task": "B_FULL_0",
+      "pid": 2844614
+    },
+    {
+      "task": "B_3DCONV_0",
+      "pid": 2844615
+    }
+  ],
+  "training_restarts": 0,
+  "queue_snapshot": {
+    "status": "running",
+    "pid": 2854531,
+    "updated_at": "2026-09-15T03:21:53.080530+00:00",
+    "gpus": [
+      1,
+      0
+    ],
+    "active": [
+      {
+        "task": "B_FULL_0",
+        "phase": "train",
+        "gpu": 1,
+        "pid": 2844614,
+        "started_at": "2026-09-15T03:02:30.087048+00:00",
+        "adopted_existing_process": true
+      },
+      {
+        "task": "B_3DCONV_0",
+        "phase": "train",
+        "gpu": 0,
+        "pid": 2844615,
+        "started_at": "2026-09-15T03:02:30.087071+00:00",
+        "adopted_existing_process": true
+      }
+    ],
+    "device_snapshot": {
+      "0": {
+        "uuid": "GPU-d45db105-becc-03de-583b-52e8ec33047a",
+        "free_MiB": 17714.0,
+        "compute_pids": [
+          2844615
+        ]
+      },
+      "1": {
+        "uuid": "GPU-13fbb6d7-0adb-19a7-78c5-c508e4e91bd0",
+        "free_MiB": 15883.0,
+        "compute_pids": [
+          2844614
+        ]
+      }
+    },
+    "disk_free_bytes": 103204511744,
+    "waiting_reason": null,
+    "counts": {
+      "started": 2,
+      "trained": 0,
+      "running": 2,
+      "failed": 0,
+      "test_verified": 0
+    }
+  }
+}

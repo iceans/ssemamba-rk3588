@@ -1,0 +1,29 @@
+============ RK3588 端到端 FPS 实测 (int8, 单核, 1080p视频 1.mp4) ============
+
+方法确认:
+  - 之前的 bench 只测 rknn.inference()，不含 DFL 解码/NMS/读图/画框 (已确认)。
+
+板子自身历史日志(旧 int8 best.rknn, 150张验证集, 端到端):
+  /home/Tronlong/RK3588_uavtest/rknn_eval_result_fixed.txt (2025-11-20): 22.62 帧/秒
+  /home/Tronlong/RK3588_uavtest/rknn_eval_result_final.txt (2025-11-27): 15.10 帧/秒
+  (Trash/rknn_eval_result.txt 2025-11-20: 22.51 帧/秒, 但指标算错)
+  -> 板子记录的端到端就是 15~23 FPS。
+
+本次实测(int8, best_int8.rknn, 640输入, 1080p50 视频):
+  后处理方式              read   pre   infer   decode+nms+draw   端到端FPS
+  全量DFL+NMS(病态*)      7.6    5.3   19.5    299.6 ms          3.0
+  预过滤解码(优化)        7.6    5.3   19.5    0.23 ms           30.7
+  * 全量路径把 NMS 跑在 8400 anchor 上，必须先按 conf 过滤。
+
+未优化(profile_pipeline, 960x480图, 含draw): 26.7 FPS
+优化后(1080p视频, 单核): 30.7 FPS
+
+当前板子状态:
+  NPU 频率 950MHz(最高), governor=rknpu_ondemand; CPU governor=performance
+  (performance.sh 想设 NPU 1GHz，但该板最高 950MHz；governor 可改 performance 但需 root)
+
+结论:
+  - 单核端到端真实帧率 ~30 FPS(int8), 与手动实测/板子日志一致。
+  - 之前报的 42/113 是 NPU 纯推理上限, 非端到端。
+  - 优化点: 预过滤解码(DFL只算存活anchor) 把后处理从 ~11.5ms 降到 ~0.23ms。
+  - 下一步提速: 视频硬件解码(MPP)替代cv2, 及 capture/推理线程流水。
