@@ -205,3 +205,6 @@ auth.json
 
 # 大型外部数据压缩包（勿提交，超 GitHub 100MB 限制）
 revision_work/evidence/external/NUDT-MIRSDT/NUDT-MIRSDT.zip
+
+# 从提交中移除（当前 token 无 workflow 权限）；获取带 workflow 权限的 token 后可删除本行
+.github/workflows/
